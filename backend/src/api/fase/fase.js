@@ -4,7 +4,11 @@ const mongoose = restful.mongoose
 
 const faseSchema = new mongoose.Schema({
     name: { type: String, required: true },
-    observacao: { type: String, required: true },
+    inicio: { type: Date, required: true },
+    fim: { type: Date, required: true },
+    inicioEsperado: { type: Date, required: true },
+    fimEsperado: { type: Date, required: true },
+    descricao: { type: String, required: true },
    
 })
 
