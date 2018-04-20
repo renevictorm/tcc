@@ -17,4 +17,16 @@ module.exports = function(server) {
     // CLIENTE Routes
     const clienteService = require('../api/cliente/clienteService')
     clienteService.register(router, '/clientes')
+
+    // COMPETENCIA Routes
+    const competenciaService = require('../api/competencia/competenciaService')
+    competenciaService.register(router, '/competencias')
+
+    // FASE Routes
+    const faseService = require('../api/fase/faseService')
+    faseService.register(router, '/fases')
+
+    // HORARIO Routes
+    const horarioService = require('../api/horario/horarioService')
+    horarioService.register(router, '/horarios')
 }
