@@ -7,4 +7,4 @@ const telefoneSchema = new mongoose.Schema({
   
 })
 
-module.exports = restful.model('Fase', telefoneSchema)
+module.exports = restful.model('Telefone', telefoneSchema)

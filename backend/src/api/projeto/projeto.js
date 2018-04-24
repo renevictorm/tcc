@@ -19,4 +19,4 @@ const projetoSchema = new mongoose.Schema({
    
 })
 
-module.exports = restful.model('Fase', projetoSchema)
+module.exports = restful.model('Projeto', projetoSchema)

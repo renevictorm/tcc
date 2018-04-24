@@ -9,4 +9,4 @@ const horarioSchema = new mongoose.Schema({
    
 })
 
-module.exports = restful.model('Fase', horarioSchema)
+module.exports = restful.model('Horario', horarioSchema)
