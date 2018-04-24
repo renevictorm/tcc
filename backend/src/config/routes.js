@@ -29,4 +29,8 @@ module.exports = function(server) {
     // HORARIO Routes
     const horarioService = require('../api/horario/horarioService')
     horarioService.register(router, '/horarios')
+
+     // MENSAGEM Routes
+     const mensagemService = require('../api/mensagem/mensagemService')
+     mensagemService.register(router, '/mensagem')
 }
