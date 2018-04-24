@@ -4,7 +4,7 @@ const mongoose = restful.mongoose
 
 const horarioSchema = new mongoose.Schema({
     dia: { type: String, required: true },
-    hora: { type: Number, required: true },
+    hora: { type: Number, required: true }
    
    
 })

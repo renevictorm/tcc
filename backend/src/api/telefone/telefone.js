@@ -3,7 +3,7 @@ const mongoose = restful.mongoose
 
 
 const telefoneSchema = new mongoose.Schema({
-    numero: { type: String, required: true },
+    numero: { type: String, required: true }
   
 })
 

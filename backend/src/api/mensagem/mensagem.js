@@ -4,7 +4,7 @@ const mongoose = restful.mongoose
 
 const mensagemSchema = new mongoose.Schema({
     texto: { type: String, required: true },
-    data:{type: Date, required : true},
+    data:{type: Date, required : true}
     
 })
 
