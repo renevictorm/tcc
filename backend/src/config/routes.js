@@ -37,4 +37,8 @@ module.exports = function(server) {
       // NOTIFICACAO Routes
       const notificacaoService = require('../api/notificacao/notificacaoService')
       notificacaoService.register(router, '/notificacao')
+
+      // POSTAGEM Routes
+      const postagemService = require('../api/postagem/postagemService')
+      postagemService.register(router, '/postagem')
 }
