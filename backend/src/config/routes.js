@@ -33,4 +33,8 @@ module.exports = function(server) {
      // MENSAGEM Routes
      const mensagemService = require('../api/mensagem/mensagemService')
      mensagemService.register(router, '/mensagem')
+
+      // NOTIFICACAO Routes
+      const notificacaoService = require('../api/notificacao/notificacaoService')
+      notificacaoService.register(router, '/notificacao')
 }
