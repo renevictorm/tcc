@@ -30,19 +30,23 @@ module.exports = function(server) {
     const horarioService = require('../api/horario/horarioService')
     horarioService.register(router, '/horarios')
 
-     // MENSAGEM Routes
-     const mensagemService = require('../api/mensagem/mensagemService')
-     mensagemService.register(router, '/mensagem')
+    // MENSAGEM Routes
+    const mensagemService = require('../api/mensagem/mensagemService')
+    mensagemService.register(router, '/mensagem')
 
-      // NOTIFICACAO Routes
-      const notificacaoService = require('../api/notificacao/notificacaoService')
-      notificacaoService.register(router, '/notificacao')
+    // NOTIFICACAO Routes
+    const notificacaoService = require('../api/notificacao/notificacaoService')
+    notificacaoService.register(router, '/notificacao')
 
-      // POSTAGEM Routes
-      const postagemService = require('../api/postagem/postagemService')
-      postagemService.register(router, '/postagem')
+    // POSTAGEM Routes
+    const postagemService = require('../api/postagem/postagemService')
+    postagemService.register(router, '/postagem')
 
-      // ARQUIVO Routes
-      const arquivoService = require('../api/arquivo/arquivoService')
-      arquivoService.register(router, '/arquivo')
+    // ARQUIVO Routes
+    const arquivoService = require('../api/arquivo/arquivoService')
+    arquivoService.register(router, '/arquivo')
+
+     // TELEFONE Routes
+     const telefoneService = require('../api/telefone/telefoneService')
+     telefoneService.register(router, '/telefone')
 }
