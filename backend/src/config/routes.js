@@ -41,4 +41,8 @@ module.exports = function(server) {
       // POSTAGEM Routes
       const postagemService = require('../api/postagem/postagemService')
       postagemService.register(router, '/postagem')
+
+      // ARQUIVO Routes
+      const arquivoService = require('../api/arquivo/arquivoService')
+      arquivoService.register(router, '/arquivo')
 }
