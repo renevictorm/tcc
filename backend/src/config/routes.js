@@ -49,4 +49,8 @@ module.exports = function(server) {
      // TELEFONE Routes
      const telefoneService = require('../api/telefone/telefoneService')
      telefoneService.register(router, '/telefone')
+
+     // CH Routes
+     const chService = require('../api/colaboradorHorario/chService')
+     chService.register(router, '/ch')
 }
