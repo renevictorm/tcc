@@ -9,4 +9,4 @@ const chSchema = new mongoose.Schema({
     
 })
 
-module.exports = restful.model('Ch', chSchema)
+module.exports = restful.model('CH', chSchema)
