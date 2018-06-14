@@ -1,0 +1,293 @@
+[33mcommit a304fabb91df59bcbee7947124e1bc02cacae8f0[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31mhub-origin/master[m[33m)[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Fri Jun 1 12:15:46 2018 -0300
+
+    começando a integração com o redux
+
+[33mcommit 89081eb66d1be0eff09d3d1cdeb9a04352e04a22[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Wed May 30 11:38:12 2018 -0300
+
+    package.json atualizado
+
+[33mcommit de63ee9ae6a9753d2c2fc8eef9572c69ee4cdd1c[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Wed May 30 11:16:16 2018 -0300
+
+    varias coisas como botoes, atalhos de teclado e pesquisas
+
+[33mcommit e5431dab152f418c0bb2e9b63f79c1cd406d67de[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Wed May 30 10:39:45 2018 -0300
+
+    concluido/pendente
+
+[33mcommit 4764f4203e4e954b94e52c19f10e198906ec6d7d[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Wed May 30 09:57:35 2018 -0300
+
+    mais alguma coisa 2
+
+[33mcommit 7becc8226816096ca464f8ce90a58c270a216706[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Wed May 30 09:53:39 2018 -0300
+
+    integração mais delete
+
+[33mcommit aed54e5050c9bc7689206b5b89236aa297fe1385[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Mon May 28 18:11:19 2018 -0300
+
+    integração com o backend
+
+[33mcommit 2e916c76bb4d153c6879604f8e3ccc6371f81de6[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue May 8 15:47:38 2018 -0300
+
+    Colaborador Horario service
+
+[33mcommit 02010c538ec438705762846c8d41612d088ac957[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue May 8 15:44:10 2018 -0300
+
+    rotas de Colaborador Horario no Backend
+
+[33mcommit 0cdd9cf49e53ac4f3c01eadc23a6d690b6047952[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue May 8 15:41:24 2018 -0300
+
+    Colaborador Horario no Backend
+
+[33mcommit dcda27c323cec5787887fc66539d2d36194341dc[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue May 1 15:46:32 2018 -0300
+
+    criando componente de button e de grid no frontend
+
+[33mcommit e51ba8236de66ec36c92f5fdf2ac6b0118f43b4a[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue May 1 15:12:13 2018 -0300
+
+    criando form e list no frontend
+
+[33mcommit cb7b30c924658109c41eb98928cc51590bd8cdbc[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue May 1 14:36:12 2018 -0300
+
+    aula 39 a 46 de frontend
+
+[33mcommit 726202c7c567721c318ec2d87be603f34f943633[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Wed Apr 25 21:33:15 2018 -0300
+
+    index.html criado
+
+[33mcommit 8ab4ed2acd67d1c0a06638b4f4573c42e4005098[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Wed Apr 25 21:16:09 2018 -0300
+
+    webpack.config.js pronto e scripits no packege,json
+
+[33mcommit 8a54fb968652d0b8d61f656f7f6f8fb796cbfd61[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Wed Apr 25 17:10:04 2018 -0300
+
+    criando um outro front end
+
+[33mcommit 5060a229c340a75b02d591b1b011eb8f50342c73[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 24 20:54:07 2018 -0300
+
+    rotas de telefone
+
+[33mcommit a5416a87fac4b94ceecfd8cbdc5cff3dd7a80cfc[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 24 20:50:28 2018 -0300
+
+    rotas de arquivo
+
+[33mcommit af4cf90fdad566e52cfcefbcc29304c32e496234[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 24 20:48:31 2018 -0300
+
+    rotas de postagem
+
+[33mcommit b1565f54a9e59479837abcd8e18cf0d40b25c6fc[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 24 20:46:18 2018 -0300
+
+    alterando arquivos post para postagem para não haver confusão
+
+[33mcommit 1b1cd4fd40c3738fcd90226a8e0a5161537a3135[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 24 20:42:58 2018 -0300
+
+    criada rotas de notificacao
+
+[33mcommit 335dae2739bed1a05b0b58f8878082bf35d6f6ec[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 24 20:41:02 2018 -0300
+
+    criada rotas de mensagem
+
+[33mcommit 898fd9d7458563c3ef68b5fdb391d5c3821fa48b[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 24 20:37:17 2018 -0300
+
+    consertos sintaticos em arquivos da api
+
+[33mcommit c9d47881ed0e4c60d5f6721293892e06a36fe278[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 24 20:33:10 2018 -0300
+
+    post.js e postService.js criados
+
+[33mcommit 60aa32ea1da3f96c2c96123cefe80c3b5395bfaa[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 24 20:13:03 2018 -0300
+
+    notificacao.js e notificacaoService.js criados
+
+[33mcommit d9635cc5eef666ce286caa8f7bce282eac83ab16[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 24 19:55:27 2018 -0300
+
+    mensagem criada
+
+[33mcommit fd80a250bb582e4e8e952423c967be9eeb1da7da[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 24 15:30:30 2018 -0300
+
+    aqruivos feito e correção na linha de module.exportes nos demais arquivos
+
+[33mcommit 0f8e31451eebbb189d6c0f7026066d9dfea76a56[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 24 15:17:53 2018 -0300
+
+    telefone.js criado
+
+[33mcommit b012f9981c2d90c7c934a2ac74f7f21a3701621f[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 24 15:15:42 2018 -0300
+
+    telefoneService criado
+
+[33mcommit e7aa22595cd47e031c1703122b0cd46770972a21[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 24 15:09:58 2018 -0300
+
+    Projeto Service criado
+
+[33mcommit f8bdd69b934e5527a54f0c3972ab3e2f98dbec75[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 24 15:04:11 2018 -0300
+
+    projeto.js feito
+
+[33mcommit f8b540b1debe5d1f839b75e2a18f98517ffbfa24[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Sun Apr 22 10:22:49 2018 -0300
+
+     medo não sei o que mudei :(
+
+[33mcommit 21b37272500ab95a6d517c403f0233e2ac51cf44[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Fri Apr 20 00:18:51 2018 -0300
+
+    routes atualizada 2
+
+[33mcommit 5ae4dd1522c5596106222bd70f3934cbf57bcb42[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Fri Apr 20 00:12:02 2018 -0300
+
+    routes atualizada
+
+[33mcommit 758ff19765255cb0dd6f5dac842ee6e6f5645382[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Wed Apr 18 23:14:28 2018 -0300
+
+    horario.js criado
+
+[33mcommit c0175d52dca03ea30ed2cf38ef830c712c73b6b4[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Wed Apr 18 11:11:33 2018 -0300
+
+    horarioService.js criado
+
+[33mcommit d92f5c7a00799b02786f740f117645b08f4848c8[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 17 23:05:42 2018 -0300
+
+    cores do css nav
+
+[33mcommit 3d6578236040c5baab5b0cf1302eba8eb9f24bd6[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 17 22:38:10 2018 -0300
+
+    fase.js correção
+
+[33mcommit 3b76ed9fedc3ea30424695200eb8202c6e797f97[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 17 22:35:49 2018 -0300
+
+    fase.js criado
+
+[33mcommit 529cbec36d53426741f14081b8044d9f953033fe[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 17 21:13:49 2018 -0300
+
+    faseService.js criado
+
+[33mcommit 6062ab0707ca66c0bf0553a390a5a99abbdcbc2f[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 17 19:08:51 2018 -0300
+
+    Corrigindo erro em competeciaService.js
+
+[33mcommit dfcba47bbcb8134ae98f8e981e125b6995534957[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 17 15:16:29 2018 -0300
+
+    competencia.js pronta
+
+[33mcommit 93ba6e37632cd25b19e884770c6c4f03627d837e[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 17 11:08:50 2018 -0300
+
+    commitando o clone do lab
+
+[33mcommit 9d981f9209dec09f82e4547b661bd923c913e906[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 17 11:00:47 2018 -0300
+
+    nada mesmo
+
+[33mcommit f1f2e9dfc9f176cae65740f8f8b0dc7c0fd57f91[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 17 10:56:58 2018 -0300
+
+    outro teste em competencias.js
+
+[33mcommit 7832ffe3f6b5d29b75e2b60f7ba5dafa4b398773[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 17 10:52:18 2018 -0300
+
+    nada de mais apenas um teste
+
+[33mcommit f51c8e903ba4953ca634fa717da91866a9af4dea[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 17 10:17:21 2018 -0300
+
+    Criando conpetenciaService.js
+
+[33mcommit 07803e1e27e958c239fe56cf7e048f825ef2d431[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Tue Apr 17 10:10:27 2018 -0300
+
+    Apenas o README.md
+
+[33mcommit 29a5f44c15d52cdc65feeaced74cac0d2fd15086[m
+Author: Renê Milagres <renevictorm@gmail.com>
+Date:   Fri Apr 13 11:21:32 2018 -0300
+
+    Primeiro commit, contendo o fake frontend e o backend com cliente e colaborador apenas
