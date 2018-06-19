@@ -17,7 +17,7 @@ export default props => (
 /*const URL = 'http://localhost:3003/api/todos'
 
 
-export default class Todo extends Component {
+export default class Todo excd tends Component {
   
     constructor(props) {
         super(props)

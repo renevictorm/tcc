@@ -4,7 +4,7 @@ import App from './view/App';
 
 import registerServiceWorker from './registerServiceWorker.js';
 
-//import 'materialize-css/bin/materialize.css';
+import 'materialize-css/bin/materialize.css';
 import 'materialize-css/bin/materialize.js';
 
 import 'material-design-icons/iconfont/material-icons.css';
