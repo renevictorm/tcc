@@ -35,27 +35,27 @@ class NovoProjeto extends Component {
                 <div className="divider" />
                 <div className="input-field">
                     <input placeholder="" id="Nome" type="text" className="validate"  />
-                    <label for="preco_estimado">Nome</label>
+                    <label >Nome</label>
                    
                 </div>
                 <div className="input-field">
                     <input placeholder="" id="tempo_estimado" type="text" className="validate" />
-                    <label for="tempo_estimado">Tipo de Projeto</label>
+                    <label >Tipo de Projeto</label>
                    
                 </div>
                 <div className="input-field">
                     <input placeholder="" id="Nome_Cliente" type="text" className="validate" />
-                    <label for="tempo_estimado">Nome do Cliente</label>
+                    <label >Nome do Cliente</label>
                    
                 </div>
                 <div className="input-field">
                     <input placeholder="" id="CPF_CNPJ_Clinete" type="text" className="validate" />
-                    <label for="tempo_estimado">CPF ou CNPJ do Cliente</label>
+                    <label >CPF ou CNPJ do Cliente</label>
                    
                 </div>
                 <div className="input-field">
                     <input placeholder="" id="Endereco_Cliente" type="text" className="validate" />
-                    <label for="tempo_estimado">Endereço do Cliente</label>
+                    <label >Endereço do Cliente</label>
                    
                 </div>
                 <br/>   

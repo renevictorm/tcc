@@ -16,7 +16,7 @@ class Principal extends Component {
         
         switch(store.getState().navigation) {
             case 'UserInfo':
-                return <div class='container'><BemVindo />
+                return <div className='container'><BemVindo />
                         </div>
             case 'NovaFase':
                 return <NovaFase />

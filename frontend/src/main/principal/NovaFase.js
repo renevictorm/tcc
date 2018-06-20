@@ -33,14 +33,14 @@ class NovaFase extends Component {
                 <div className="divider" />
                 <div className="input-field">
                     <input placeholder="" id="Nome_Fase" type="text" className="validate" />
-                    <label for="preco_estimado">Nome</label>
+                    <label >Nome</label>
 
                 </div>
                 <br />
 
                 <div className="input-field">
-                    <textarea name="Text1" cols="40" rows="20" wrap="hard">Descrição</textarea>
-
+                    <textarea name="Text1" cols="40" rows="20" wrap="hard" ></textarea>
+                    <label >Descrição</label>
 
                 </div>
 
@@ -52,15 +52,15 @@ class NovaFase extends Component {
                     <br />
                     <br />
                     <ul id="slide-in" >{NavButton("Add", "AdicionarColaborador", "add")}Adicionar Colaborador</ul>
-                    <table Alingn="center" >
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th><ul id="slide-in" >{NavButton("Adicionar Fase", "NovoProjetoEstimativa")}</ul></th>
+                                <th><ul id="slide-in" >{NavButton("Cancelar", "NovoProjetoEstimativa")}</ul></th>
 
-                        <tr>
-                            <th><ul id="slide-in" >{NavButton("Adicionar Fase", "NovoProjetoEstimativa")}</ul></th>
-                            <th><ul id="slide-in" >{NavButton("Cancelar", "NovoProjetoEstimativa")}</ul></th>
+                            </tr>
 
-                        </tr>
-
-
+                        </tbody>
                     </table>
 
 

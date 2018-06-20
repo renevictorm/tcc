@@ -26,7 +26,7 @@ class TelaInicial extends Component {
                 <TopBar />
                 <SideBar />
                 <div id="Content">
-                <NovoFuncionario /> : 
+                <Principal /> : 
                 </div>
             </div>);
     }

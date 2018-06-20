@@ -27,18 +27,18 @@ class AdicionarColaborador extends Component {
         window.$('select').material_select()
     }
     render() {
-        return <div className="row  center">
+        return <div className="socorro">
             <form className="col s6 " >
                 <h1>Adicionar Colaborador</h1>
                 <div className="divider" />
                 <div className="input-field">
                     <input placeholder="" id="Cargo" type="text" className="validate" />
-                    <label for="preco_estimado">Cargo</label>
+                    <label >Cargo</label>
                     
                 </div>
                 <div className="input-field">
                 <input placeholder="" id="Colaborador" type="text" className="validate" />
-                <label for="preco_estimado">Colaborador</label>
+                <label >Colaborador</label>
                 <a className="waves-effect waves-light btn #1565c0 blue darken-3">
                             Escolher automático
                         <i className="material-icons right">send</i>
@@ -52,14 +52,14 @@ class AdicionarColaborador extends Component {
                     <div className="col s4 offset-s4">
                         
                             <table >
-                            
+                            <tbody>
                                 <tr>
                                     <th><ul id="slide-in" >{NavButton("Adicionar Fase", "NovaFase", "add")}</ul></th>
                                     <th><ul id="slide-in" >{NavButton("Cancelar", "NovaFase", "add")}</ul></th>
                                     
                                 </tr>                
                                                             
-                                
+                                </tbody>  
                             </table>
                     
                         

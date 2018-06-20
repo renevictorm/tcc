@@ -34,7 +34,7 @@ class NovoProjetoEsimativa extends Component {
                 <br />
                 <div className="input-field">
                     <input placeholder="" id="preco_estimado" type="text" className="validate" />
-                    <label for="preco_estimado">Preço Estimado (Reais)</label>
+                    <label >Preço Estimado (Reais)</label>
                     <br />
                     <br />
 
@@ -52,7 +52,7 @@ class NovoProjetoEsimativa extends Component {
                 <br />
                 <div className="input-field">
                     <input placeholder="" id="tempo_estimado" type="text" className="validate" />
-                    <label for="tempo_estimado">Tempo Estimado (Meses)</label>
+                    <label >Tempo Estimado (Meses)</label>
                     <br />
                     <br />
                     <div className="row left">
