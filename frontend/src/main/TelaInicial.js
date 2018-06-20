@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom';
 import TopBar from './TopBar.js';
 import SideBar from './SideBar.js';
 import Principal from './principal/Principal.js';
-import BemVindo from './principal/BemVindo.js'
+import BemVindo from './principal/BemVindo.js';
+import Home from './principal/Home.js'
+import AdicionarColaborador from './principal/AdicionarColaborador.js'
+import NovoFuncionario from './principal/NovoFuncionario.js'
 import store from '../store/index.js';
 
 import NotFound from './NotFound'
@@ -23,7 +26,7 @@ class TelaInicial extends Component {
                 <TopBar />
                 <SideBar />
                 <div id="Content">
-                <Principal /> : 
+                <NovoFuncionario /> : 
                 </div>
             </div>);
     }

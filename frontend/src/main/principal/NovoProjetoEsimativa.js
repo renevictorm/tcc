@@ -31,6 +31,7 @@ class NovoProjetoEsimativa extends Component {
             <form className="socorro" >
                 <h1>Novo Projeto</h1>
                 <div className="divider" />
+                <br />
                 <div className="input-field">
                     <input placeholder="" id="preco_estimado" type="text" className="validate" />
                     <label for="preco_estimado">Preço Estimado (Reais)</label>
@@ -46,7 +47,7 @@ class NovoProjetoEsimativa extends Component {
                 </div>
                 <br />
                 <br />
-                <br />
+                
                 <br />
                 <br />
                 <div className="input-field">

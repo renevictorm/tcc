@@ -28,25 +28,38 @@ class NovoFuncionario extends Component {
     }
 
     render() {
-        return <div className="col s6" style={{ paddingTop: "20px" }}>
+        return <div className="socorro" style={{ paddingTop: "20px" }}>
+            <h1>Novo Funcionário</h1>
+            <br/>
+        
             <div className="input-field">
-                <select id="tipo-usuario">
+                <select id="tipo">
                     <option value="" disabled selected>Tipo de usuário</option>
                     <option value="1">Super-admin</option>
                     <option value="2">Administrador</option>
                     <option value="3">Usuário</option>
                 </select>
-                <label for="tipo-usuario">Tipo de usuário</label>
+                <label for="tipo">Tipo de usuário</label>
             </div>
 
             <div className="input-field">
-                <input id="nome_completo" type="text" />
-                <label for="nome_completo">Nome completo</label>
+                <input id="name" type="text" />
+                <label for="name">Nome completo</label>
+            </div>
+
+            <div className="input-field">
+                <input id="matricula" type="text" />
+                <label for="matricula">Matrícula</label>
             </div>
 
             <div className="input-field">
                 <input id="cpf" type="text" />
                 <label for="cpf">CPF</label>
+            </div>
+
+             <div className="input-field">
+                <input id="identidade" type="text" />
+                <label for="identidade">Identidade</label>
             </div>
 
             <div className="input-field">
@@ -55,18 +68,18 @@ class NovoFuncionario extends Component {
             </div>
 
             <div className="input-field">
-                <input id="endereco" type="text" />
-                <label for="endereco">Telefone</label>
+                <input id="dataNascimento" type="text" className="datepicker" />
+                <label for="dataNascimento">Data de nascimento</label>
             </div>
 
             <div className="input-field">
-                <input id="data-nasc" type="text" className="datepicker" />
-                <label for="data-nasc">Data de nascimento</label>
+                <input id="dataEntrada" type="text" className="datepicker" />
+                <label for="dataEntrada">Data de entrada</label>
             </div>
 
-            <div className="input-field">
-                <input id="data-contrato" type="text" className="datepicker" />
-                <label for="data-contrato">Data de contrato</label>
+              <div className="input-field">
+                <input id="dataSaida" type="text" className="datepicker" />
+                <label for="dataSaida">Data de saída</label>
             </div>
 
             <div className="input-field">
@@ -74,14 +87,51 @@ class NovoFuncionario extends Component {
                 <label for="email">Email</label>
             </div>
 
+             <div className="input-field">
+                <input id="emailAlternative" type="text" />
+                <label for="emailAlternative">Email alternativo</label>
+            </div>
+           
             <div className="input-field">
-                <input id="pass" type="password" />
-                <label for="pass">Senha</label>
+                <input id="cargo" type="text" />
+                <label for="cargo">Cargo</label>
             </div>
 
             <div className="input-field">
-                <input id="pass_confirm" type="password" />
-                <label for="pass_confirm">Repita a senha</label>
+                <select id="status">
+                    <option value="" disabled selected>Status</option>
+                    <option value = 'false' >Desligado</option>
+                    <option value = 'true' >Vinculado</option>
+                   
+                </select>
+                <label for="status">Status</label>
+            </div>
+
+            <div className="input-field">
+                <select id="camisa">
+                    <option value="" disabled selected>Tamanho da Camisa</option>
+                    <option value="GG">GG</option>
+                    <option value="G">G</option>
+                    <option value="M">M</option>
+                    <option value="P">P</option>
+                    <option value="PP">PP</option>
+                </select>
+                <label for="camisa">Tamanho da camisa</label>
+            </div>
+
+             <div className="input-field">
+                <input id="login" type="text" />
+                <label for="login">Login</label>
+            </div>
+
+            <div className="input-field">
+                <input id="senha" type="password" />
+                <label for="senha">Senha</label>
+            </div>
+
+            <div className="input-field">
+                <input id="senha_confirm" type="password" />
+                <label for="senha_confirm">Repita a senha</label>
             </div>
 
             <div className="row">
