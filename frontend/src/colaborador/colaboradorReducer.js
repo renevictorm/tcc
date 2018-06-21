@@ -13,7 +13,9 @@ const INITIAL_STATE = {
     dataNascimento: '',
     dataEntrada: '',
     dataSaida: '',
-
+    camisa: '',
+    status: '',
+    isEdited: '',
     list: []
 }
 export default (state = INITIAL_STATE, action) => {
@@ -57,11 +59,15 @@ export default (state = INITIAL_STATE, action) => {
 
         case 'COLABORADOR_SEARCHED':
             return { ...state, list: action.payload }
+        //Quem vai ser editado====================================
+        case 'ISEDITED_SEARCHED':
+            return { ...state, isEdited: action.payload }
+        //========================================================
         case 'COLABORADOR_CLEAR':
             return {
                 ...state, name: '', matricula: '', tipoUsuario: '', cpf: '', email: '', emailAlternative: '', endereco: '',
-                identidade: '', cargo: '', login: '', senha: '', dataNascimento: '', dataEntrada: '', dataSaida: '', camisa:'',
-                status:''
+                identidade: '', cargo: '', login: '', senha: '', dataNascimento: '', dataEntrada: '', dataSaida: '', camisa: '',
+                status: ''
             }
 
         default:

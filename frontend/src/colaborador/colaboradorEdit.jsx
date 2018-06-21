@@ -3,12 +3,12 @@ import { connect } from 'react-redux'
 import Grid from '../template/grid'
 import { bindActionCreators } from 'redux'
 import {
-    add, changeName, changeTipoUsuario, search, clear, changeMatricula, changeEmail, changeEmailAlternative,
+    edit, add, changeName, changeTipoUsuario, search, clear, changeMatricula, changeEmail, changeEmailAlternative,
     changeCpf, changeEndereco, changeIdentidade, changeCargo, changeLogin, changeSenha, changeDataNascimento,
     changeDataEntrada, changeDataSaida, changeCamisa, changeStatus
 } from './colaboradorActions'
 
-class NovoFuncionario extends Component {
+class ColaboradorEdit extends Component {
     constructor(props) {
         super(props)
         this.keyHandler = this.keyHandler.bind(this)
@@ -84,7 +84,7 @@ class NovoFuncionario extends Component {
         if (isNaN(this.props.tipoUsuario) || (this.props.tipoUsuario) < 1 || (this.props.tipoUsuario) > 3) {
             alert("O Campo 'Tipo de Usuário' deve ser um número de 1 a 3: \n 1: Super admin \n 2: Admin \n 3: Usuário ")
         } else {
-            add(name, tipoUsuario, matricula, cpf, email, emailAlternative, endereco, identidade, cargo,
+            edit(name, tipoUsuario, matricula, cpf, email, emailAlternative, endereco, identidade, cargo,
                 login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status)
         }
 
@@ -97,7 +97,7 @@ class NovoFuncionario extends Component {
             login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status } = this.props
         return <div className="socorro2" style={{ paddingTop: "20px" }}>
             <Grid cols='12 9 10'>
-                <h1>Novo Funcionário</h1>
+                <h1>Editar Funcionário</h1>
                 <br />
 
                 <div className="input-field" >
@@ -297,9 +297,9 @@ const mapStateToProps = state => ({
 })
 const mapDispatchToProps = dispatch =>
     bindActionCreators({
-        add, changeName, search, clear, changeTipoUsuario, changeMatricula,
+        edit, add, changeName, search, clear, changeTipoUsuario, changeMatricula,
         changeEmail, changeEmailAlternative, changeCpf, changeEndereco, changeIdentidade, changeCargo,
         changeLogin, changeSenha, changeDataNascimento, changeDataEntrada, changeDataSaida, changeCamisa, 
         changeStatus
     }, dispatch)
-export default connect(mapStateToProps, mapDispatchToProps)(NovoFuncionario)
+export default connect(mapStateToProps, mapDispatchToProps)(ColaboradorEdit)

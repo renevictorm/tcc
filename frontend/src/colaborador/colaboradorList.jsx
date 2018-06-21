@@ -1,16 +1,24 @@
 import React from 'react'
 import { connect } from 'react-redux'
-//import IconButton from '../template/iconButton'
+import IconButton from '../template/iconButton'
 
 import { bindActionCreators } from 'redux'
-//import { markAsDone, markAsPending, remove } from './todoActions'
+import { markAsDone, markAsPending, remove } from './colaboradorActions'
 
 
-const TodoList = props => {
+const ColaboradorList = props => {
     const renderRows = () => {
         const list = props.list || []
-        return list.map(todo => (
-            <tr key={todo._id}>
+        return list.map(colaborador => (
+            <tr key={colaborador._id}>
+            <td className={(colaborador.camisa= "GG") ? 'markedAsDone' : ''}>{colaborador.name}</td>              
+                <td>
+                    
+                   <a href='#/colaboradore' className="waves-effect waves btn #1565c0 blue darken-3">
+                editar
+                    <i className="material-icons left">{"add"}</i>
+                    </a>
+                </td>
                 
             </tr>
         ))
@@ -20,17 +28,20 @@ const TodoList = props => {
             <thead>
                 <tr>
                     <th>Nome</th>
-                    <th>Imagem</th>
-                    <th>Cargo</th>
+                    
                     <th className ='tableActions' >Ações</th>
                 </tr>
             </thead>
             <tbody>
+            
                 {renderRows()}
+                
             </tbody>
         </table>
     )
 }
 
-
- export default TodoList
+const mapStateToProps = state => ({list: state.colaborador.list})
+const mapDosátchToProps = (dispatch) => bindActionCreators ({ markAsDone, markAsPending, remove}, dispatch)
+export default connect(mapStateToProps, mapDosátchToProps)(ColaboradorList)
+ 

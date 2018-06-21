@@ -81,10 +81,20 @@ export const search = (name) => {
 
 }
 
-export const add = (name, tipoUsuario, matricula, cpf, email, emailAlternative, endereco,
-    identidade, cargo, login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status ) => {
+export const add = (name, tipoUsuario, matricula, cpf, email, emailAlternative, endereco, identidade, cargo, login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status ) => {
     return dispatch => {
         axios.post(URL, {
+            name, tipoUsuario, matricula, email, emailAlternative, cpf, endereco, identidade, cargo,
+            login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status 
+        })
+            .then(resp => dispatch(clear()))
+            .then(resp => dispatch(search()))
+    }
+}
+
+export const edit = (name, tipoUsuario, matricula, cpf, email, emailAlternative, endereco, identidade, cargo, login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status ) => {
+    return dispatch => {
+        axios.put(`${URL}/${todo._id}`, {
             name, tipoUsuario, matricula, email, emailAlternative, cpf, endereco, identidade, cargo,
             login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status 
         })
@@ -96,4 +106,29 @@ export const add = (name, tipoUsuario, matricula, cpf, email, emailAlternative, 
 export const clear = () => {
     return [{ type: 'COLABORADOR_CLEAR' }, search()]
 }
+//--------------------------------------------------------------------------------------------------
+export const markAsDone = (colaborador) => {
+    /*return dispatch => {
+        axios.put(`${URL}/${colaborador._id}`, { ...colaborador, done: true })
+            .then(resp => dispatch(search()))
+    }*/
+    return null
+}
 
+
+
+export const markAsPending = (colaborador) => {
+    /*return dispatch => {
+        axios.put(`${URL}/${colaborador._id}`, { ...colaborador, done: false })
+            .then(resp => dispatch(search()))
+    }*/
+    return null
+}
+
+export const remove = (colaborador) => {
+   /* return dispatch => {
+        axios.delete(`${URL}/${colaborador._id}`)
+            .then(resp => dispatch(search()))
+    }*/
+    return null
+}

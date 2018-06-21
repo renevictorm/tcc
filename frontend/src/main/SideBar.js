@@ -7,24 +7,31 @@ const NavButton = (texto, to, icone) => {
         case 'home':
             return <li>
                 <a href='#/bemvindo' className="waves-effect waves btn #1565c0 blue darken-3">
-                    {texto}
+                    <h7 className="color:#FFFFFF hide-on-med-and-down" >{texto}</h7>
                     <i className="material-icons left">{icone}</i>
                 </a>
             </li>;
         case 'Novo Projeto':
             return <li>
                 <a href='#/colaboradorp' className="waves-effect waves btn #1565c0 blue darken-3">
-                    {texto}
+                <h7 className="color:#FFFFFF hide-on-med-and-down" >{texto}</h7>
                     <i className="material-icons left">{icone}</i>
                 </a>
             </li>;
         case 'Novo Colaborador':
         return <li>
             <a href='#/colaborador' className="waves-effect waves btn #1565c0 blue darken-3">
-                {texto}
+            <h7 className="color:#FFFFFF hide-on-med-and-down" >{texto}</h7>
                 <i className="material-icons left">{icone}</i>
             </a>
         </li>;
+        case 'Pesquisar Colaborador':
+        return <li>
+        <a href='#/colaboradorP' className="waves-effect waves btn #1565c0 blue darken-3">
+        <h7 className="color:#FFFFFF hide-on-med-and-down" >{texto}</h7>
+            <i className="material-icons left">{icone}</i>
+        </a>
+    </li>;
       
     }
    
@@ -58,11 +65,11 @@ const SideBar = () => {
 
                 {NavButton("home", "UserInfo", "home")}
 
-                {NavButton("Novo Projeto", "NovoProjeto", "add")}
+                {NavButton("Novo Projeto", "NovoProjeto", "create")}
 
                 {NavButton("Novo Colaborador", "NovoColaborador", "assignment_ind")}
 
-                {NavButton("Pesquisar Colaborador", "PesquisarColaborador", "assignment_ind")}
+                {NavButton("Pesquisar Colaborador", "PesquisarColaborador", "search")}
 
             </ul>
         </div>;
