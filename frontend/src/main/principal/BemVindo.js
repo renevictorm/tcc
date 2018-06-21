@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import store from "../../store/index.js";
-
+import Grid from "../../template/grid";
 class UserInfo extends Component {
     componentDidMount() {
         const dom = ReactDOM.findDOMNode(this);
@@ -15,7 +15,7 @@ class UserInfo extends Component {
     render() {
         const usuarioAtual = store.getState().usuarioAtual;
         return <div className="row">
-            
+            <Grid cols='12 9 10'>
             <div className="col s12">
                   
                 <div className="divider " />
@@ -27,7 +27,7 @@ class UserInfo extends Component {
                 <h2>{usuarioAtual.username} </h2>
             </div>
 
-            
+            </Grid>
         </div>;
     }
 }

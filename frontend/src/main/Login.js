@@ -19,7 +19,7 @@ class Login extends Component {
             
                 <div className="modal white" >
                         
-                <img class="responsive-img" src="http://www.centev.ufv.br/Recursos/Cemp-Empresas/Fotos/p18sqfa8a91e51ut31llu17c719373.png" width="300" height="212.25"/> 
+                <img className="responsive-img" src="http://www.centev.ufv.br/Recursos/Cemp-Empresas/Fotos/p18sqfa8a91e51ut31llu17c719373.png" /> 
                 
                
                         

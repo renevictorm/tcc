@@ -8,7 +8,7 @@ import Home from './principal/Home.js'
 import AdicionarColaborador from './principal/AdicionarColaborador.js'
 import NovoFuncionario from './principal/NovoFuncionario.js'
 import store from '../store/index.js';
-
+import Routes from './routes'
 import NotFound from './NotFound'
 
 class TelaInicial extends Component {
@@ -26,7 +26,7 @@ class TelaInicial extends Component {
                 <TopBar />
                 <SideBar />
                 <div id="Content">
-                <Principal /> : 
+                <Routes /> 
                 </div>
             </div>);
     }

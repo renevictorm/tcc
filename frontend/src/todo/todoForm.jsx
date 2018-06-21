@@ -5,7 +5,7 @@ import IconButton from '../template/iconButton'
 import { bindActionCreators } from 'redux'
 import { add, changeDescription, search, clear } from './todoActions'
 
-class TodoForm extends Component {
+class TodoForm extends Component { 
     constructor(props) {
         super(props)
         this.keyHandler = this.keyHandler.bind(this)
