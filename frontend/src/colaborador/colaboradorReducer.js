@@ -61,14 +61,18 @@ export default (state = INITIAL_STATE, action) => {
             return { ...state, list: action.payload }
         //Quem vai ser editado====================================
         case 'ISEDITED_SEARCHED':
-            return { ...state, isEdited: action.payload }
+            return { ...state, isEdited: action.payload._id, name: action.payload.name
+                ,tipoUsuario: action.payload.tipoUsuario, matricula: action.payload.matricula, identidade: action.payload.identidade
+                , dataEntrada: action.payload.dataEntrada, dataNascimento: action.payload.dataNascimento, dataSaida: action.payload.dataSaida
+                , login: action.payload.login, senha: action.payload.senha, status: action.payload.status
+                , camisa: action.payload.camisa, endereco: action.payload.endereco, email: action.payload.email,
+                 emailAlternative: action.payload.emailAlternative, cpf: action.payload.cpf, cargo: action.payload.cargo }
         //========================================================
         case 'COLABORADOR_CLEAR':
             return {
-                ...state, name: '', matricula: '', tipoUsuario: '', cpf: '', email: '', emailAlternative: '', endereco: '',
-                identidade: '', cargo: '', login: '', senha: '', dataNascimento: '', dataEntrada: '', dataSaida: '', camisa: '',
-                status: ''
-            }
+                ...state, name: '', matricula: '',cpf: '',email: '', emailAlternative: '', endereco: '', identidade: '',
+                cargo: '', login: '', senha: '', dataNascimento: '', dataEntrada: '', dataSaida: '', camisa: '', status: '',
+                isEdited: '' }
 
         default:
             return state

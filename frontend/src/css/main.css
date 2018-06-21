@@ -59,6 +59,14 @@ padding:15px 260px;
   }
 
 
+.socorro3 {
+  padding:3% 10%;  
+  /*border:100px solid #000; */ 
+  /*font:12px Verdana;  fonte do input */
+  }
+
+
+
 .side-nav {
   width: 100%;
   transform: translateX(0);

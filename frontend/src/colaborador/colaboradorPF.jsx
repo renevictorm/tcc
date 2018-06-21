@@ -24,7 +24,7 @@ class ColaboradorPF extends Component {
     render() {
         const {  search, name } = this.props
         return (
-            <div role='form' className='todoForm'>
+            <div role='form' className='socorro3'>
                 <Grid cols='12 9 10'>
                     <input id='name' className='form-control'
                         placeholder='Pesquise por nome'
@@ -33,11 +33,18 @@ class ColaboradorPF extends Component {
                         value={this.props.name}></input>
                 </Grid>
                 <Grid cols='12 3 2'>
-                  
-                    <IconButton style='info' icon='search'
-                        onClick={search}></IconButton>
-                    <IconButton style='default' icon='close'
-                        onClick={this.props.clear}></IconButton>
+                    
+                    <a className="waves-effect waves btn #1565c0 blue darken-3 left"
+                        onClick={search}>
+                        
+                    <i className="material-icons ">{"search"}</i>
+                    </a>
+                    <a className="waves-effect waves btn #1565c0 blue darken-3 left"
+                        onClick={this.props.clear}>
+                        
+                    <i className="material-icons ">{"clear"}</i>
+                    </a>
+                   
                 </Grid>
 
             </div>

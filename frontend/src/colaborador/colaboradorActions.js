@@ -91,15 +91,24 @@ export const add = (name, tipoUsuario, matricula, cpf, email, emailAlternative, 
             .then(resp => dispatch(search()))
     }
 }
+export const changeEdit = (colaborador) => {
+    return{
+       type: 'ISEDITED_SEARCHED',
+       payload: colaborador
+    }
 
-export const edit = (name, tipoUsuario, matricula, cpf, email, emailAlternative, endereco, identidade, cargo, login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status ) => {
+    
+}
+
+
+export const edit = (isEdited,colaborador, name, tipoUsuario, matricula, cpf, email, emailAlternative, endereco, identidade, cargo, login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status ) => {
     return dispatch => {
-        axios.put(`${URL}/${todo._id}`, {
-            name, tipoUsuario, matricula, email, emailAlternative, cpf, endereco, identidade, cargo,
-            login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status 
-        })
+        axios.put(`${URL}/${isEdited}`, { ...colaborador, name, tipoUsuario, matricula, email, emailAlternative, cpf, endereco, identidade, cargo,
+            login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status   })
             .then(resp => dispatch(clear()))
             .then(resp => dispatch(search()))
+            alert(isEdited);
+
     }
 }
 

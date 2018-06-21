@@ -95,9 +95,10 @@ class NovoFuncionario extends Component {
     render() {
         const { add, search, name, tipoUsuario, matricula, email, emailAlternative, cpf, endereco, identidade, cargo,
             login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status } = this.props
-        return <div className="socorro2" style={{ paddingTop: "20px" }}>
+        return <div  style={{ paddingTop: "20px" }}>
             <Grid cols='12 9 10'>
                 <h1>Novo Funcionário</h1>
+                <div className="socorro2">
                 <br />
 
                 <div className="input-field" >
@@ -264,7 +265,7 @@ class NovoFuncionario extends Component {
 
 
                 <div className="row">
-                    <div className="col s4 offset-s4">
+                    <div className="center">
                         <a className="waves-effect waves-light btn"
                             onClick={() => [
 
@@ -278,8 +279,9 @@ class NovoFuncionario extends Component {
                         </a>
                     </div>
                 </div>
-
+                </div>
             </Grid>
+            
         </div>
 
     }

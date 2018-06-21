@@ -25,7 +25,7 @@ class ColaboradorEdit extends Component {
         if (e.key === 'Enter') {
             e.shiftKey ? search() : add(name)
         } else if (e.key === 'Escape') {
-            clear()
+           
         }
     }
     componentDidMount() {
@@ -79,12 +79,13 @@ class ColaboradorEdit extends Component {
             
     */
     getVALUE() {
-        const { add, search, name, tipoUsuario, matricula, email, emailAlternative, cpf, endereco, identidade, cargo,
+        const { isEdited,colaborador, edit, add, search, name, tipoUsuario, matricula, email, emailAlternative, cpf, endereco, identidade, cargo,
             login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status } = this.props
         if (isNaN(this.props.tipoUsuario) || (this.props.tipoUsuario) < 1 || (this.props.tipoUsuario) > 3) {
             alert("O Campo 'Tipo de Usuário' deve ser um número de 1 a 3: \n 1: Super admin \n 2: Admin \n 3: Usuário ")
         } else {
-            edit(name, tipoUsuario, matricula, cpf, email, emailAlternative, endereco, identidade, cargo,
+            
+            edit(isEdited, colaborador, name, tipoUsuario, matricula, cpf, email, emailAlternative, endereco, identidade, cargo,
                 login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status)
         }
 
@@ -93,7 +94,7 @@ class ColaboradorEdit extends Component {
                     
     */
     render() {
-        const { add, search, name, tipoUsuario, matricula, email, emailAlternative, cpf, endereco, identidade, cargo,
+        const {edit, add, search, name, tipoUsuario, matricula, email, emailAlternative, cpf, endereco, identidade, cargo,
             login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status } = this.props
         return <div className="socorro2" style={{ paddingTop: "20px" }}>
             <Grid cols='12 9 10'>
@@ -265,7 +266,7 @@ class ColaboradorEdit extends Component {
 
                 <div className="row">
                     <div className="col s4 offset-s4">
-                        <a className="waves-effect waves-light btn"
+                        <a href='#/colaboradorp' className="waves-effect waves-light btn"
                             onClick={() => [
 
                                 this.getVALUE()
@@ -293,7 +294,7 @@ const mapStateToProps = state => ({
     cargo: state.colaborador.cargo, login: state.colaborador.login,
     senha: state.colaborador.senha, dataNascimento: state.colaborador.dataNascimento,
     dataEntrada: state.colaborador.dataEntrada, dataSaida: state.colaborador.dataSaida,
-    camisa: state.colaborador.camisa, status: state.colaborador.status
+    camisa: state.colaborador.camisa, status: state.colaborador.status, isEdited: state.colaborador.isEdited
 })
 const mapDispatchToProps = dispatch =>
     bindActionCreators({
