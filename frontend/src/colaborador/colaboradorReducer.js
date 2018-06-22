@@ -56,6 +56,7 @@ export default (state = INITIAL_STATE, action) => {
             return { ...state, camisa: action.payload }
         case 'STATUS_CHANGED':
             return { ...state, status: action.payload }
+        
 
         case 'COLABORADOR_SEARCHED':
             return { ...state, list: action.payload }

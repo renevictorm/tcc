@@ -7,6 +7,7 @@ import ColaboradorPF from './colaboradorPF'
 export default props => (
     <div>
         <ColaboradorPF/>
+        <br/>
         <ColaboradorList />
        
         

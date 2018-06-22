@@ -9,13 +9,14 @@ import Welcome from './principal/BemVindo'
 import Relatorios from './principal/Relatorios';
 import UserInfo from './principal/UserInfo';
 import NovoProjeto from './principal/NovoProjeto';
+import Home from './principal/Home';
 
 
 
 export default props => (
     <Router history={hashHistory}>
         <Route path='/bemvindo' component={Welcome} /> 
-        <Route path='/novoprojeto' component={NovoProjeto} />      
+        <Route path='/novoprojeto' component={Home} />      
         <Route path='/todos' component={Todo} />
         <Route path='/colaborador' component={Colaborador} />
         <Route path='/colaboradorp' component={ColaboradorP} />
