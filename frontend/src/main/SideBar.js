@@ -74,7 +74,7 @@ const SideBar = () => {
 
                 {NavButton("Novo Projeto", "NovoProjeto", "create")}
 
-                {NavButton("Nova Competência", "NovoCompetencia", "assignment_ind")}
+                {NavButton("Nova Competência", "NovoCompetencia", "receipt")}
 
                 {NavButton("Novo Colaborador", "NovoColaborador", "assignment_ind")}
 

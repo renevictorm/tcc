@@ -61,7 +61,7 @@ export default (state = INITIAL_STATE, action) => {
         case 'COLABORADOR_SEARCHED':
             return { ...state, list: action.payload }
         //Quem vai ser editado====================================
-        case 'ISEDITED_SEARCHED':
+        case 'ISEDITED_COLA_SEARCHED':
             return { ...state, isEdited: action.payload._id, name: action.payload.name
                 ,tipoUsuario: action.payload.tipoUsuario, matricula: action.payload.matricula, identidade: action.payload.identidade
                 , dataEntrada: action.payload.dataEntrada, dataNascimento: action.payload.dataNascimento, dataSaida: action.payload.dataSaida

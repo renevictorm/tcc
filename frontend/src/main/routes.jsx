@@ -12,6 +12,7 @@ import Relatorios from './principal/Relatorios';
 import UserInfo from './principal/UserInfo';
 import NovoProjeto from './principal/NovoProjeto';
 import Home from './principal/Home';
+import ColaboradorVer from '../colaborador/colaboradorVerComp';
 
 
 
@@ -27,6 +28,7 @@ export default props => (
         <Route path='/colaborador' component={Colaborador} />
         <Route path='/colaboradorp' component={ColaboradorP} />
         <Route path='/colaboradore' component={ColaboradorE} />
+        <Route path='/colaboradorver' component={ColaboradorVer} />
         
         <Route path='/about' component={About} />
         <Redirect from='*' to='/bemvindo' />

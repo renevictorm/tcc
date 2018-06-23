@@ -54,7 +54,7 @@ const CompetenciaList = props => {
 
             <div className="row hide-on-med-and-down">
                 <div className="col s12">
-                    <h5>competenciaes</h5>
+                    <h3>Competências:</h3>
                     <div className="divider" />
                     <div className="row">
                         {renderRows2()}

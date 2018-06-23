@@ -83,6 +83,7 @@ export const search = (name) => {
 
 export const add = (name, tipoUsuario, matricula, cpf, email, emailAlternative, endereco, identidade, cargo, login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status ) => {
     return dispatch => {
+        
         axios.post(URL, {
             name, tipoUsuario, matricula, email, emailAlternative, cpf, endereco, identidade, cargo,
             login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status 
@@ -93,7 +94,7 @@ export const add = (name, tipoUsuario, matricula, cpf, email, emailAlternative, 
 }
 export const changeEdit = (colaborador) => {
     return{
-       type: 'ISEDITED_SEARCHED',
+       type: 'ISEDITED_COLA_SEARCHED',
        payload: colaborador
     }
 

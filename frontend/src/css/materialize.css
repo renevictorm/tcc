@@ -2662,6 +2662,11 @@ img.responsive-img,
 video.responsive-video {
   max-width: 70%;
   height: auto;
+}img.responsive-imgr,
+video.responsive-video {
+  margin-top: 27%;
+  max-width: 100%;
+  height: auto;
 }
 
 .pagination li {

@@ -65,7 +65,12 @@ padding:15px 260px;
   /*font:12px Verdana;  fonte do input */
   }
 
-
+  .naomostra{
+    display: none;
+  }
+  .simmostra{
+    display: block;
+  }
 
 .side-nav {
   width: 100%;

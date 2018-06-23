@@ -214,7 +214,7 @@ class NovoFuncionario extends Component {
 
                 <div className="input-field">
                 <label>Data de Nascimento:</label> <br/><br/>
-                    <input id="dataNascimento" type="date"
+                    <input id="dataNascimento" type="Date"
                         placeholder="DATA DE NASCIMENTO"
                         onChange={this.props.changeDataNascimento}
                         onKeyUp={this.keyHandler}
@@ -224,7 +224,7 @@ class NovoFuncionario extends Component {
 
                 <div className="input-field">
                 <label>Data de Entrada:</label> <br/><br/>
-                    <input id="dataEntrada" type="date"
+                    <input id="dataEntrada" type="Date"
                         placeholder="DATA DE ENTRADA"
                         onChange={this.props.changeDataEntrada}
                         onKeyUp={this.keyHandler}
@@ -235,7 +235,7 @@ class NovoFuncionario extends Component {
 
                 <div className="input-field">
                 <label>Data de Saída:</label> <br/><br/>
-                    <input id="dataSaida" type="date"
+                    <input id="dataSaida" type="Date"
                         placeholder="DATA DE SAÍDA"
                         onChange={this.props.changeDataSaida}
                         onKeyUp={this.keyHandler}

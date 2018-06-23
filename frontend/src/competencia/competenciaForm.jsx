@@ -39,7 +39,7 @@ class CompetenciaForm extends Component {
         const { add, name,observacao } = this.props
         return <div  style={{ paddingTop: "20px" }}>
             <Grid cols='12 9 10'>
-                <h1>COMPETÊNCIAS</h1>
+                <h3 className="center" >Adicione uma nova competência:</h3>
                 <div className="socorro3">
                 <div className="input-field">
                     <input id="name" type="text"
