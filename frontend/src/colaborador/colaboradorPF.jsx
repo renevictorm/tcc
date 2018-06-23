@@ -11,6 +11,7 @@ class ColaboradorPF extends Component {
         this.keyHandler = this.keyHandler.bind(this)
     }
     componentWillMount() { // essa merda que da erro
+        this.props.clear()
         this.props.search()
     }
     keyHandler(e) {

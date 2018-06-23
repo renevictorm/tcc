@@ -18,6 +18,7 @@ class ColaboradorEdit extends Component {
 
 
     componentWillMount() {
+        
         this.props.search()
     }
     keyHandler(e) {

@@ -14,27 +14,34 @@ const NavButton = (texto, to, icone) => {
         case 'Novo Projeto':
             return <li>
                 <a href='#/novoprojeto' className="waves-effect waves btn #1565c0 blue darken-3">
-                <h7 className="color:#FFFFFF hide-on-med-and-down" >{texto}</h7>
+                    <h7 className="color:#FFFFFF hide-on-med-and-down" >{texto}</h7>
+                    <i className="material-icons left">{icone}</i>
+                </a>
+            </li>;
+        case 'Nova Competência':
+            return <li>
+                <a href='#/competencia' className="waves-effect waves btn #1565c0 blue darken-3">
+                    <h7 className="color:#FFFFFF hide-on-med-and-down" >{texto}</h7>
                     <i className="material-icons left">{icone}</i>
                 </a>
             </li>;
         case 'Novo Colaborador':
-        return <li>
-            <a href='#/colaborador' className="waves-effect waves btn #1565c0 blue darken-3">
-            <h7 className="color:#FFFFFF hide-on-med-and-down" >{texto}</h7>
-                <i className="material-icons left">{icone}</i>
-            </a>
-        </li>;
+            return <li>
+                <a href='#/colaborador' className="waves-effect waves btn #1565c0 blue darken-3">
+                    <h7 className="color:#FFFFFF hide-on-med-and-down" >{texto}</h7>
+                    <i className="material-icons left">{icone}</i>
+                </a>
+            </li>;
         case 'Pesquisar Colaborador':
-        return <li>
-        <a href='#/colaboradorP' className="waves-effect waves btn #1565c0 blue darken-3">
-        <h7 className="color:#FFFFFF hide-on-med-and-down" >{texto}</h7>
-            <i className="material-icons left">{icone}</i>
-        </a>
-    </li>;
-      
+            return <li>
+                <a href='#/colaboradorP' className="waves-effect waves btn #1565c0 blue darken-3">
+                    <h7 className="color:#FFFFFF hide-on-med-and-down" >{texto}</h7>
+                    <i className="material-icons left">{icone}</i>
+                </a>
+            </li>;
+
     }
-   
+
 }
 /*
 const NavButton = (texto, to, icone) => {
@@ -66,6 +73,8 @@ const SideBar = () => {
                 {NavButton("home", "UserInfo", "home")}
 
                 {NavButton("Novo Projeto", "NovoProjeto", "create")}
+
+                {NavButton("Nova Competência", "NovoCompetencia", "assignment_ind")}
 
                 {NavButton("Novo Colaborador", "NovoColaborador", "assignment_ind")}
 

@@ -18,6 +18,7 @@ class NovoFuncionario extends Component {
 
 
     componentWillMount() {
+        this.props.clear()
         this.props.search()
     }
     keyHandler(e) {

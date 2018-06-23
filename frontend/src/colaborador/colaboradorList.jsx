@@ -8,6 +8,7 @@ import { markAsDone, markAsPending, remove, edit, changeEdit } from './colaborad
 
 const ColaboradorList = props => {
     const renderRows = () => {
+      
         const list = props.list || []
         return list.map(colaborador => (
             <tr key={colaborador._id} className='hide-on-large-only'>
@@ -25,6 +26,7 @@ const ColaboradorList = props => {
         ))
     }
     const renderRows2 = () => {
+        
         const list = props.list || []
         return list.map(colaborador => (
             <div className="col s4" key={colaborador._id}>
