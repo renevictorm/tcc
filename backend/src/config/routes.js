@@ -1,11 +1,11 @@
 const express = require('express')
 
-module.exports = function(server) {
-    
+module.exports = function (server) {
+
     // API Routes
     const router = express.Router()
     server.use('/api', router)
-    
+
     // TODO Routes
     const todoService = require('../api/todo/todoService')
     todoService.register(router, '/todos')
@@ -46,11 +46,15 @@ module.exports = function(server) {
     const arquivoService = require('../api/arquivo/arquivoService')
     arquivoService.register(router, '/arquivo')
 
-     // TELEFONE Routes
-     const telefoneService = require('../api/telefone/telefoneService')
-     telefoneService.register(router, '/telefone')
+    // TELEFONE Routes
+    const telefoneService = require('../api/telefone/telefoneService')
+    telefoneService.register(router, '/telefone')
 
-     // CH Routes
-     const chService = require('../api/colaboradorHorario/chService')
-     chService.register(router, '/ch')
+    // COLABORADOR_COMPETENCIA Routes
+    const colaboradorCompetenciaService = require('../api/colaboradorCompetencia/colaboradorCompetenciaService')
+    colaboradorCompetenciaService.register(router, '/colaboradorCompetencia')
+
+    // CH Routes
+    const chService = require('../api/colaboradorHorario/chService')
+    chService.register(router, '/ch')
 }
