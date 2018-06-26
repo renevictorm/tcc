@@ -27,6 +27,7 @@ export default props => (
 
         <Route path='/colaborador' component={Colaborador} />
         <Route path='/colaboradorp' component={ColaboradorP} />
+        <Route path='/colaboradorpp' component={ColaboradorP} />
         <Route path='/colaboradore' component={ColaboradorE} />
         <Route path='/colaboradorver' component={ColaboradorVer} />
         

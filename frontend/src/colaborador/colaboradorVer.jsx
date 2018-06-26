@@ -17,14 +17,20 @@ class ColaboradorVer extends Component {
         this.getVALUE = this.getVALUE.bind(this)
         var escolha1;
     }
-    handLinkClick (e) {
-        
-          window.location.href = '#/bemvindo';
-        
-      }
-  
+    handLinkClick(e) {
+
+
+
+    }
+    componentWillUnmount() {
+
+       
+    }
+
     componentWillMount() {
-        window.history.replaceState('Object', 'bemvindo' ,'#/colaboradorP' )
+        //window.location.href = '#/bemvindo';
+        window.history.replaceState('Object', 'bemvindo', '#/colaboradorpp')
+       
         this.props.search()
     }
     keyHandler(e) {
@@ -35,7 +41,7 @@ class ColaboradorVer extends Component {
             alert('aaa')//window.location.href = '#/bemvindo';
         }
     }
-   
+
     getVALUE() {
         const { isEdited, colaborador, edit, add, search, name, tipoUsuario, matricula, email, emailAlternative, cpf, endereco, identidade, cargo,
             login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status } = this.props
@@ -48,11 +54,11 @@ class ColaboradorVer extends Component {
         }
 
     }
-    
+
     render() {
         const { edit, add, search, name, tipoUsuario, matricula, email, emailAlternative, cpf, endereco, identidade, cargo,
             login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status } = this.props
-        return <div  onKeyUp={this.keyHandler} className="row" style={{ paddingTop: "20px" }}>
+        return <div onKeyUp={this.keyHandler} className="row" style={{ paddingTop: "20px" }}>
 
             <div className="col s4">
                 <div className=" row teal lighten-1">
@@ -89,40 +95,40 @@ class ColaboradorVer extends Component {
 
                                 <font size='4'><b>EMAIL ALTERNATIVO: </b>{emailAlternative}</font><br />
 
-                                <font size='4'><b> ENTRADA: </b>{dataEntrada}</font><br />
+                                <font size='4'><b> ENTRADA: </b>{dataEntrada.substring(0, 10)}</font><br />
 
-                                <font size='4'><b>SAÍDA: </b>{dataSaida} </font><br />
+                                <font size='4'><b>SAÍDA: </b>{dataSaida.substring(0, 10)} </font><br />
 
                                 <font size='4'><b>TAMANHO DA CAMISA: </b>{camisa} </font>
                             </ul>
                         </div>
                         <div className="card-content white-text col s6">
-                            <ul ><br/>
+                            <ul ><br />
                                 <font size='4'><b>CPF: </b>{cpf}</font><br />
 
                                 <font size='4'><b>IDENTIDADE: </b>{identidade}</font><br />
 
                                 <font size='4'><b>MATRÍCULA: </b>{matricula}</font><br />
 
-                                <font size='4'><b>NASCIMENTO: </b>{dataNascimento}</font><br />
+                                <font size='4'><b>NASCIMENTO: </b>{dataNascimento.substring(0, 10)}</font><br />
 
 
 
                             </ul>
                         </div>
-                        
+
                     </div>
                     <div className="card-content center white-text darken-2">
                         <ul >
                             <font size='4'><b> ENDEREÇO: </b> {endereco}</font><br />
                         </ul>
                     </div>
-                    
+
                 </div>
-                
+
             </div>
 
-          
+
 
 
         </div>

@@ -10,7 +10,7 @@ const INITIAL_STATE = {
     cargo: '',
     login: '',
     senha: '',
-    dataNascimento: '',
+    dataNascimento: new Date,
     dataEntrada: '',
     dataSaida: '',
     camisa: '',
