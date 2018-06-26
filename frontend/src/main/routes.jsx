@@ -10,7 +10,7 @@ import ColaboradorE from '../colaborador/colaboradorEdit'
 import Welcome from './principal/BemVindo'
 import Relatorios from './principal/Relatorios';
 import UserInfo from './principal/UserInfo';
-import NovoProjeto from './principal/NovoProjeto';
+import Projeto from '../projeto/projeto';
 import Home from './principal/Home';
 import ColaboradorVer from '../colaborador/colaboradorVerComp';
 
@@ -19,7 +19,7 @@ import ColaboradorVer from '../colaborador/colaboradorVerComp';
 export default props => (
     <Router history={hashHistory}>
         <Route path='/bemvindo' component={Welcome} /> 
-        <Route path='/novoprojeto' component={Home} />      
+        <Route path='/projeto' component={Projeto} />      
         <Route path='/todos' component={Todo} />
        
         <Route path='/competencia' component={Competencia} />
