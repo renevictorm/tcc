@@ -2,6 +2,7 @@ const INITIAL_STATE = {
     name: '',
     observacao: '',
     isEdited: '',
+    listById: [],
     list: []
 }
 export default (state = INITIAL_STATE, action) => {
@@ -12,6 +13,8 @@ export default (state = INITIAL_STATE, action) => {
             return { ...state, observacao: action.payload }
         case 'COMPETENCIA_SEARCHED':
             return { ...state, list: action.payload }
+        case 'COMPETENCIABYID_SEARCHED':
+            return { ...state, listById: action.payload }
         case 'COMPETENCIA_CLEAR':
             return {
                 ...state, name: '', observacao: '', isEdited: ''
@@ -19,7 +22,8 @@ export default (state = INITIAL_STATE, action) => {
         case 'ISEDITED_SEARCHED':
             return {
                 ...state, isEdited: action.payload._id, name: action.payload.name
-                , observacao: action.payload.observacao }
+                , observacao: action.payload.observacao
+            }
 
 
         default:

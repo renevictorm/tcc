@@ -5,7 +5,7 @@ const mongoose = restful.mongoose
 const colaboradorCompetenciaSchema = new mongoose.Schema({
     idColaborador: { type: String, required: true },
     idCompetencia: { type: String, required: true },
-    nivel:{type: Number, require:false}
+    nivel:{type: Number, require:false, default: 3}
   
 })
 

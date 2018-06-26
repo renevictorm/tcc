@@ -2,7 +2,8 @@ import React, { Component } from "react"
 import { connect } from 'react-redux'
 import Grid from '../template/grid'
 import { bindActionCreators } from 'redux'
-import {search, clear, add, changeName, changeObservacao} from './competenciaActions.js'
+import {searchComp, clear, add, changeName, changeObservacao} from './competenciaActions.js'
+import {   clearCC, searchCCTotal } from '../colaborador/ccActions.js'
 
 
 class CompetenciaForm extends Component {
@@ -15,13 +16,15 @@ class CompetenciaForm extends Component {
 
 
     componentWillMount() {
+        this.props.clearCC()
+        this.props.searchCCTotal()
         this.props.clear()
-        this.props.search()
+        this.props.searchComp()
     }
     keyHandler(e) {
-        const { add, search, name, tipoUsuario, clear, matricula } = this.props
+        const { add, searchComp, name, tipoUsuario, clear, matricula } = this.props
         if (e.key === 'Enter') {
-            e.shiftKey ? search() : add(name)
+            e.shiftKey ? searchComp() : add(name)
         } else if (e.key === 'Escape') {
             clear()
         }
@@ -88,5 +91,5 @@ class CompetenciaForm extends Component {
 
 const mapStateToProps = state => ({ name:state.competencia.name, observacao:state.competencia.observacao})
 const mapDispatchToProps = dispatch =>
-    bindActionCreators({ search, clear, add, changeName,changeObservacao}, dispatch)
+    bindActionCreators({ searchComp, clear, add, changeName,changeObservacao,  clearCC, searchCCTotal}, dispatch)
 export default connect(mapStateToProps, mapDispatchToProps)(CompetenciaForm)

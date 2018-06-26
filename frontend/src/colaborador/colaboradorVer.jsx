@@ -8,6 +8,8 @@ import {
     changeDataEntrada, changeDataSaida, changeCamisa, changeStatus
 } from './colaboradorActions'
 
+
+
 class ColaboradorVer extends Component {
     constructor(props) {
         super(props)
@@ -15,10 +17,14 @@ class ColaboradorVer extends Component {
         this.getVALUE = this.getVALUE.bind(this)
         var escolha1;
     }
-
-
+    handLinkClick (e) {
+        
+          window.location.href = '#/bemvindo';
+        
+      }
+  
     componentWillMount() {
-
+        window.history.replaceState('Object', 'bemvindo' ,'#/colaboradorP' )
         this.props.search()
     }
     keyHandler(e) {
@@ -26,59 +32,10 @@ class ColaboradorVer extends Component {
         if (e.key === 'Enter') {
             e.shiftKey ? search() : add(name)
         } else if (e.key === 'Escape') {
-
+            alert('aaa')//window.location.href = '#/bemvindo';
         }
     }
-    componentDidMount() {
-        window.$('select').material_select();
-
-        window.$('.datepicker').pickadate({
-            monthsFull: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio',
-                'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-            monthsShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
-            weekdaysFull: ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira',
-                'Sexta-feira', 'Sábado'],
-            weekdaysShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
-            weekdaysLetter: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'],
-            labelMonthNext: 'Próximo mês',
-            labelMonthPrev: 'Mês anterior',
-            labelMonthSelect: 'Selecione um mês',
-            labelYearSelect: 'Selecione um ano',
-            format: 'd !de mmmm !de yyyy',
-            formatSubmit: 'yyyy/mm',
-            selectMonths: true,
-            selectYears: 20,
-            today: 'Hoje',
-            clear: 'Limpar',
-            close: 'Ok',
-            closeOnSelect: false
-        });
-    }/* 
-     
-                
-
-                <select id="tipo" defaultValue="0" onChange={this.getVALUE()}>
-                    <option value="1" >Super-admin</option>
-                    <option value="2">Administrador</option>
-                    <option value="3">Usuário</option>
-
-                </select>
-
-                 <div>
-                    <input type="radio" id='coco' name="gender" value="1" />
-                    <label >Super-Admin</label>
-                </div>
-                <div>
-                    <input type="radio" id='coco2' name="gender" value="2" />
-                    <label >Admin</label>
-                </div>
-                <div>
-                    <input type="radio" id='coco3' name="gender" value="3" />
-                    <label >User</label>
-                </div>
-
-            
-    */
+   
     getVALUE() {
         const { isEdited, colaborador, edit, add, search, name, tipoUsuario, matricula, email, emailAlternative, cpf, endereco, identidade, cargo,
             login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status } = this.props
@@ -91,128 +48,11 @@ class ColaboradorVer extends Component {
         }
 
     }
-    /*
- <h1> {this.props.name}</h1>
-                <br />
-
-
-                <div className="col s4" >
-                    <ul className="center">
-                        <font size='5'>MATRÍCULA:{this.props.matricula}</font>
-                    </ul>
-                </div>
-                <div className="col s4" >
-                    <ul className="center">
-                        <font size='5'>CPF:{this.props.cpf}</font>
-                    </ul>
-                </div>
-                <div className="col s4" >
-                    <ul className="center">
-                        <font size='5'> IDENTIDADE:{this.props.identidade}</font>
-                    </ul>
-                </div>
-                <div className="col s6" >
-                    <ul className="center">
-                        <font size='5'>EMAIL:{this.props.email}</font>
-                    </ul>
-                </div>
-                <div className="col s6" >
-                    <ul className="center">
-                        <font size='5'>EMAIL ALTERNATIVO:{this.props.emailAlternative}</font>
-                    </ul>
-                </div>
-                <div className="col s12" >
-                    <ul className="center">
-                        <font size='5'> ENDEREÇO:{this.props.endereco}</font>
-                    </ul>
-                </div>
-
-             
-
-                <div className="col s4" >
-                    <ul className="center">
-                        <font size='5'> CARGO:{this.props.cargo}</font>
-                    </ul>
-                </div>
-
-
-                <div className="col s4" >
-                    <ul className="center">
-                        <font size='5'> LOGIN:{this.props.login}</font>
-                    </ul>
-                </div>
-
-                <div className="col s4" >
-                    <ul className="center">
-                        <font size='5'> DATA NASCIMENTO:{this.props.dataNascimento}</font>
-                    </ul>
-                </div>
-
-
-                <div className="col s4" >
-                    <ul className="center">
-                        <font size='5'> DATA DE ENTRADA:{this.props.dataEntrada}</font>
-                    </ul>
-                </div>
-                
-
-                <div className="col s4" >
-                    <ul className="center">
-                        <font size='5'> DATA DE SAÍDA:{this.props.dataSaida}</font>
-                    </ul>
-                </div>
-
-
-                <div className="col s4" >
-                    <ul className="center">
-                        <font size='5'> TAMANHO DA CAMISA:{this.props.camisa}</font>
-                    </ul>
-                </div>
-                <div className="col s4" >
-                    <ul className="center">
-                        <font size='5'> STATUS:{this.props.status}</font>
-                    </ul>
-                </div>
-            
-
-            
-
-
-    ============================================================================================================
-
-
-        <div className="col s4" key={colaborador._id}>
-                <div className="card teal lighten-1">
-                    <div className="card-content white-text">
-                        <a className="card-title center white-text" style={{ cursor: "pointer" }}>{colaborador.name}</a>
-
-                        <ul className="center">
-                            <font size='5'>{colaborador.cargo}</font>
-                        </ul>
-                    </div>
-                    <div className="card-action teal darken-2">
-                        <a href='#/colaboradore' className="waves-effect waves btn #1565c9 blue darken-3"
-                            onClick={() => props.changeEdit(colaborador)}>
-                            <i className="material-icons left">{"edit"}</i>
-
-                        </a>
-                        <a href='#/colaboradorver' className="waves-effect waves btn #1565c9 blue darken-3"
-                            onClick={() => props.changeEdit(colaborador)}>
-                            <i className="material-icons left">{"search"}</i>
-                        </a>
-
-                        <a className="center btn red darken-4" >
-                            <i className="material-icons left">{"clear"}</i>
-                        </a>
-
-                    </div>
-                </div>
-            </div>             
-    */
+    
     render() {
         const { edit, add, search, name, tipoUsuario, matricula, email, emailAlternative, cpf, endereco, identidade, cargo,
             login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status } = this.props
-        return <div className="row" style={{ paddingTop: "20px" }}>
+        return <div  onKeyUp={this.keyHandler} className="row" style={{ paddingTop: "20px" }}>
 
             <div className="col s4">
                 <div className=" row teal lighten-1">
@@ -251,7 +91,9 @@ class ColaboradorVer extends Component {
 
                                 <font size='4'><b> ENTRADA: </b>{dataEntrada}</font><br />
 
-                                <font size='4'><b>SAÍDA: </b>{dataSaida} </font>
+                                <font size='4'><b>SAÍDA: </b>{dataSaida} </font><br />
+
+                                <font size='4'><b>TAMANHO DA CAMISA: </b>{camisa} </font>
                             </ul>
                         </div>
                         <div className="card-content white-text col s6">
@@ -279,6 +121,9 @@ class ColaboradorVer extends Component {
                 </div>
                 
             </div>
+
+          
+
 
         </div>
 

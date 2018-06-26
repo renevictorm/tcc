@@ -61,6 +61,8 @@ export const changeDataSaida = event => ({
     type: 'DS_CHANGED',
     payload: event.target.value
 })
+
+
 export const changeCamisa = event => ({
     type: 'CAMISA_CHANGED',
     payload: event.target.value
@@ -92,6 +94,10 @@ export const add = (name, tipoUsuario, matricula, cpf, email, emailAlternative, 
             .then(resp => dispatch(search()))
     }
 }
+
+
+
+
 export const changeEdit = (colaborador) => {
     return{
        type: 'ISEDITED_COLA_SEARCHED',
@@ -141,4 +147,36 @@ export const remove = (colaborador) => {
             .then(resp => dispatch(search()))
     }*/
     return null
+}
+
+
+
+//------------------A PARTIR DAQUI È PARA COLABORADOR_COMPETENCIA-------------------------------------------
+const URL2 = 'http://localhost:3003/api/colaboradorCompetencia'
+export const addCC = (idColaborador,idCompetencia ) => {
+    return dispatch => {
+        
+        axios.post(URL2, {idColaborador,idCompetencia })
+            
+            .then(resp => dispatch(search()))
+    }
+}
+
+export const removeCC = (idColaborador,idCompetencia) => {
+   return dispatch => {
+         axios.delete(`${URL2}/?idColaborador=${idColaborador}&idCompetencia=${idCompetencia}`)
+             .then(resp => dispatch(search()))
+     }
+     return null
+ }
+
+ export const searchCC = (name) => {
+    return (dispatch) => {
+        
+        
+        const request = axios.get(`${URL2}`)
+            .then(resp => dispatch({ type: 'CC_SEARCHED', payload: resp.data }))
+
+    }
+
 }

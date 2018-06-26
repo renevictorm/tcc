@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import Grid from '../template/grid'
 import { bindActionCreators } from 'redux'
 import {
-    edit, search, clear, add, changeName, changeObservacao
+    edit, searchComp, clear, add, changeName, changeObservacao
 } from './competenciaActions'
 
 class CompetenciaEdit extends Component {
@@ -16,12 +16,12 @@ class CompetenciaEdit extends Component {
 
 
     componentWillMount() {
-        this.props.search()
+        this.props.searchComp()
     }
     keyHandler(e) {
-        const { add, search, name, tipoUsuario, clear, matricula } = this.props
+        const { add, searchComp, name, tipoUsuario, clear, matricula } = this.props
         if (e.key === 'Enter') {
-            e.shiftKey ? search() : add(name)
+            e.shiftKey ? searchComp() : add(name)
         } else if (e.key === 'Escape') {
 
         }
@@ -77,7 +77,7 @@ class CompetenciaEdit extends Component {
             
     */
     getVALUE() {
-        const { isEdited, competencia, edit, add, search, name, observacao } = this.props
+        const { isEdited, competencia, edit, add, searchComp, name, observacao } = this.props
         if (isNaN(this.props.tipoUsuario) || (this.props.tipoUsuario) < 1 || (this.props.tipoUsuario) > 3) {
             alert("O Campo 'Tipo de Usuário' deve ser um número de 1 a 3: \n 1: Super admin \n 2: Admin \n 3: Usuário ")
         } else {
@@ -90,7 +90,7 @@ class CompetenciaEdit extends Component {
                     
     */
     render() {
-        const { competencia, isEdited, edit, add, search, name, observacao } = this.props
+        const { competencia, isEdited, edit, add, searchComp, name, observacao } = this.props
         return <div className="socorro2" style={{ paddingTop: "20px" }}>
             <Grid cols='12 9 10'>
                 <h1>Editar Competência</h1>
@@ -147,5 +147,5 @@ class CompetenciaEdit extends Component {
 const mapStateToProps = state => ({
     name: state.competencia.name, observacao: state.competencia.observacao,isEdited: state.competencia.isEdited})
 const mapDispatchToProps = dispatch =>
-    bindActionCreators({edit, add, changeName, search, clear, changeObservacao}, dispatch)
+    bindActionCreators({edit, add, changeName, searchComp, clear, changeObservacao}, dispatch)
 export default connect(mapStateToProps, mapDispatchToProps)(CompetenciaEdit)

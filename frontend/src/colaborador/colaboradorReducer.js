@@ -16,6 +16,8 @@ const INITIAL_STATE = {
     camisa: '',
     status: '',
     isEdited: '',
+    idColaborador: '',
+    idCompetencia: '',
     list: []
 }
 export default (state = INITIAL_STATE, action) => {
@@ -51,29 +53,34 @@ export default (state = INITIAL_STATE, action) => {
             return { ...state, dataEntrada: action.payload }
         case 'DS_CHANGED':
             return { ...state, dataSaida: action.payload }
+      
 
         case 'CAMISA_CHANGED':
             return { ...state, camisa: action.payload }
         case 'STATUS_CHANGED':
             return { ...state, status: action.payload }
-        
+
 
         case 'COLABORADOR_SEARCHED':
             return { ...state, list: action.payload }
+
         //Quem vai ser editado====================================
         case 'ISEDITED_COLA_SEARCHED':
-            return { ...state, isEdited: action.payload._id, name: action.payload.name
-                ,tipoUsuario: action.payload.tipoUsuario, matricula: action.payload.matricula, identidade: action.payload.identidade
+            return {
+                ...state, isEdited: action.payload._id, name: action.payload.name
+                , tipoUsuario: action.payload.tipoUsuario, matricula: action.payload.matricula, identidade: action.payload.identidade
                 , dataEntrada: action.payload.dataEntrada, dataNascimento: action.payload.dataNascimento, dataSaida: action.payload.dataSaida
                 , login: action.payload.login, senha: action.payload.senha, status: action.payload.status
                 , camisa: action.payload.camisa, endereco: action.payload.endereco, email: action.payload.email,
-                 emailAlternative: action.payload.emailAlternative, cpf: action.payload.cpf, cargo: action.payload.cargo }
+                emailAlternative: action.payload.emailAlternative, cpf: action.payload.cpf, cargo: action.payload.cargo
+            }
         //========================================================
         case 'COLABORADOR_CLEAR':
             return {
-                ...state, name: '', matricula: '',cpf: '',email: '', emailAlternative: '', endereco: '', identidade: '',
+                ...state, name: '', matricula: '', cpf: '', email: '', emailAlternative: '', endereco: '', identidade: '',
                 cargo: '', login: '', senha: '', dataNascimento: '', dataEntrada: '', dataSaida: '', camisa: '', status: '',
-                isEdited: '' }
+                isEdited: '', idColaborador: '', idCompetencia: ''
+            }
 
         default:
             return state

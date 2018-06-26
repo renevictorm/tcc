@@ -4,6 +4,9 @@ import Grid from '../template/grid'
 import IconButton from '../template/iconButton'
 import { bindActionCreators } from 'redux'
 import { changeName, search, clear } from './colaboradorActions'
+import { searchCC, clearCC } from './ccActions'
+import {searchComp} from '../competencia/competenciaActions'
+
 
 class ColaboradorPF extends Component { 
     constructor(props) {
@@ -11,8 +14,11 @@ class ColaboradorPF extends Component {
         this.keyHandler = this.keyHandler.bind(this)
     }
     componentWillMount() { // essa merda que da erro
+        this.props.clearCC()
+        
         this.props.clear()
         this.props.search()
+        this.props.searchComp()
     }
     keyHandler(e) {
         const { search, name, clear } = this.props
@@ -55,5 +61,5 @@ class ColaboradorPF extends Component {
 }
 const mapStateToProps = state => ({ name: state.colaborador.name })
 const mapDispatchToProps = dispatch =>
-    bindActionCreators({  changeName, search, clear}, dispatch)
+    bindActionCreators({  changeName, search, clear,clearCC,searchCC, searchComp}, dispatch)
 export default connect(mapStateToProps, mapDispatchToProps)(ColaboradorPF)
