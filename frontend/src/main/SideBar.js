@@ -13,7 +13,7 @@ const NavButton = (texto, to, icone) => {
             </li>;
         case 'Novo Projeto':
             return <li>
-                <a href='#/projeto' className="waves-effect waves btn #1565c0 blue darken-3">
+                <a href='#/cliente' className="waves-effect waves btn #1565c0 blue darken-3">
                     <h7 className="color:#FFFFFF hide-on-med-and-down" >{texto}</h7>
                     <i className="material-icons left">{icone}</i>
                 </a>

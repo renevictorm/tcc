@@ -9,10 +9,9 @@ const clienteSchema = new mongoose.Schema({
     contatoPreferencial: { type: String, required: false },
     identidade: { type: String, required: false },
     cnpj: { type: String, required: false },
-    cpf: { type: String, required: false },
-  
+    cpf: { type: String, required: false },  
     endereco: { type: String, required: false },
-    capitacaoAtiva: { type: Boolean, required: true, default: false },
+    capitacaoAtiva: { type: Boolean, required: false, default: false },
     empresa: { type: String, required: false }
 })
 

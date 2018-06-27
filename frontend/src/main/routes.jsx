@@ -2,6 +2,7 @@ import React from 'react'
 import { Router, Route, Redirect, hashHistory } from 'react-router'
 import Todo from '../todo/todo'
 import About from '../about/about'
+import Cliente from '../cliente/cliente'
 import Colaborador from '../colaborador/colaborador'
 import Competencia from '../competencia/competencia'
 import CompetenciaE from '../competencia/competenciaEdit'
@@ -21,6 +22,8 @@ export default props => (
         <Route path='/bemvindo' component={Welcome} /> 
         <Route path='/projeto' component={Projeto} />      
         <Route path='/todos' component={Todo} />
+
+        <Route path='/cliente' component={Cliente}/>
        
         <Route path='/competencia' component={Competencia} />
         <Route path='/competenciae' component={CompetenciaE} />

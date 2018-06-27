@@ -1,11 +1,11 @@
 import React from 'react'
-import ProjetoForm from './projetoForm'
+import ClienteForm from './clienteForm'
 
 
 export default props => (
     <div>
        
-        <ProjetoForm />
+        <ClienteForm />
         
     </div>
 )

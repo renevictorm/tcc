@@ -54,11 +54,11 @@ export const searchCliente = (name) => {
     }
 }
 
-export const addCliente = (name, email, telefone, pref,identidade,cnpj,cpf,endereco,capitacao,empresa) => {
+export const addCliente = (name, email, telefone, contatoPreferencial, identidade,cnpj, cpf, endereco, capitacaoAtiva,empresa) => {
     return dispatch => {
         
-        axios.post(URL, {name, email, telefone, pref,identidade,cnpj,cpf,endereco,capitacao,empresa
-        })
+        alert(`${URL}/`)
+        axios.post(URL, {name, email, telefone, contatoPreferencial, identidade,cnpj, cpf, endereco, capitacaoAtiva,empresa })
             .then(resp => dispatch(clearCliente()))
             .then(resp => dispatch(searchCliente()))
     }

@@ -2,181 +2,164 @@ import React, { Component } from "react"
 import { connect } from 'react-redux'
 import Grid from '../template/grid'
 import { bindActionCreators } from 'redux'
-import {changeNameCliente,changeTelefoneCliente,changePrefCliente,changeCpfCliente,changeCnpjCliente,changeEmailCliente,
-changeEmailCliente, changeEnderecoCliente, changeIdentidadeCliente, changeCapitacaoCliente,changeEmpresaCliente,addCliente,changeEditCliente,editCliente,clearCliente } from './clienteActions'
+import {
+    searchCliente,
+    changeNameCliente, changeTelefoneCliente, changePrefCliente, changeCpfCliente, changeCnpjCliente, changeEmailCliente,
+    changeEnderecoCliente, changeIdentidadeCliente, changeCapitacaoCliente, changeEmpresaCliente, addCliente, changeEditCliente, editCliente, clearCliente
+} from './clienteActions'
 
-class NovoCliente extends Component {
+class ClienteForm extends Component {
     constructor(props) {
         super(props)
-       // this.keyHandler = this.keyHandler.bind(this)
-        //this.getVALUE = this.getVALUE.bind(this)
-       
+     
+        this.getVALUE = this.getVALUE.bind(this)
+
     }
 
 
     componentWillMount() {
-        //this.props.clear()
-        //this.props.search()
+        this.props.clearCliente()
+        this.props.searchCliente()
     }
-      /*
-    keyHandler(e) {
-        const { add, search, name, tipoUsuario, clear, matricula } = this.props
-        if (e.key === 'Enter') {
-            e.shiftKey ? search() : add(name)
-        } else if (e.key === 'Escape') {
-            clear()
-        }
-    }
+
+ 
 
     getVALUE() {
-        const { } = this.props
-        if (isNaN(this.props.tipoUsuario) || (this.props.tipoUsuario) < 1 || (this.props.tipoUsuario) > 3) {
-            alert("O Campo 'Tipo de Usuário' deve ser um número de 1 a 3: \n 1: Super admin \n 2: Admin \n 3: Usuário ")
-        } else {
-            add(name, tipoUsuario, matricula, cpf, email, emailAlternative, endereco, identidade, cargo,
-                login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status)
-        }
+        const { addCliente, nameCliente, emailCliente, telefoneCliente, prefCliente, identidadeCliente,
+            cnpjCliente, cpfCliente, enderecoCliente, capitacaoCliente, empresaCliente, isEditedCliente } = this.props
+         const eee = false
+        addCliente(nameCliente, emailCliente, telefoneCliente, prefCliente, identidadeCliente,cnpjCliente, cpfCliente, enderecoCliente, capitacaoCliente,empresaCliente)
+
 
     }
-  
-       const { add, search, name, tipoUsuario, matricula, email, emailAlternative, cpf, endereco, identidade, cargo,
-            login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status } = this.props              
-    */
+
+
+
     render() {
-       
+        const { addCliente, searchCliente, nameCliente, emailCliente, telefoneCliente, prefCliente, identidadeCliente,
+            cnpjCliente, cpfCliente, enderecoCliente, capitacaoCliente, empresaCliente, isEditedCliente } = this.props
         return <div style={{ paddingTop: "20px" }}>
             <Grid cols='12 9 10'>
-            <h1>Novo Funcionário</h1>
+                <h1>Novo Cliente</h1>
                 <div className="socorro2">
-                <br />
+                    <br />
 
-                <div className="input-field" >
-
-
-                    <input id="tipo" type="range" min="1" max="3"
-                        placeholder='Tipo de Usuário'
-
-                        onChange={this.props.changeTipoUsuario}
-                        onKeyUp={this.keyHandler}
-                        value={this.props.tipoUsuario}                >
-                    </input>
-
-                </div>
+                    <div className="input-field" >
 
 
-                <div className="input-field">
-                    <input id="name" type="text"
-                        placeholder='Nome'
+                        <input id="tipo" type="text"
+                            placeholder='Nome'
 
-                        onChange={this.props.changeName}
-                        onKeyUp={this.keyHandler}
-                        value={this.props.name} >
-                    </input>
+                            onChange={this.props.changeNameCliente}
+                            
+                            value={this.props.nameCliente}                >
+                        </input>
 
-                </div>
-
-                <div className="input-field">
-                    <input id="matricula" type="text"
-                        placeholder="Matrícula"
-                        onChange={this.props.changeMatricula}
-                        onKeyUp={this.keyHandler}
-                        value={this.props.matricula} >
-                    </input>
-
-
-                </div>
-
-                <div className="input-field">
-                    <input id="cpf" type="text"
-                        placeholder="CPF"
-                        onChange={this.props.changeCpf}
-                        onKeyUp={this.keyHandler}
-                        value={this.props.cpf} >
-                    </input>
-
-                </div>
-
-                <div className="input-field">
-                    <input id="email" type="text"
-                        placeholder="EMAIL"
-                        onChange={this.props.changeEmail}
-                        onKeyUp={this.keyHandler}
-                        value={this.props.email}  >
-                    </input>
-                </div>
-
-                <div className="input-field">
-                    <input id="emailAlternative" type="text"
-                        placeholder="EMAIL ALTERNATIVO"
-                        onChange={this.props.changeEmailAlternative}
-                        onKeyUp={this.keyHandler}
-                        value={this.props.emailAlternative} >
-                    </input>
-                </div>
-
-                <div className="input-field">
-                    <input id="endereco" type="text"
-                        placeholder="ENDEREÇO"
-                        onChange={this.props.changeEndereco}
-                        onKeyUp={this.keyHandler}
-                        value={this.props.endereco} >
-                    </input>
-                </div>
-
-
-                <div className="input-field">
-                    <input id="identidade" type="text"
-                        placeholder="IDENTIDADE"
-                        onChange={this.props.changeIdentidade}
-                        onKeyUp={this.keyHandler}
-                        value={this.props.identidade}>
-                    </input>
-                </div>
-
-                <div className="input-field">
-                    <input id="cargo" type="text"
-                        placeholder="CARGO"
-                        onChange={this.props.changeCargo}
-                        onKeyUp={this.keyHandler}
-                        value={this.props.cargo}>
-                    </input>
-                </div>
-
-                <div className="input-field">
-                    <input id="login" type="text"
-                        placeholder="LOGIN"
-                        onChange={this.props.changeLogin}
-                        onKeyUp={this.keyHandler}
-                        value={this.props.login}>
-                    </input>
-                </div>
-
-                <div className="input-field">
-                    <input id="senha" type="password"
-                        placeholder="SENHA"
-                        onChange={this.props.changeSenha}
-                        onKeyUp={this.keyHandler}
-                        value={this.props.senha}>
-                    </input>
-                </div>
-
-              
-
-                <div className="row">
-                    <div className="center">
-                        <a className="waves-effect waves-light btn"
-                            onClick={() => [
-
-                                this.getVALUE()
-
-                            ]
-
-                            }>
-                            Salvar
-                        <i className="material-icons right">send</i>
-                        </a>
                     </div>
-                </div>
+
+
+                    <div className="input-field">
+                        <input id="email" type="text"
+                            placeholder='Email'
+
+                            onChange={this.props.changeEmailCliente}
+                           
+                            value={this.props.emailCliente} >
+                        </input>
+
+                    </div>
+
+                    <div className="input-field">
+                        <input id="telefone" type="text"
+                            placeholder="Telefone"
+                            onChange={this.props.changeTelefoneCliente}
+                           
+                            value={this.props.telefoneCliente} >
+                        </input>
+
+
+                    </div>
+
+                    <div className="input-field">
+                        <input id="pref" type="text"
+                            placeholder="Contato Preferencial"
+                            onChange={this.props.changePrefCliente}
+                            
+                            value={this.props.prefCliente}  >
+                        </input>
+                    </div>
+
+                    <div className="input-field">
+                        <input id="identidade" type="text"
+                            placeholder="IDENTIDADE"
+                            onChange={this.props.changeIdentidadeCliente}
+                           
+                            value={this.props.identidadeCliente}>
+                        </input>
+                    </div>
+
+                    <div className="input-field">
+                        <input id="cnpj" type="text"
+                            placeholder="CNPJ"
+                            onChange={this.props.changeCnpjCliente}
+                          
+                            value={this.props.cnpjCliente} >
+                        </input>
+                    </div>
+
+                    <div className="input-field">
+                        <input id="cpf" type="text"
+                            placeholder="CPF"
+                            onChange={this.props.changeCpfCliente}
+                          
+                            value={this.props.cpfCliente} >
+                        </input>
+
+                    </div>
+
+
+
+
+
+                    <div className="input-field">
+                        <input id="endereco" type="text"
+                            placeholder="ENDEREÇO"
+                            onChange={this.props.changeEnderecoCliente}
+                           
+                            value={this.props.enderecoCliente} >
+                        </input>
+                    </div>
+
+
+
+                    <div className="input-field">
+                        <input id="empresa" type="text"
+                            placeholder="EMPRESA"
+                            onChange={this.props.changeEmpresaCliente}
+                          
+                            value={this.props.empresaCliente}>
+                        </input>
+                    </div>
+
+
+
+
+
+                    <div className="row">
+                        <div className="center">
+                            <a className="waves-effect waves-light btn"
+                                onClick={() => [
+                                    
+                                    this.getVALUE()
+
+                                ]
+
+                                }>
+                                Salvar
+                        <i className="material-icons right">send</i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </Grid>
 
@@ -185,8 +168,12 @@ class NovoCliente extends Component {
     }
 }
 
-const mapStateToProps = state => ({     })
+const mapStateToProps = state => ({nameCliente: state.cliente.nameCliente, emailCliente: state.cliente.emailCliente, prefCliente: state.cliente.prefCliente
+    , telefoneCliente: state.cliente.telefoneCliente, identidadeCliente: state.cliente.identidadeCliente, cpfCliente: state.cliente.cpfCliente,cnpjCliente: state.cliente.cnpjCliente
+    , enderecoCliente: state.cliente.enderecoCliente, capitacaoCliente: state.cliente.capitacaoCliente, empresaCliente: state.cliente.empresaCliente
+})
 const mapDispatchToProps = dispatch =>
-    bindActionCreators({ changeNameCliente,changeTelefoneCliente,changePrefCliente,changeCpfCliente,changeCnpjCliente,changeEmailCliente,
-        changeEmailCliente, changeEnderecoCliente, changeIdentidadeCliente, changeCapitacaoCliente,changeEmpresaCliente,addCliente,changeEditCliente,editCliente,clearCliente   }, dispatch)
-export default connect(mapStateToProps, mapDispatchToProps)(NovoProjeto)
+    bindActionCreators({changeNameCliente, changeTelefoneCliente, changePrefCliente, changeCpfCliente, changeCnpjCliente, changeEmailCliente, searchCliente,
+        changeEmailCliente, changeEnderecoCliente, changeIdentidadeCliente, changeCapitacaoCliente, changeEmpresaCliente, addCliente, changeEditCliente, editCliente, clearCliente
+    }, dispatch)
+export default connect(mapStateToProps, mapDispatchToProps)(ClienteForm)

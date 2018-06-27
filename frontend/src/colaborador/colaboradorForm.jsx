@@ -269,7 +269,7 @@ class NovoFuncionario extends Component {
                     <div className="center">
                         <a className="waves-effect waves-light btn"
                             onClick={() => [
-
+                                
                                 this.getVALUE()
 
                             ]
