@@ -11,7 +11,7 @@ const clienteSchema = new mongoose.Schema({
     cnpj: { type: String, required: false },
     cpf: { type: String, required: false },  
     endereco: { type: String, required: false },
-    capitacaoAtiva: { type: Boolean, required: false, default: false },
+    captacaoAtiva: { type: Boolean, required: false, default: false },
     empresa: { type: String, required: false }
 })
 

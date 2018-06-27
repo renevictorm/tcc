@@ -11,7 +11,7 @@ const NavButton = (texto, to, icone) => {
                     <i className="material-icons left">{icone}</i>
                 </a>
             </li>;
-        case 'Novo Projeto':
+        case 'Novo Cliente':
             return <li>
                 <a href='#/cliente' className="waves-effect waves btn #1565c0 blue darken-3">
                     <h7 className="color:#FFFFFF hide-on-med-and-down" >{texto}</h7>
@@ -75,6 +75,8 @@ const SideBar = () => {
                 {NavButton("Novo Projeto", "NovoProjeto", "create")}
 
                 {NavButton("Nova Competência", "NovoCompetencia", "receipt")}
+
+                {NavButton("Novo Cliente", "NovoCliente", "add")}
 
                 {NavButton("Novo Colaborador", "NovoColaborador", "assignment_ind")}
 

@@ -7,7 +7,7 @@ const INITIAL_STATE = {
     cnpjCliente: '',
     cpfCliente: '',
     enderecoCliente: '',
-    capitacaoCliente: false,
+    captacaoCliente: false,
     empresaCliente: '',
     isEditedCliente: '',
     listCliente: []
@@ -33,8 +33,8 @@ export default (state = INITIAL_STATE, action) => {
             return { ...state, cpfCliente: action.payload }
         case 'ENDERECOCLIENTE_CHANGED':
             return { ...state, enderecoCliente: action.payload }
-        case 'CAPITACAOCLIENTE_CHANGED':
-            return { ...state, capitacaoCliente: action.payload }
+        case 'CAPTACAOCLIENTE_CHANGED':
+            return { ...state, captacaoCliente: action.payload }
         case 'EMPRESACLIENTE_CHANGED':
             return { ...state, empresaCliente: action.payload }
        
@@ -50,13 +50,13 @@ export default (state = INITIAL_STATE, action) => {
                 ...state, isEditedCliente: action.payload._id, nameCliente: action.payload.name
                 , emailCliente: action.payload.email, telefoneCliente: action.payload.telefone, prefCliente: action.payload.contatoPreferencial
                 , identidadeCliente: action.payload.identidade, cnpjCliente: action.payload.cnpj, cpfCliente: action.payload.cpf
-                , enderecoCliente: action.payload.endereco, capitacaoCliente: action.payload.capitacaoAtiva, empresaCliente: action.payload.empresa
+                , enderecoCliente: action.payload.endereco, captacaoCliente: action.payload.captacaoAtiva, empresaCliente: action.payload.empresa
                
             }
         //========================================================
         case 'CLIENTE_CLEAR':
             return {
-                ...state,   nameCliente: '', emailCliente: '', telefoneCliente: '', prefCliente: '', identidadeCliente: '', cnpjCliente: '', cpfCliente: '', enderecoCliente: '', capitacaoCliente: false, empresaCliente: '',isEditedCliente:''
+                ...state,   nameCliente: '', emailCliente: '', telefoneCliente: '', prefCliente: '', identidadeCliente: '', cnpjCliente: '', cpfCliente: '', enderecoCliente: '', captacaoCliente: false, empresaCliente: '',isEditedCliente:''
             }
 
         default:

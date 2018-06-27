@@ -35,8 +35,8 @@ export const changeIdentidadeCliente = event => ({
     type: 'IDENTIDADECLIENTE_CHANGED',
     payload: event.target.value
 })
-export const changeCapitacaoCliente = event => ({
-    type: 'CAPITACAOCLIENTE_CHANGED',
+export const changeCaptacaoCliente = event => ({
+    type: 'CAPTACAOCLIENTE_CHANGED',
     payload: event.target.value
 })
 export const changeEmpresaCliente = event => ({
@@ -54,11 +54,11 @@ export const searchCliente = (name) => {
     }
 }
 
-export const addCliente = (name, email, telefone, contatoPreferencial, identidade,cnpj, cpf, endereco, capitacaoAtiva,empresa) => {
+export const addCliente = (name, email, telefone, contatoPreferencial, identidade,cnpj, cpf, endereco, captacaoAtiva,empresa) => {
     return dispatch => {
         
         alert(`${URL}/`)
-        axios.post(URL, {name, email, telefone, contatoPreferencial, identidade,cnpj, cpf, endereco, capitacaoAtiva,empresa })
+        axios.post(URL, {name, email, telefone, contatoPreferencial, identidade,cnpj, cpf, endereco, captacaoAtiva,empresa })
             .then(resp => dispatch(clearCliente()))
             .then(resp => dispatch(searchCliente()))
     }
@@ -71,9 +71,9 @@ export const changeEditCliente = (colaborador) => {
     }
 }
 
-export const editCliente = (name, email, telefone, pref,identidade,cnpj,cpf,endereco,capitacao,empresa) => {
+export const editCliente = (name, email, telefone, pref,identidade,cnpj,cpf,endereco,captacao,empresa) => {
     return dispatch => {
-        axios.put(`${URL}/${isEdited}`, { ...colaborador, name, email, telefone, pref,identidade,cnpj,cpf,endereco,capitacao,empresa   })
+        axios.put(`${URL}/${isEdited}`, { ...colaborador, name, email, telefone, pref,identidade,cnpj,cpf,endereco,captacao,empresa   })
             .then(resp => dispatch(clearCliente()))
             .then(resp => dispatch(searchCliente()))
             alert(isEdited);
