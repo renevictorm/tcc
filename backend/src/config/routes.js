@@ -14,6 +14,10 @@ module.exports = function (server) {
     const colaboradorService = require('../api/colaborador/colaboradorService')
     colaboradorService.register(router, '/colaboradores')
 
+     // PROJETO Routes
+     const projetoService = require('../api/projeto/projetoService')
+     projetoService.register(router, '/projetos')
+
     // CLIENTE Routes
     const clienteService = require('../api/cliente/clienteService')
     clienteService.register(router, '/clientes')
