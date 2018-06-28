@@ -47,7 +47,7 @@ export const changeEmpresaCliente = event => ({
 
 export const searchCliente = (name) => {
     return (dispatch, getState) => {
-        const name = getState().cliente.name
+        const name = getState().cliente.nameCliente
         const search = name ? `&name__regex=/${name}/` : ''
         const request = axios.get(`${URL}?sort=-createdAt${search}`)
             .then(resp => dispatch({ type: 'CLIENTE_SEARCHED', payload: resp.data }))
@@ -64,19 +64,20 @@ export const addCliente = (name, email, telefone, contatoPreferencial, identidad
     }
 }
 
-export const changeEditCliente = (colaborador) => {
+export const changeEditCliente = (cliente) => {
     return{
        type: 'ISEDITEDCLIENTE_SEARCHED',
-       payload: colaborador
+       payload: cliente
     }
 }
 
-export const editCliente = (name, email, telefone, pref,identidade,cnpj,cpf,endereco,captacao,empresa) => {
+export const editCliente = (isEditedCliente,cliente ,name, email, telefone, contatoPreferencial, identidade,cnpj, cpf, endereco, captacaoAtiva,empresa) => {
     return dispatch => {
-        axios.put(`${URL}/${isEdited}`, { ...colaborador, name, email, telefone, pref,identidade,cnpj,cpf,endereco,captacao,empresa   })
+        alert(`${URL}/${isEditedCliente}`)
+        axios.put(`${URL}/${isEditedCliente}`, { ...cliente,name, email, telefone, contatoPreferencial, identidade,cnpj, cpf, endereco, captacaoAtiva,empresa})
             .then(resp => dispatch(clearCliente()))
             .then(resp => dispatch(searchCliente()))
-            alert(isEdited);
+            alert(isEditedCliente);
     }
 }
 

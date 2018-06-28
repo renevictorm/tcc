@@ -7,6 +7,8 @@ import Colaborador from '../colaborador/colaborador'
 import Competencia from '../competencia/competencia'
 import CompetenciaE from '../competencia/competenciaEdit'
 import ColaboradorP from '../colaborador/colaboradorPesquisa'
+import ClienteP from '../cliente/clientePesquisa'
+import ClienteE from '../cliente/clienteEdit'
 import ColaboradorE from '../colaborador/colaboradorEdit'
 import Welcome from './principal/BemVindo'
 import Relatorios from './principal/Relatorios';
@@ -24,9 +26,12 @@ export default props => (
         <Route path='/todos' component={Todo} />
 
         <Route path='/cliente' component={Cliente}/>
+        <Route path='/clientep' component={ClienteP} />
+        <Route path='/clientee' component={ClienteE} />
        
         <Route path='/competencia' component={Competencia} />
         <Route path='/competenciae' component={CompetenciaE} />
+        <Route path='/colaboradore' component={ColaboradorE} />
 
         <Route path='/colaborador' component={Colaborador} />
         <Route path='/colaboradorp' component={ColaboradorP} />
