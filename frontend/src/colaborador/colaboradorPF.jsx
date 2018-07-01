@@ -41,12 +41,12 @@ class ColaboradorPF extends Component {
                 </Grid>
                 <Grid cols='12 3 2'>
                     
-                    <a className="waves-effect waves btn #1565c0 blue darken-3 left"
+                    <a className="waves-effect waves btn #1565c0 blue darken-1 left"
                         onClick={search}>
                         
                     <i className="material-icons ">{"search"}</i>
                     </a>
-                    <a className="waves-effect waves btn #1565c0 blue darken-3 left"
+                    <a className="waves-effect waves btn #1565c0 orange lighten-1 left"
                         onClick={this.props.clear}>
                         
                     <i className="material-icons ">{"clear"}</i>

@@ -14,21 +14,34 @@ import Welcome from './principal/BemVindo'
 import Relatorios from './principal/Relatorios';
 import UserInfo from './principal/UserInfo';
 import Projeto from '../projeto/projeto';
+import ProjetoP from '../projeto/projetoPesquisa'
 import Home from './principal/Home';
 import ColaboradorVer from '../colaborador/colaboradorVerComp';
+import projetoVer from '../projeto/projetoVerClientes';
+import projetoEdit from '../projeto/projetoEdit';
+import projetoAddCliente from '../projeto/projetoAddCliente';
+import ClienteVer from '../cliente/clienteVer';
 
 
 
 export default props => (
     <Router history={hashHistory}>
-        <Route path='/bemvindo' component={Welcome} /> 
-        <Route path='/projeto' component={Projeto} />      
+        <Route path='/bemvindo' component={Welcome} />
         <Route path='/todos' component={Todo} />
 
-        <Route path='/cliente' component={Cliente}/>
+        <Route path='/projeto' component={Projeto} />
+        <Route path='/projetop' component={ProjetoP}/>
+        <Route path='/projetopp' component={ProjetoP}/>
+        <Route path='/projetover' component={projetoVer}/>
+        <Route path='/projetoe' component={projetoEdit}/>
+        <Route path='/projetoaddcliente' component={projetoAddCliente}/>
+        
+
+        <Route path='/cliente' component={Cliente} />
         <Route path='/clientep' component={ClienteP} />
         <Route path='/clientee' component={ClienteE} />
-       
+        <Route path='/clientever' component={ClienteVer} />
+
         <Route path='/competencia' component={Competencia} />
         <Route path='/competenciae' component={CompetenciaE} />
         <Route path='/colaboradore' component={ColaboradorE} />
@@ -38,7 +51,7 @@ export default props => (
         <Route path='/colaboradorpp' component={ColaboradorP} />
         <Route path='/colaboradore' component={ColaboradorE} />
         <Route path='/colaboradorver' component={ColaboradorVer} />
-        
+
         <Route path='/about' component={About} />
         <Redirect from='*' to='/bemvindo' />
     </Router>

@@ -7,16 +7,16 @@ const projetoSchema = new mongoose.Schema({
     codigo: { type: String, required: true },
     inicio: { type: Date, required: true },
     situacao: {type: String, required: false},
-    inicio: { type: Date, required: true },
-    fim: { type: Date, required: true },
-    inicioEsperado: { type: Date, required: true },
-    fimEsperado: { type: Date, required: true },
-    tipo: { type: String, required: true },
-    precoReal: { type: String, required: true },
-    precoEsperado: { type: String, required: true },
+    
+    fim: { type: Date, required: false },
+   
+    fimEsperado: { type: Date, required: false },
+    tipo: { type: String, required: false },
+    precoReal: { type: Number, required: false },
+    precoEsperado: { type: Number, required: false },
     descricao: { type: String, required: true },
-    gastos: {type: String, required:false},
-    primeiroContato:{type: Date, required:false}
+    gastos: {type: Number, required:false},
+   
     
    
 })

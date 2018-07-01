@@ -39,6 +39,13 @@ const NavButton = (texto, to, icone) => {
                     <i className="material-icons left">{icone}</i>
                 </a>
             </li>;
+        case 'Pesquisar Projeto':
+            return <li>
+                <a href='#/projetoP' className="waves-effect waves btn #1565c0 blue darken-3">
+                    <h7 className="color:#FFFFFF hide-on-med-and-down" >{texto}</h7>
+                    <i className="material-icons left">{icone}</i>
+                </a>
+            </li>;
         case 'Pesquisar Cliente':
             return <li>
                 <a href='#/clienteP' className="waves-effect waves btn #1565c0 blue darken-3">
@@ -86,13 +93,21 @@ const SideBar = () => {
 
                 {NavButton("home", "UserInfo", "home")}
 
+                {NavButton("Nova Competência", "NovoCompetencia", "receipt")}
+
+                <div className="divider blue" />
+
                 {NavButton("Novo Projeto", "NovoProjeto", "create")}
 
-                {NavButton("Nova Competência", "NovoCompetencia", "receipt")}
+                {NavButton("Pesquisar Projeto", "PesquisarProjeto", "search")}
+
+                <div className="divider blue" />
 
                 {NavButton("Novo Cliente", "NovoCliente", "add")}
 
                 {NavButton("Pesquisar Cliente", "PesquisarCliente", "search")}
+
+                <div className="divider blue" />
 
                 {NavButton("Novo Colaborador", "NovoColaborador", "assignment_ind")}
 

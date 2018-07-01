@@ -78,21 +78,21 @@ const ColaboradorList = props => {
         const list = props.list || []
         return list.map(colaborador => (
             <div className="col s3" key={colaborador._id}>
-                <div className="card teal lighten-1">
+                <div className="card blue lighten-1">
                     <div className="card-content white-text">
-                        <a className="card-title center white-text" style={{ cursor: "pointer" }}>{colaborador.name}</a>
+                        <a className="card-title center white-text" style={{ cursor: "pointer" }}><b>{colaborador.name}</b></a>
 
                         <ul className="center">
-                            <font size='5'>{colaborador.cargo}</font>
+                            <font size='5'><b>{colaborador.cargo}</b></font>
                         </ul>
                     </div>
-                    <div className="card-action teal darken-2">
-                        <a href='#/colaboradore' className="waves-effect waves btn #1565c9 blue darken-3"
+                    <div className="card-action  center blue darken-3">
+                        <a href='#/colaboradore' className="waves-effect waves btn #1565c9 blue darken-1"
                             onClick={() => props.changeEdit(colaborador)}>
                             <i className="material-icons left">{"edit"}</i>
 
                         </a>
-                        <a href='#/colaboradorver' className="waves-effect waves btn #1565c9 blue darken-3"
+                        <a href='#/colaboradorver' className="waves-effect waves btn #1565c9 orange lighten-1"
                             onClick={() => props.changeEdit(colaborador)}>
                             <i className="material-icons left">{"search"}</i>
                         </a>

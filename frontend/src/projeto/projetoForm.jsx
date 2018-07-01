@@ -2,101 +2,129 @@ import React, { Component } from "react"
 import { connect } from 'react-redux'
 import Grid from '../template/grid'
 import { bindActionCreators } from 'redux'
-
+import {
+    addProjeto, changeNameProjeto, changeCodigoProjeto, searchProjeto, clearProjeto, changeInicioProjeto, changeSituacaoProjeto, changeFimProjeto,
+    changeFimEsperadoProjeto, changeTipoProjeto, changePrecoRealProjeto, changePrecoEsperadoProjeto, changeDescricaoProjeto, changeGastosProjeto
+} from './projetoActions'
 
 class NovoProjeto extends Component {
     constructor(props) {
         super(props)
-       // this.keyHandler = this.keyHandler.bind(this)
-        //this.getVALUE = this.getVALUE.bind(this)
-       
+        this.keyHandler = this.keyHandler.bind(this)
+        this.getVALUE = this.getVALUE.bind(this)
+
     }
 
 
     componentWillMount() {
-        //this.props.clear()
-        //this.props.search()
+        this.props.clearProjeto()
+        this.props.searchProjeto()
     }
-      /*
+
     keyHandler(e) {
-        const { add, search, name, tipoUsuario, clear, matricula } = this.props
+        const { addProjeto, nameProjeto, codigoProjeto, inicioProjeto, situacaoProjeto, fimProjeto, fimEsperadoProjeto, tipoProjeto, precoRealProjeto, precoEsperadoProjeto, descricaoProjeto, gastosProjeto } = this.props
         if (e.key === 'Enter') {
-            e.shiftKey ? search() : add(name)
-        } else if (e.key === 'Escape') {
-            clear()
+            addProjeto(nameProjeto, codigoProjeto, inicioProjeto, situacaoProjeto, fimProjeto, fimEsperadoProjeto, tipoProjeto, precoRealProjeto, precoEsperadoProjeto, descricaoProjeto, gastosProjeto)
         }
     }
 
     getVALUE() {
-        const { } = this.props
-        if (isNaN(this.props.tipoUsuario) || (this.props.tipoUsuario) < 1 || (this.props.tipoUsuario) > 3) {
-            alert("O Campo 'Tipo de Usuário' deve ser um número de 1 a 3: \n 1: Super admin \n 2: Admin \n 3: Usuário ")
-        } else {
-            add(name, tipoUsuario, matricula, cpf, email, emailAlternative, endereco, identidade, cargo,
-                login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status)
-        }
+        const { addProjeto, nameProjeto, codigoProjeto, inicioProjeto, situacaoProjeto, fimProjeto, fimEsperadoProjeto, tipoProjeto, precoRealProjeto, precoEsperadoProjeto, descricaoProjeto, gastosProjeto } = this.props
 
+        addProjeto(nameProjeto, codigoProjeto, inicioProjeto, situacaoProjeto, fimProjeto, fimEsperadoProjeto, tipoProjeto, precoRealProjeto, precoEsperadoProjeto, descricaoProjeto, gastosProjeto)
     }
-  
-       const { add, search, name, tipoUsuario, matricula, email, emailAlternative, cpf, endereco, identidade, cargo,
-            login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status } = this.props              
-    */
+    /*
+        const { add, search, name, tipoUsuario, matricula, email, emailAlternative, cpf, endereco, identidade, cargo,
+             login, senha, dataNascimento, dataEntrada, dataSaida, camisa, status } = this.props              
+     */
     render() {
-       
+        const { addProjeto, nameProjeto, codigoProjeto, inicioProjeto, situacaoProjeto, fimProjeto, fimEsperadoProjeto, tipoProjeto, precoRealProjeto, precoEsperadoProjeto, descricaoProjeto, gastosProjeto } = this.props
+
         return <div style={{ paddingTop: "20px" }}>
-            <Grid cols='12 9 10'>
-                <div className="socorro">
-                    <form className="col s10  " >
-                        <h1>Novo Projeto</h1>
-                        <div className="divider" />
-                        <div className="input-field">
-                            <input placeholder="" id="Nome" type="text" className="validate" />
-                            <label >Nome</label>
 
-                        </div>
-                        <div className="input-field">
-                            <input placeholder="" id="tempo_estimado" type="text" className="validate" />
-                            <label >Tipo de Projeto</label>
+            <div className="socorro row">
 
-                        </div>
-                        <div className="input-field">
-                            <input placeholder="" id="Nome_Cliente" type="text" className="validate" />
-                            <label >Nome do Cliente</label>
+                <h1>Novo Projeto</h1>
 
-                        </div>
-                        <div className="input-field">
-                            <input placeholder="" id="CPF_CNPJ_Clinete" type="text" className="validate" />
-                            <label >CPF ou CNPJ do Cliente</label>
+                <br />
+                <div className="col s6 ">
+                    <div className="left"><b>Nome:</b></div>
+                    <div className="input-field">
+                        <input id="name" type="text"
+                            placeholder='Nome'
 
-                        </div>
-                        <div className="input-field">
-                            <input placeholder="" id="Endereco_Cliente" type="text" className="validate" />
-                            <label >Endereço do Cliente</label>
+                            onChange={this.props.changeNameProjeto}
 
-                        </div>
-                        <br />
-                        <br />
+                            value={this.props.nameProjeto} >
+                        </input>
 
-                        <div className="row">
-                            <div className="col s4 offset-s4">
-                                <ul id="slide-in" >
-
-                                    
-
-                                </ul>
-
-                            </div>
-                        </div>
-                    </form>
+                    </div>
                 </div>
-            </Grid>
+                <div className="col s6">
+
+                    <div className="left"><b>Código:</b></div>
+                    <div className="input-field">
+                        <input id="codigo" type="text"
+                            placeholder="Código"
+                            onChange={this.props.changeCodigoProjeto}
+
+                            value={this.props.codigoProjeto} >
+                        </input>
+
+
+                    </div>
+                </div>
+                <br/><br/><br/><br/><br/><br/><br/>
+
+                <div className="left"><b>Descrição:</b></div>
+                <div className="input-field">
+
+
+
+                    <textarea id="descricao" type="text" cols='50' rows='10'
+                        placeholder="Descrição"
+                        onChange={this.props.changeDescricaoProjeto}
+
+                        value={this.props.descricaoProjeto} >
+                    </textarea>
+
+                </div>
+                <br/><br/>
+                <div className="row">
+                    <div className="col s4 offset-s4">
+                        <ul id="slide-in" >
+                            <a className="waves-effect blue darken-1  waves-light btn"
+                                onClick={() => [
+
+                                    this.getVALUE()
+
+                                ]
+
+                                }>
+                                <b >Salvar</b>
+                                        <i className="material-icons orange-text text-lighten-1 right">send</i>
+                            </a>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+
 
         </div>
 
     }
 }
 
-const mapStateToProps = state => ({     })
+const mapStateToProps = state => ({
+    nameProjeto: state.projeto.nameProjeto, codigoProjeto: state.projeto.codigoProjeto, inicioProjeto: state.projeto.inicioProjeto, situacaoProjeto: state.projeto.situacaoProjeto,
+    fimProjeto: state.projeto.fimProjeto, fimEsperadoProjeto: state.projeto.fimEsperadoProjeto, tipoProjeto: state.projeto.tipoProjeto, precoRealProjeto: state.projeto.precoRealProjeto,
+    precoEsperadoProjeto: state.projeto.precoEsperadoProjeto, descricaoProjeto: state.projeto.descricaoProjeto, gastosProjeto: state.projeto.gastosProjeto
+})
 const mapDispatchToProps = dispatch =>
-    bindActionCreators({    }, dispatch)
+    bindActionCreators({
+        addProjeto, changeNameProjeto, changeCodigoProjeto, searchProjeto, clearProjeto, changeInicioProjeto, changeSituacaoProjeto, changeFimProjeto,
+        changeFimEsperadoProjeto, changeTipoProjeto, changePrecoRealProjeto, changePrecoEsperadoProjeto, changeDescricaoProjeto, changeGastosProjeto
+    }, dispatch)
 export default connect(mapStateToProps, mapDispatchToProps)(NovoProjeto)

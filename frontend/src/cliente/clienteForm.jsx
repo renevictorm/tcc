@@ -156,7 +156,7 @@ class ClienteForm extends Component {
 
                     <div className="row">
                         <div className="center">
-                            <a className="waves-effect waves-light btn"
+                            <a className="waves-effect orange waves-light btn"
                                 onClick={() => [
 
                                     this.getVALUE()
