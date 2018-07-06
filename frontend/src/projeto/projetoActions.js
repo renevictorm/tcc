@@ -91,9 +91,8 @@ export const editProjeto = (isEditedProjeto, projeto,name, codigo, inicio, situa
     return dispatch => {
         //Aqui deve ser os mesmos nomes dos que estão no banco de dados
         axios.put(`${URL}/${isEditedProjeto}`, { ...projeto,name, codigo, inicio, situacao, fim,fimEsperado, tipo, precoReal, precoEsperado,descricao,gastos})
-            .then(resp => dispatch(clearProjeto()))
-            .then(resp => dispatch(searchProjeto()))
-            alert(`${URL}/${isEditedProjeto}`)
+            
+            alert(`PROJETO ALTERADO`)
     }
 }
 

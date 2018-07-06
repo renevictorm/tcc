@@ -19,7 +19,7 @@ class ColaboradorEdit extends Component {
 
     componentWillMount() {
         
-        this.props.search()
+    this.props.search()
     }
     keyHandler(e) {
         const { add, search, name, tipoUsuario, clear, matricula } = this.props

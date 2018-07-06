@@ -44,7 +44,7 @@ class ProjetoEdit extends Component {
 
             <div className="socorro row">
 
-                <h1>Novo Projeto</h1>
+                <h1>Editar Projeto</h1>
 
                 <br />
                 <div className="card col s6 ">
@@ -132,7 +132,7 @@ class ProjetoEdit extends Component {
                 <div className="row">
                     <div className="col s4 offset-s4">
                         <ul id="slide-in" >
-                            <a className="waves-effect blue darken-1  waves-light btn"
+                            <a  className="waves-effect blue darken-1  waves-light btn"
                                 onClick={() => [
 
                                     this.getVALUE()
@@ -142,6 +142,12 @@ class ProjetoEdit extends Component {
                                 }>
                                 <b >Salvar</b>
                                 <i className="material-icons orange-text text-lighten-1 right">send</i>
+                            </a>
+                            <br/><br/><br/>
+                            <a href="#/projetover" className="waves-effect blue darken-1  waves-light btn"
+                               >
+                                <b >Voltar</b>
+                                <i className="material-icons orange-text text-lighten-1 right">redo</i>
                             </a>
                         </ul>
 

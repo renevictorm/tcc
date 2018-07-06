@@ -6,19 +6,6 @@ import { bindActionCreators } from 'redux'
 import { editCliente, changeEditCliente, searchCliente } from '../cliente/clienteActions.js'
 import { addPC, removePC, searchPC, changeCount, clearPC, addPCresponsavel, changeResponsavel } from './projetoClienteActions.js'
 
-//import { remove, edit, changeEdit, search, searchClienteById } from '../cliente/clienteActions.js'
-//import { addPC, removePC, searchPC, changeCount, clearPC, addPCresponsavel, changeResponsavel } from './pcActions.js'
-/* var i;
-        var j = false;
-        for (i = 0; i < props.list.length; i++) {
-            if (clienteid == props.list[i]._id) {
-                return(<div> 
-                    {props.list[i].name}
-                </div>)
-                    
-                   
-            }
-        } */
 
 
 const ProjetoClienteList = props => {
@@ -31,13 +18,37 @@ const ProjetoClienteList = props => {
 
                 if (responsavel == 1) {
                     return (<div>
-                        <div className=" orange lighten-1"><h4 className='center'><b>{props.list[i].name}:</b></h4></div>
-                        <div className=" orange darken-2 "><h5>Cliente Responsável</h5></div>
+                        <div className=" orange darken-1"><h5 className='center'><b>{props.list[i].name}:</b></h5></div>
+                        <div className=" orange darken-1"><h5 className='center'><b>{props.list[i].telefone}</b></h5></div>
+                        <div className=" orange darken-1"><h6 className='center'><b>{props.list[i].email}</b></h6></div>
+                        <div className=" card  blue darken-2 "><h5>Responsável</h5></div>
+                        <a href='#/clientee' className="waves-effect waves btn #1565c9 blue darken-3"
+                            onClick={() => props.changeEditCliente(props.list[i])}>
+                            <i className="material-icons ">{"edit"}</i>
+
+                        </a>
+                        <a href='#/clientever' className="waves-effect waves btn #1565c9 blue darken-3"
+                            onClick={() => props.changeEditCliente(props.list[i])}>
+                            <i className="material-icons ">{"search"}</i>
+                        </a>
+
                     </div>)
                 }
                 if (responsavel == 2) {
                     return (<div>
-                        <h5 className='center'><b>{props.list[i].name}:</b> <br /><br /> Cliente Comum</h5>
+                        <div className=" orange darken-1"><h5 className='center'><b>{props.list[i].name}:</b></h5></div>
+                        <div className=" orange darken-1"><h5 className='center'><b>{props.list[i].telefone}</b></h5></div>
+                        <div className=" orange darken-1"><h6 className='center'><b>{props.list[i].email}</b></h6></div>
+                        <div className=" orange darken-1 "></div><br/>
+                        <a href='#/clientee' className="waves-effect waves btn #1565c9 blue darken-3"
+                            onClick={() => props.changeEditCliente(props.list[i])}>
+                            <i className="material-icons ">{"edit"}</i>
+
+                        </a>
+                        <a href='#/clientever' className="waves-effect waves btn #1565c9 blue darken-3"
+                            onClick={() => props.changeEditCliente(props.list[i])}>
+                            <i className="material-icons ">{"search"}</i>
+                        </a>
                     </div>)
                 }
 
@@ -65,13 +76,13 @@ const ProjetoClienteList = props => {
         const listpc = props.listpc || []
         return listpc.map(pc => (
 
-            <div className="col s12 " key={pc._id}>
+            <div className="col s12 card orange darken-1" key={pc._id}>
 
-                <div className=" card orange darken-2">
-                    <div className="card-content white-text">
-                        {renderclientes(pc.idProjeto, pc.idCliente, pc.responsavel)}
 
-                    </div>
+                <div className="card-content white-text">
+                    {renderclientes(pc.idProjeto, pc.idCliente, pc.responsavel)}
+
+
 
                 </div>
             </div>
@@ -81,7 +92,7 @@ const ProjetoClienteList = props => {
 
 
     return (
-        <div>
+        
             <div className="row hide-on-med-and-down">
                 <div className="col s12">
                     <h4><b>Cliente(s):</b></h4>
@@ -94,7 +105,7 @@ const ProjetoClienteList = props => {
 
 
 
-        </div>
+        
     )
 }
 

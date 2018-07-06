@@ -24,7 +24,7 @@ class UserInfo extends Component {
                 <br/>
                 <br/> 
                 <h1><strong> BEM VINDO!</strong>  {usuarioAtual.nivelAcesso}</h1>
-                <h2>{usuarioAtual.username} </h2>
+                <h2>{usuarioAtual.name} </h2>
             </div>
 
             </Grid>

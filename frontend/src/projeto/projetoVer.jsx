@@ -2,7 +2,11 @@ import React, { Component } from "react"
 import { connect } from 'react-redux'
 import Grid from '../template/grid'
 import ProjetoClienteList from './projetoClienteList.jsx'
+import FaseList from '../fase/faseList'
 import { bindActionCreators } from 'redux'
+import { clearFase,searchFase } from '../fase/faseActions'
+import { clearCliente } from '../cliente/clienteActions'
+
 import {
     changeEditProjeto, editProjeto, addProjeto, changeNameProjeto, changeCodigoProjeto, searchProjeto, clearProjeto, changeInicioProjeto,
     changeSituacaoProjeto, changeFimProjeto, changeFimEsperadoProjeto, changeTipoProjeto, changePrecoRealProjeto,
@@ -31,8 +35,11 @@ class ProjetoVer extends Component {
     componentWillMount() {
         //window.location.href = '#/bemvindo';
         window.history.replaceState('Object', 'bemvindo', '#/projetopp')
-
+        
+        
+        this.props.clearFase()
         this.props.searchProjeto()
+        //this.props.clearCliente()
     }
     keyHandler(e) {
 
@@ -54,19 +61,28 @@ class ProjetoVer extends Component {
                     <h3>{situacaoProjeto}</h3>
                 </div>
             </div>
+            <div className="card  left white-text ">
+
+                <a href="#/projetop" className="waves-effect blue darken-1  waves-light btn"
+                >
+                    <b >Voltar</b>
+                    <i className="material-icons orange-text text-lighten-1 right">redo</i>
+                </a>
+            </div><br/><br/><br/>
             <div className="row">
                 <div className="col s3">
                     <div className="card blue darken-2 col s12 ">
                         <div className="   blue darken-2 white-text">
-                            <br />
+                            <div className="   blue darken-2 center white-text"> <h5><b>DADOS: </b></h5></div>
+                            <div className="  divider" />
                             <div className="   blue darken-2 white-text"> <h5><b>Código: </b>{codigoProjeto}</h5></div>
-                            <div className="   blue  white-text"> <h5><b>Tipo de projeto: </b>{tipoProjeto}</h5></div>
+                            <div className="   blue darken-1 white-text"> <h5><b>Tipo de projeto: </b>{tipoProjeto}</h5></div>
 
                             <div className="   blue darken-2 white-text">  <h5><b>Inicio: </b>{inicioProjeto.substring(0, 10)}</h5></div>
-                            <div className="   blue  white-text"> <h5><b>Fim: </b>{fimProjeto.substring(0, 10)}</h5></div>
+                            <div className="   blue  darken-1 white-text"> <h5><b>Fim: </b>{fimProjeto.substring(0, 10)}</h5></div>
 
                             <div className="   blue darken-2 white-text"> <h5><b>Gastos: </b>{gastosProjeto} R$</h5></div>
-                            <div className="   blue  white-text"> <h5><b>Descrição: </b>{descricaoProjeto}</h5></div>
+                            <div className="   blue  darken-1 white-text"> <h5><b>Descrição: </b>{descricaoProjeto}</h5></div>
 
                             <div className="center card-action blue darken-2">
 
@@ -83,23 +99,31 @@ class ProjetoVer extends Component {
                 </div>
 
                 <div className=" col s6  card-action ">
-                <br/>
-                    <a href='#/projetoe' className="waves-effect waves btn orange darken-1"
+                    <br />
+                    <a href='#/fase' className="waves-effect waves btn orange darken-1"
                     >
                         <i className="material-icons small center"><b> CRIAR FASE </b> {"add"}</i>
                     </a>
-
+                    <a href='#/arquivo' className="waves-effect waves btn orange darken-1"
+                    >
+                        <i className="material-icons small center"><b> Arquivo </b> {"add"}</i>
+                    </a>
+                    <div>
+                        <FaseList />
+                    </div>
                 </div>
 
                 <div className=" center col s3">
-                    <div className="  card blue lighten-1  white-text">
+                    <div className="  card blue darken-2  white-text">
 
                         <ProjetoClienteList />
-                        <a href='#/projetoaddcliente' className="waves-effect waves btn blue darken-1"
+                        <div className="  divider" />
+                        <br />
+                        <a href='#/projetoaddcliente' className="waves-effect waves btn orange darken-1"
                         >
                             <i className="material-icons  center"><b> ADD CLIENTE </b> {"edit"}</i>
                         </a>
-                        <br /><br /><br />
+                        <br /><br />
                     </div>
 
                 </div>
@@ -123,7 +147,7 @@ const mapStateToProps = state => ({
 })
 const mapDispatchToProps = dispatch =>
     bindActionCreators({
-        changeEditProjeto, editProjeto, addProjeto, changeNameProjeto, changeCodigoProjeto, searchProjeto, clearProjeto, changeInicioProjeto,
+        searchFase, clearCliente, clearFase, changeEditProjeto, editProjeto, addProjeto, changeNameProjeto, changeCodigoProjeto, searchProjeto, clearProjeto, changeInicioProjeto,
         changeSituacaoProjeto, changeFimProjeto, changeFimEsperadoProjeto, changeTipoProjeto, changePrecoRealProjeto,
         changePrecoEsperadoProjeto, changeDescricaoProjeto, changeGastosProjeto
     }, dispatch)

@@ -21,6 +21,11 @@ import projetoVer from '../projeto/projetoVerClientes';
 import projetoEdit from '../projeto/projetoEdit';
 import projetoAddCliente from '../projeto/projetoAddCliente';
 import ClienteVer from '../cliente/clienteVer';
+import faseForm from '../fase/faseForm';
+import faseEdit from '../fase/faseEdit';
+import faseVer from '../fase/faseVer';
+import faseAddColaborador from '../fase/faseAddColaborador';
+import arquivoForm from '../arquivos/arquivoForm';
 
 
 
@@ -35,6 +40,14 @@ export default props => (
         <Route path='/projetover' component={projetoVer}/>
         <Route path='/projetoe' component={projetoEdit}/>
         <Route path='/projetoaddcliente' component={projetoAddCliente}/>
+
+        <Route path='/fase' component={faseForm}/>
+        <Route path='/fasee' component={faseEdit}/>
+        <Route path='/fasever' component={faseVer}/>
+       
+        <Route path='/arquivo' component={arquivoForm}/>
+
+        <Route path='/faseaddcolaborador' component={faseAddColaborador}/>
         
 
         <Route path='/cliente' component={Cliente} />

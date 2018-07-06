@@ -14,9 +14,9 @@ module.exports = function (server) {
     const colaboradorService = require('../api/colaborador/colaboradorService')
     colaboradorService.register(router, '/colaboradores')
 
-     // PROJETO Routes
-     const projetoService = require('../api/projeto/projetoService')
-     projetoService.register(router, '/projetos')
+    // PROJETO Routes
+    const projetoService = require('../api/projeto/projetoService')
+    projetoService.register(router, '/projetos')
 
     // CLIENTE Routes
     const clienteService = require('../api/cliente/clienteService')
@@ -65,4 +65,8 @@ module.exports = function (server) {
     // CH Routes
     const chService = require('../api/colaboradorHorario/chService')
     chService.register(router, '/ch')
+
+    // FASE_COLABORADOR Routes
+    const faseColaboradorService = require('../api/faseColaborador/faseColaboradorService')
+    faseColaboradorService.register(router, '/faseColaborador')
 }

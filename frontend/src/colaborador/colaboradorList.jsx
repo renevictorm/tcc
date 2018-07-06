@@ -55,7 +55,7 @@ const ColaboradorList = props => {
         const list = props.list || []
         return list.map(colaborador => (
             <tr key={colaborador._id} className='hide-on-large-only'>
-                <td className={(colaborador.camisa = "GG") ? 'markedAsDone' : ''}>{colaborador.name}</td>
+                <td >{colaborador.name}</td>
                 <td>
 
                     <a href='#/colaboradore' className="waves-effect waves btn #1565c0 blue darken-3"

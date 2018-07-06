@@ -5,8 +5,9 @@ import IconButton from '../template/iconButton'
 import { bindActionCreators } from 'redux'
 import { changeNameProjeto, searchProjeto, clearProjeto, changeChoiceProjeto, searchProjetoByCodigo } from './projetoActions'
 import { changeNameCliente, searchCliente, clearCliente } from '../cliente/clienteActions'
-
-
+import { clear ,search } from '../colaborador/colaboradorActions'
+import { clearPC } from './projetoClienteActions'
+import{clearFase, searchFase} from '../fase/faseActions'
 class ProjetoPF extends Component {
     constructor(props) {
         super(props)
@@ -14,12 +15,16 @@ class ProjetoPF extends Component {
     }
     componentWillMount() { // essa merda que da erro
         //this.props.clearCC()
-
+        this.props.clear()
+        this.props.search()
         this.props.clearProjeto()
         this.props.searchProjeto()
         //this.props.searchComp()
+        this.props.clearFase()
+        this.props.searchFase()
         this.props.clearCliente()
         this.props.searchCliente()
+        this.props.clearPC()
     }
     keyHandler(e) {
         const { searchProjeto, nameProjeto, clearProjeto } = this.props
@@ -72,5 +77,5 @@ class ProjetoPF extends Component {
 }
 const mapStateToProps = state => ({ nameProjeto: state.projeto.nameProjeto, codigoProjeto: state.projeto.codigorojeto, choiceProjeto: state.projeto.choiceProjeto })
 const mapDispatchToProps = dispatch =>
-    bindActionCreators({ changeNameCliente, searchCliente, clearCliente,changeNameProjeto, searchProjeto, clearProjeto, changeChoiceProjeto, searchProjetoByCodigo }, dispatch)
+    bindActionCreators({   clear,search, clearFase, searchFase, clearPC, changeNameCliente, searchCliente, clearCliente,changeNameProjeto, searchProjeto, clearProjeto, changeChoiceProjeto, searchProjetoByCodigo }, dispatch)
 export default connect(mapStateToProps, mapDispatchToProps)(ProjetoPF)
