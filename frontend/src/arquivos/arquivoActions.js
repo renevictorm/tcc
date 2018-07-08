@@ -8,19 +8,22 @@ export const changeNameArquivo = event => ({
     payload: event.target.value
 })
 
-export const changeFileArquivo = (fila)=>({
+export const changeFileArquivo = (file)=>({
     type: 'ARQUIVOFILE_CHANGED',
    
-    payload: fila
+    payload: file
  
 })
 
 
-export const searchArquivo = (name) => {
+
+export const searchArquivo = (name,idProjeto) => {
     return (dispatch, getState) => {
+        const idProjeto=  getState().projeto.isEditedProjeto
         const name = getState().arquivo.nameArquivo
         const search = name ? `&name__regex=/${name}/` : ''
-        const request = axios.get(`${URL}?sort=-createdAt${search}`)
+        const search2 = idProjeto ? `&idProjeto__regex=/${idProjeto}/` : ''
+        const request = axios.get(`${URL}?sort=-createdAt${search}${search2}`)
             .then(resp => dispatch({ type: 'ARQUIVO_SEARCHED', payload: resp.data }))
     }
 }

@@ -1,13 +1,16 @@
 const INITIAL_STATE = {
     nameArquivo: '',
-    fileArquivo: null,
+    fileArquivo:new FileReader(),
+    idProjetoArqruivo:'',
     listArquivo: []
+
 }
 export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case 'ARQUIVONAME_CHANGED':
             return { ...state, nameArquivo: action.payload }
         case 'ARQUIVOFILE_CHANGED':
+      
             return { ...state, fileArquivo: action.payload }
 
 
@@ -18,7 +21,7 @@ export default (state = INITIAL_STATE, action) => {
        
         case 'ARQUIVO_CLEAR':
             return {
-                ...state, nameArquivo: '', fileArquivo: null
+                ...state, nameArquivo: '', idProjetoArqruivo:'',fileArquivo: new FileReader()
             }
 
         default:

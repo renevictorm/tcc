@@ -4,7 +4,7 @@ import Grid from '../template/grid'
 import ProjetoClienteList from './projetoClienteList.jsx'
 import FaseList from '../fase/faseList'
 import { bindActionCreators } from 'redux'
-import { clearFase,searchFase } from '../fase/faseActions'
+import { clearFase, searchFase } from '../fase/faseActions'
 import { clearCliente } from '../cliente/clienteActions'
 
 import {
@@ -35,8 +35,8 @@ class ProjetoVer extends Component {
     componentWillMount() {
         //window.location.href = '#/bemvindo';
         window.history.replaceState('Object', 'bemvindo', '#/projetopp')
-        
-        
+
+
         this.props.clearFase()
         this.props.searchProjeto()
         //this.props.clearCliente()
@@ -68,12 +68,14 @@ class ProjetoVer extends Component {
                     <b >Voltar</b>
                     <i className="material-icons orange-text text-lighten-1 right">redo</i>
                 </a>
-            </div><br/><br/><br/>
+            </div><br /><br /><br />
             <div className="row">
                 <div className="col s3">
                     <div className="card blue darken-2 col s12 ">
                         <div className="   blue darken-2 white-text">
-                            <div className="   blue darken-2 center white-text"> <h5><b>DADOS: </b></h5></div>
+                            <div className="   blue darken-2 center white-text"> <h5><b>DADOS: </b>
+                                </h5></div>
+
                             <div className="  divider" />
                             <div className="   blue darken-2 white-text"> <h5><b>Código: </b>{codigoProjeto}</h5></div>
                             <div className="   blue darken-1 white-text"> <h5><b>Tipo de projeto: </b>{tipoProjeto}</h5></div>
@@ -90,7 +92,11 @@ class ProjetoVer extends Component {
                                 >
                                     <i className="material-icons small center"><b> EDITAR </b> {"edit"}</i>
                                 </a>
-
+                                <br/><br/>
+                                <a href='#/arquivover' className="waves-effect waves btn orange darken-1"
+                                >
+                                    <i className="material-icons small center"><b> FILES </b> {"edit"}</i>
+                                </a>
 
                             </div>
 
@@ -104,9 +110,9 @@ class ProjetoVer extends Component {
                     >
                         <i className="material-icons small center"><b> CRIAR FASE </b> {"add"}</i>
                     </a>
-                    <a href='#/arquivo' className="waves-effect waves btn orange darken-1"
+                    <a href='#/arquivo' className="waves-effect waves right btn orange darken-1"
                     >
-                        <i className="material-icons small center"><b> Arquivo </b> {"add"}</i>
+                        <i className="material-icons small center"><b> ADD FILE </b> {"add"}</i>
                     </a>
                     <div>
                         <FaseList />

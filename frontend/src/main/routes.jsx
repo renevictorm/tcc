@@ -26,6 +26,7 @@ import faseEdit from '../fase/faseEdit';
 import faseVer from '../fase/faseVer';
 import faseAddColaborador from '../fase/faseAddColaborador';
 import arquivoForm from '../arquivos/arquivoForm';
+import arquivoPesquisa from '../arquivos/arquivoPesquisa';
 
 
 
@@ -46,6 +47,7 @@ export default props => (
         <Route path='/fasever' component={faseVer}/>
        
         <Route path='/arquivo' component={arquivoForm}/>
+        <Route path='/arquivover' component={arquivoPesquisa}/>
 
         <Route path='/faseaddcolaborador' component={faseAddColaborador}/>
         
