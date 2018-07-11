@@ -5,7 +5,7 @@ import IconButton from '../template/iconButton'
 import { bindActionCreators } from 'redux'
 import { changeName, search, clear } from './colaboradorActions'
 import { searchCC, clearCC } from './ccActions'
-import {searchComp} from '../competencia/competenciaActions'
+import {searchComp,clearComp} from '../competencia/competenciaActions'
 
 
 class ColaboradorPF extends Component { 
@@ -15,7 +15,7 @@ class ColaboradorPF extends Component {
     }
     componentWillMount() { // essa merda que da erro
         this.props.clearCC()
-        
+        this.props.clearComp()
         this.props.clear()
         this.props.search()
         this.props.searchComp()
@@ -61,5 +61,5 @@ class ColaboradorPF extends Component {
 }
 const mapStateToProps = state => ({ name: state.colaborador.name })
 const mapDispatchToProps = dispatch =>
-    bindActionCreators({  changeName, search, clear,clearCC,searchCC, searchComp}, dispatch)
+    bindActionCreators({  clearComp,changeName, search, clear,clearCC,searchCC, searchComp}, dispatch)
 export default connect(mapStateToProps, mapDispatchToProps)(ColaboradorPF)

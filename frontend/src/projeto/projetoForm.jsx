@@ -47,7 +47,7 @@ class NovoProjeto extends Component {
                 <h1>Novo Projeto</h1>
 
                 <br />
-                <div className="col s6 ">
+                <div className="card col s6 blue lighten-5 ">
                     <div className="left"><b>Nome:</b></div>
                     <div className="input-field">
                         <input id="name" type="text"
@@ -60,7 +60,7 @@ class NovoProjeto extends Component {
 
                     </div>
                 </div>
-                <div className="col s6">
+                <div className="card col s6 blue lighten-5">
 
                     <div className="left"><b>Código:</b></div>
                     <div className="input-field">
@@ -77,7 +77,7 @@ class NovoProjeto extends Component {
                 <br/><br/><br/><br/><br/><br/><br/>
 
                 <div className="left"><b>Descrição:</b></div>
-                <div className="input-field">
+                <div className="input-field ">
 
 
 
@@ -93,7 +93,7 @@ class NovoProjeto extends Component {
                 <div className="row">
                     <div className="col s4 offset-s4">
                         <ul id="slide-in" >
-                            <a className="waves-effect blue darken-1  waves-light btn"
+                            <a className="waves-effect blue lighten-1  waves-light btn"
                                 onClick={() => [
 
                                     this.getVALUE()

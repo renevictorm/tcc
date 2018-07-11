@@ -68,7 +68,7 @@ class CompetenciaForm extends Component {
 
                 <div className="row">
                     <div className="center">
-                        <a className="waves-effect waves-light btn"
+                        <a className="waves-effect blue lighten-1 waves-light btn"
                             onClick={() => [
 
                                 add(name,observacao)
@@ -76,8 +76,8 @@ class CompetenciaForm extends Component {
                             ]
 
                             }>
-                            Salvar
-                        <i className="material-icons right">send</i>
+                            <b>Salvar</b>
+                            <i className="material-icons orange-text text-lighten-1 right">send</i>
                         </a>
                     </div>
                 </div>

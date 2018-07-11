@@ -6,8 +6,8 @@ const INITIAL_STATE = {
     fimProjeto: new Date,
     fimEsperadoProjeto: new Date,
     tipoProjeto: 'Tipo Não Definido',
-    precoRealProjeto: 2500,
-    precoEsperadoProjeto: 2500,
+    precoRealProjeto: 0,
+    precoEsperadoProjeto: 0,
     descricaoProjeto: '',
     gastosProjeto: 0,
     isEditedProjeto: '',
@@ -60,7 +60,7 @@ export default (state = INITIAL_STATE, action) => {
         case 'PROJETO_CLEAR':
             return {
                 ...state, nameProjeto: '', codigoProjeto: '', inicioProjeto: new Date, situacaoProjeto: 'Analisando', fimProjeto: new Date,
-                fimEsperadoProjeto: new Date, tipoProjeto: 'Tipo Não Definido', precoRealProjeto: 2500, precoEsperadoProjeto: 2500, descricaoProjeto: '',
+                fimEsperadoProjeto: new Date, tipoProjeto: 'Tipo Não Definido', precoRealProjeto: 0, precoEsperadoProjeto: 0, descricaoProjeto: '',
                 gastosProjeto: 0, isEditedProjeto: ''
             }
 

@@ -50,14 +50,14 @@ import { addCC, removeCCSsimples, searchCC, changeCount, clearCC, searchCCTotal 
             const list = props.list || []
             return list.map(competencia => (
                 <div className="col s4" key={competencia._id}>
-                    <div className="card teal lighten-1">
+                    <div className="card blue lighten-2">
                         <div className="card-content white-text">
-                            <a className="card-title center white-text" style={{ cursor: "pointer" }}>{competencia.name}</a>
+                            <a className="card-title center white-text" style={{ cursor: "pointer" }}><b>{competencia.name}</b></a>
 
 
                         </div>
-                        <div className="card-action teal darken-2">
-                            <a href='#/competenciae' className="btn blue darken-4  "
+                        <div className="card-action blue darken-1">
+                            <a href='#/competenciae' className="btn blue lighten-1  "
                                 onClick={() =>
                                     props.changeEdit(competencia)
                                 } style={{ float: "none", cursor: "pointer" }}>
@@ -68,8 +68,8 @@ import { addCC, removeCCSsimples, searchCC, changeCount, clearCC, searchCCTotal 
                                 props.remove(competencia)
                                 removerDeColaboradorCompetencia(competencia._id)
                             }
-                            } className=" btn red darken-4" style={{ float: "right", cursor: "pointer" }}><i className="material-icons">{"clear"}</i></a>
-                            <a className=" btn gray darken-4" style={{ float: "none", cursor: "pointer" }}><i className="material-icons">{"search"}</i></a>
+                            } className=" btn blue darken-4" style={{ float: "right", cursor: "pointer" }}><i className="material-icons">{"clear"}</i></a>
+                            <a className=" btn orange " style={{ float: "none", cursor: "pointer" }}><i className="material-icons">{"search"}</i></a>
                         </div>
                     </div>
                 </div>

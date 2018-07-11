@@ -62,6 +62,15 @@ export const searchProjeto = (name) => {
     }
 }
 
+export const searchProjetoV = (name) => {
+    return (dispatch, getState) => {
+        const name = getState().projeto.nameProjeto
+        const search = ''
+        const request = axios.get(`${URL}?sort=-createdAt${search}`)
+            .then(resp => dispatch({ type: 'PROJETO_SEARCHED', payload: resp.data }))
+    }
+}
+
 export const searchProjetoByCodigo = (name) => {
     return (dispatch, getState) => {
         const name = getState().projeto.nameProjeto

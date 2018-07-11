@@ -54,10 +54,10 @@ class ProjetoVer extends Component {
         const { projeto, nameProjeto, codigoProjeto, inicioProjeto, situacaoProjeto, fimProjeto, fimEsperadoProjeto,
             tipoProjeto, precoRealProjeto, precoEsperadoProjeto, descricaoProjeto, gastosProjeto } = this.props
         return <div >
-            <div className="card-action blue darken-2 center white-text ">
+            <div className="card-action blue center white-text ">
                 <h1><b>{nameProjeto}</b></h1>
 
-                <div className="card blue  center white-text ">
+                <div className="card blue lighten-2  center white-text ">
                     <h3>{situacaoProjeto}</h3>
                 </div>
             </div>
@@ -71,22 +71,22 @@ class ProjetoVer extends Component {
             </div><br /><br /><br />
             <div className="row">
                 <div className="col s3">
-                    <div className="card blue darken-2 col s12 ">
-                        <div className="   blue darken-2 white-text">
-                            <div className="   blue darken-2 center white-text"> <h5><b>DADOS: </b>
+                    <div className="card blue  col s12 ">
+                        <div className="   blue  white-text">
+                            <div className="   blue  center white-text"> <h5><b>DADOS: </b>
                                 </h5></div>
 
                             <div className="  divider" />
-                            <div className="   blue darken-2 white-text"> <h5><b>Código: </b>{codigoProjeto}</h5></div>
-                            <div className="   blue darken-1 white-text"> <h5><b>Tipo de projeto: </b>{tipoProjeto}</h5></div>
+                            <div className="   blue  white-text"> <h5><b>Código: </b>{codigoProjeto}</h5></div>
+                            <div className="   blue lighten-1 white-text"> <h5><b>Tipo de projeto: </b>{tipoProjeto}</h5></div>
 
-                            <div className="   blue darken-2 white-text">  <h5><b>Inicio: </b>{inicioProjeto.substring(0, 10)}</h5></div>
-                            <div className="   blue  darken-1 white-text"> <h5><b>Fim: </b>{fimProjeto.substring(0, 10)}</h5></div>
+                            <div className="   blue white-text">  <h5><b>Inicio: </b>{inicioProjeto.substring(0, 10)}</h5></div>
+                            <div className="   blue  lighten-1 white-text"> <h5><b>Fim: </b>{fimProjeto.substring(0, 10)}</h5></div>
 
-                            <div className="   blue darken-2 white-text"> <h5><b>Gastos: </b>{gastosProjeto} R$</h5></div>
-                            <div className="   blue  darken-1 white-text"> <h5><b>Descrição: </b>{descricaoProjeto}</h5></div>
+                            <div className="   blue  white-text"> <h5><b>Gastos: </b>{gastosProjeto} R$</h5></div>
+                            <div className="   blue  lighten-1 white-text"> <h5><b>Descrição: </b>{descricaoProjeto}</h5></div>
 
-                            <div className="center card-action blue darken-2">
+                            <div className="center card-action blue ">
 
                                 <a href='#/projetoe' className="waves-effect waves btn orange darken-1"
                                 >
@@ -120,7 +120,7 @@ class ProjetoVer extends Component {
                 </div>
 
                 <div className=" center col s3">
-                    <div className="  card blue darken-2  white-text">
+                    <div className="  card blue   white-text">
 
                         <ProjetoClienteList />
                         <div className="  divider" />

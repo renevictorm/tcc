@@ -39,7 +39,7 @@ const ProjetoList = props => {
         const list = props.list || []
         return list.map(projeto => (
             <div className="col s3" key={projeto._id}>
-                <div className="card blue ">
+                <div className="card blue lighten-2 ">
                     <div className="card-content white-text">
                         <a className="card-title center white-text" style={{ cursor: "pointer" }}><b>{projeto.name}</b></a>
                       
@@ -47,13 +47,13 @@ const ProjetoList = props => {
                             <font size='5'><b>{projeto.codigo}</b></font>
                         </ul>
                     </div>
-                    <div className="card-action blue darken-3 center">
-                        <a href='#/projetoe' className="waves-effect waves btn #1565c9 blue darken-1"
+                    <div className="card-action blue darken-1 center">
+                        <a href='#/projetoe' className="waves-effect waves btn #1565c9 blue lighten-1"
                             onClick={() => props.changeEditProjeto(projeto)}>
                             <i className="material-icons left">{"edit"}</i>
 
                         </a>
-                        <a href='#/projetover' className="waves-effect waves btn #1565c9 orange darken-1"
+                        <a href='#/projetover' className="waves-effect waves btn #1565c9 orange"
                             onClick={() => props.changeEditProjeto(projeto)}>
                             <i className="material-icons left">{"search"}</i>
                         </a>

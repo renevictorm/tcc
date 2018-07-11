@@ -50,19 +50,19 @@ class ProjetoPF extends Component {
 
                 <Grid cols='4 3 2'>
 
-                    <a className="waves-effect waves btn #1565c0 blue darken-2 left"
+                    <a className="waves-effect waves btn #1565c0 blue  left"
                         onClick={this.props.searchProjeto}>
-
-                        <i className="material-icons ">{"search"}</i>
-
+                          <b>Nome </b>
+                        <i className="material-icons "> {"search"}</i>
+                      
                     </a>
-                    <a className="waves-effect waves btn #1565c0 blue darken-1 left"
+                    <a className="waves-effect waves btn #1565c0 blue lighten-1 left"
                         onClick={this.props.searchProjetoByCodigo}>
-
-                        <i className="material-icons ">{"search"}</i>
+                            <b>Code </b>
+                        <i className="material-icons "> {"search"}</i>
                     </a>
 
-                    <a className="waves-effect waves btn #1565c0 orange darken-1 left"
+                    <a className="waves-effect waves btn #1565c0 orange lighten-1 left"
                         onClick={this.props.clearProjeto}>
 
                         <i className="material-icons ">{"clear"}</i>

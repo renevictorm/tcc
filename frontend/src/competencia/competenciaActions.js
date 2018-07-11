@@ -73,6 +73,10 @@ export const edit = (isEdited,competencia, name, observacao ) => {
 export const clear = () => {
     return [{ type: 'COMPETENCIA_CLEAR' }, searchComp()]
 }
+
+export const clearComp = () => {
+    return [{ type: 'COMPETENCIA_CLEAR' }, searchComp()]
+}
 //--------------------------------------------------------------------------------------------------
 export const markAsDone = (competencia) => {
     /*return dispatch => {
