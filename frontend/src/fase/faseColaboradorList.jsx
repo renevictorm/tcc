@@ -17,8 +17,8 @@ const FaseColaboradorList = props => {
 
                
                     return (<div>
-                        <div className=" orange darken-1"><h5 className='center'><b>{props.list[i].name}:</b></h5></div>
-                        <div className=" orange darken-1"><h6 className='center'><b>{props.list[i].email}</b></h6></div>
+                        <div className=" orange "><h5 className='center'><b>{props.list[i].name}:</b></h5></div>
+                        <div className=" orange "><h6 className='center'><b>{props.list[i].email}</b></h6></div>
                     </div>)
              
 
@@ -47,7 +47,7 @@ const FaseColaboradorList = props => {
 
             <div className="col s12 " key={fc._id}>
 
-                <div className="card orange darken-1">
+                <div className="card orange">
                 <br/>
                     
                         {rendercolaborador(fc.idFase, fc.idColaborador)}

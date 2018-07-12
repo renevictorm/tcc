@@ -100,8 +100,8 @@ class ColaboradorEdit extends Component {
         return <div style={{ paddingTop: "20px" }}>
             <Grid cols='12 9 10'>
                 <h1>Editar Funcionário</h1>
-                <div className="socorro2">
-                   
+                <div className="socorro row">
+                <div className="card col s12 blue lighten-5 ">
                     <div className="center"><b>Tipo de Usuário:</b></div>
                     <div className="center">||1-Super Admin || 2-Admin || 3-User||</div>
                     <div className="input-field" >
@@ -115,9 +115,9 @@ class ColaboradorEdit extends Component {
                             value={this.props.tipoUsuario}                >
                         </input>
 
-                    </div>
+                    </div></div>
 
-                    <br />
+                    <div className="card col s6  ">
                     <div className="center"><b>Nome:</b></div>
                     <div className="input-field">
                         <input id="name" type="text"
@@ -128,8 +128,9 @@ class ColaboradorEdit extends Component {
                             value={this.props.name} >
                         </input>
 
-                    </div>
-                    <br />
+                    </div></div>
+
+                    <div className="card col s6  ">
                     <div className="center"><b>Matrícula:</b></div>
                     <div className="input-field">
                         <input id="matricula" type="text"
@@ -140,8 +141,9 @@ class ColaboradorEdit extends Component {
                         </input>
 
 
-                    </div>
-                    <br />
+                    </div></div>
+
+                  <div className="card col s6 blue lighten-5 ">
                     <div className="center"><b>CPF:</b></div>
                     <div className="input-field">
                         <input id="cpf" type="text"
@@ -151,8 +153,9 @@ class ColaboradorEdit extends Component {
                             value={this.props.cpf} >
                         </input>
 
-                    </div>
-                    <br />
+                    </div></div>
+
+                    <div className="card col s6 blue lighten-5 ">
                     <div className="center"><b>Email:</b></div>
                     <div className="input-field">
                         <input id="email" type="text"
@@ -161,8 +164,9 @@ class ColaboradorEdit extends Component {
                             onKeyUp={this.keyHandler}
                             value={this.props.email}  >
                         </input>
-                    </div>
-                    <br />
+                    </div></div>
+
+                    <div className="card col s6  ">
                     <div className="center"><b>Email Alternativo:</b></div>
                     <div className="input-field">
                         <input id="emailAlternative" type="text"
@@ -171,18 +175,11 @@ class ColaboradorEdit extends Component {
                             onKeyUp={this.keyHandler}
                             value={this.props.emailAlternative} >
                         </input>
-                    </div>
-                    <br />
-                    <div className="center"><b>Endereço:</b></div>
-                    <div className="input-field">
-                        <input id="endereco" type="text"
-                            placeholder="ENDEREÇO"
-                            onChange={this.props.changeEndereco}
-                            onKeyUp={this.keyHandler}
-                            value={this.props.endereco} >
-                        </input>
-                    </div>
-                    <br />
+                    </div></div>
+
+                   
+
+                   <div className="card col s6  ">
                     <div className="center"><b>Identidade:</b></div>
                     <div className="input-field">
                         <input id="identidade" type="text"
@@ -191,8 +188,9 @@ class ColaboradorEdit extends Component {
                             onKeyUp={this.keyHandler}
                             value={this.props.identidade}>
                         </input>
-                    </div>
-                    <br />
+                    </div></div>
+
+                   <div className="card col s6 blue lighten-5 ">
                     <div className="center"><b>Cargo:</b></div>
                     <div className="input-field">
                         <input id="cargo" type="text"
@@ -201,8 +199,9 @@ class ColaboradorEdit extends Component {
                             onKeyUp={this.keyHandler}
                             value={this.props.cargo}>
                         </input>
-                    </div>
-                    <br />
+                    </div></div>
+
+                   <div className="card col s6 blue lighten-5 ">
                     <div className="center"><b>Login:</b></div>
                     <div className="input-field">
                         <input id="login" type="text"
@@ -211,8 +210,9 @@ class ColaboradorEdit extends Component {
                             onKeyUp={this.keyHandler}
                             value={this.props.login}>
                         </input>
-                    </div>
-                    <br />
+                    </div></div>
+
+                    <div className="card col s6  ">
                     <div className="center"><b>Senha:</b></div>
                     <div className="input-field">
                         <input id="senha" type="password"
@@ -221,8 +221,9 @@ class ColaboradorEdit extends Component {
                             onKeyUp={this.keyHandler}
                             value={this.props.senha}>
                         </input>
-                    </div>
-                    <br />
+                    </div></div>
+
+                    <div className="card col s6  ">
                     <div className="center"><b>Data de Nascimento:</b></div>
                     <div className="input-field">
                         
@@ -232,8 +233,9 @@ class ColaboradorEdit extends Component {
                             onKeyUp={this.keyHandler}
                             value={this.props.dataNascimento}>
                         </input>
-                    </div>
-                    <br />
+                    </div></div>
+
+                   <div className="card col s6 blue lighten-5 ">
                     <div className="center"><b>Data de Entrada:</b></div>
                     <div className="input-field">
                         
@@ -244,8 +246,9 @@ class ColaboradorEdit extends Component {
                             value={this.props.dataEntrada}>
                         </input>
 
-                    </div>
-                    <br />
+                    </div></div>
+
+                  <div className="card col s6 blue lighten-5 ">
                     <div className="center"><b>Data de Saída:</b></div>
                     <div className="input-field">
                        
@@ -256,8 +259,9 @@ class ColaboradorEdit extends Component {
                             value={this.props.dataSaida}>
                         </input>
 
-                    </div>
-                    <br />
+                    </div></div>
+
+                   <div className="card col s6  ">
                     <div className="center"><b>Tamanho da Camisa:</b></div>
                     <div className="input-field">
                         <input id="camisa" type="text"
@@ -267,8 +271,9 @@ class ColaboradorEdit extends Component {
                             value={this.props.camisa}>
                         </input>
 
-                    </div>
-                    <br />
+                    </div></div>
+
+                   <div className="card col s6  ">
                     <div className="center"><b>Status</b></div>
                     <div className="input-field">
                         <input id="status" type="text"
@@ -278,7 +283,18 @@ class ColaboradorEdit extends Component {
                             value={this.props.status}>
                         </input>
 
-                    </div>
+                    </div></div>
+
+                    <div className="card col s12 blue lighten-5 ">
+                    <div className="center"><b>Endereço:</b></div>
+                    <div className="input-field">
+                        <input id="endereco" type="text"
+                            placeholder="ENDEREÇO"
+                            onChange={this.props.changeEndereco}
+                            onKeyUp={this.keyHandler}
+                            value={this.props.endereco} >
+                        </input>
+                    </div></div>
 
 
                     <div className="row">

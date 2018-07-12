@@ -20,6 +20,7 @@ class ProjetoEdit extends Component {
         //this.props.clearProjeto()
         //this.props.searchProjeto()
         this.props.searchProjetoV()
+        window.history.replaceState('Object', 'bemvindo', '#/projetopp')
     }
 
     keyHandler(e) {

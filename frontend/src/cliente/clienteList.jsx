@@ -39,21 +39,21 @@ const ClienteList = props => {
         const list = props.list || []
         return list.map(cliente => (
             <div className="col s3" key={cliente._id}>
-                <div className="card teal lighten-1">
+                <div className="card blue lighten-1">
                     <div className="card-content white-text">
-                        <a className="card-title center white-text" style={{ cursor: "pointer" }}>{cliente.name}</a>
+                        <a className="card-title center white-text" style={{ cursor: "pointer" }}><b>{cliente.name}</b></a>
 
                         <ul className="center">
                             <font size='5'>{cliente.email}</font>
                         </ul>
                     </div>
-                    <div className="card-action teal darken-2">
-                        <a href='#/clientee' className="waves-effect waves btn #1565c9 blue darken-3"
+                    <div className="card-action blue darken-2 center">
+                        <a href='#/clientee' className="waves-effect  btn  blue lighten-1"
                             onClick={() => props.changeEditCliente(cliente)}>
                             <i className="material-icons left">{"edit"}</i>
 
                         </a>
-                        <a href='#/clientever' className="waves-effect waves btn #1565c9 blue darken-3"
+                        <a href='#/clientever' className="waves-effect btn  orange"
                             onClick={() => props.changeEditCliente(cliente)}>
                             <i className="material-icons left">{"search"}</i>
                         </a>

@@ -39,12 +39,12 @@ class ClientePF extends Component {
                 </Grid>
                 <Grid cols='12 3 2'>
                     
-                    <a className="waves-effect waves btn #1565c0 blue darken-3 left"
+                    <a className="waves-effect waves btn  blue lighten-1 left"
                         onClick={this.props.searchCliente}>
                         
                     <i className="material-icons ">{"search"}</i>
                     </a>
-                    <a className="waves-effect waves btn #1565c0 blue darken-3 left"
+                    <a className="waves-effect waves btn #1565c0 orange  left"
                         onClick={this.props.clearCliente}>
                         
                     <i className="material-icons ">{"clear"}</i>

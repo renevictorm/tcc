@@ -21,6 +21,7 @@ class NovoArquivo extends Component {
 
 
     componentWillMount() {
+        window.history.replaceState('Object', 'bemvindo', '#/projetopp')
         this.props.clearArquivo()
         this.props.searchArquivo()
     }
@@ -103,87 +104,93 @@ class NovoArquivo extends Component {
             node.innerText = text;
             var file = reader.result;
             //0000000000000000
-         
-        
-    
-//console.log(idP)
-axios.post('http://localhost:3003/api/arquivo', { name, file, idProjeto })
-alert("Arquivo Salvo")
+
+
+
+            //console.log(idP)
+            axios.post('http://localhost:3003/api/arquivo', { name, file, idProjeto })
+            alert("Arquivo Salvo")
 
 
         };
 
-reader.readAsDataURL(this.props.arquivo)
+        reader.readAsDataURL(this.props.arquivo)
     }
 
 
 
 
-render() {
-    const { addArquivo, searchArquivo } = this.props
-    return <div style={{ paddingTop: "20px" }}>
-        <Grid cols='12 9 10'>
-            <h1>Novo Arquivo</h1>
-            <div className="socorro2">
-                <br />
+    render() {
+        const { addArquivo, searchArquivo } = this.props
+        return <div style={{ paddingTop: "20px" }}>
+            <Grid cols='12 9 10'>
+                <h1>Novo Arquivo</h1>
+                <div className="socorro2">
+                    <br />
 
-                <div className="input-field" >
-
-
-                    <input id="output" type="file" encType="form-data"
-                        placeholder='Arquivo'
-
-                        onChange={this.fileChangedHandler}
-                        onKeyUp={this.keyHandler}
-                        value={this.props.fileArquivo}                >
-                    </input>
-
-                </div>
-
-                <div className="input-field" >
+                    <div className="input-field" >
 
 
-                    <input id="nomearq" type="text"
-                        placeholder='Nome'
+                        <input id="output" type="file" encType="form-data"
+                            placeholder='Arquivo'
 
-                        onChange={this.props.changeNameArquivo}
-                        //onKeyUp={this.keyHandler}
-                        value={this.props.nameArquivo}                >
-                    </input>
+                            onChange={this.fileChangedHandler}
+                            onKeyUp={this.keyHandler}
+                            value={this.props.fileArquivo}                >
+                        </input>
 
-                </div>
-
-                <div className="input-field" display="none">
-
-
-                    <option id="idproject" value={this.props.idArquivoProjeto}               >
-                    </option>
-
-                </div>
-
-                <div className="row">
-                    <div className="center">
-                        <a className="waves-effect orange lighten-1 waves-light btn"
-                            onClick={() => [
-
-                                this.uploadHandler()
-
-                            ]
-
-                            }>
-                            Salvar
-                        <i className="material-icons right">send</i>
-                        </a>
                     </div>
+
+                    <div className="input-field " >
+
+
+                        <input id="nomearq" type="text"
+                            placeholder='Nome'
+
+                            onChange={this.props.changeNameArquivo}
+                            //onKeyUp={this.keyHandler}
+                            value={this.props.nameArquivo}                >
+                        </input>
+
+                    </div>
+
+                    <div className="input-field" display="none">
+
+
+                        <option id="idproject" value={this.props.idArquivoProjeto}               >
+                        </option>
+
+                    </div>
+
+                    <div className="row">
+                        <div className="center">
+                            <a className="waves-effect blue lighten-1 waves-light btn"
+                                onClick={() => [
+
+                                    this.uploadHandler()
+
+                                ]
+
+                                }>
+                                <b>Salvar</b>
+                                <i className="material-icons right orange-text  ">send</i>
+                            </a>
+                            <br /><br /><br />
+                            <a href="#/projetover" className="waves-effect blue lighten-1  waves-light btn"
+                            >
+                                <b >Voltar</b>
+                                <i className="material-icons orange-text text-lighten-1 right">redo</i>
+                            </a>
+                        </div>
+                    </div>
+
+
                 </div>
+            </Grid>
 
+        </div>
 
-            </div>
-        </Grid>
-
-    </div>
-
-}
+    }
 }
 
 const mapStateToProps = state => ({

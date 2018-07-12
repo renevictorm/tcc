@@ -82,6 +82,7 @@ const ProjetoClienteList = props => {
         if (props.count < 2) {
             props.changeCount()
             props.searchPC(props.isEditedProjeto)
+            window.history.replaceState('Object', 'bemvindo', '#/projetopp')
 
         }
     }
@@ -93,7 +94,7 @@ const ProjetoClienteList = props => {
 
             <div className="col s6 " key={pc._id}>
 
-                <div className="card teal lighten-1">
+                <div className="card blue  lighten-1">
                     <div className="card-content white-text">
                         {renderclientes(pc.idProjeto, pc.idCliente, pc.responsavel)}
 
@@ -111,13 +112,13 @@ const ProjetoClienteList = props => {
         const idProjeto = props.isEditedProjeto
         return list.map(cliente => (
             <div className="col s4" key={cliente._id}>
-                <div className="card teal lighten-1">
+                <div className="card blue  lighten-1">
                     <div className="card-content white-text">
                         <a className="card-title center white-text" style={{ cursor: "pointer" }}>{cliente.name}</a>
 
 
                     </div>
-                    <div className="card-action teal darken-2 center">
+                    <div className="card-action blue  darken-2 center">
 
 
                         <div className="input-field">
@@ -144,7 +145,7 @@ const ProjetoClienteList = props => {
                         </a>
 
 
-                        <a className="btn red darken-4 "
+                        <a className="btn orange  "
                             onClick={() => {
                                 remover(idProjeto, cliente._id)
 

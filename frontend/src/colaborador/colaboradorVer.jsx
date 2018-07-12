@@ -61,7 +61,7 @@ class ColaboradorVer extends Component {
         return <div onKeyUp={this.keyHandler} className="row" style={{ paddingTop: "20px" }}>
 
             <div className="col s4">
-                <div className=" row teal lighten-1">
+                <div className=" row blue ">
                     <div className=" row">
                         <div className="col s4">
                             <img className="responsive-imgr" src="https://instagram.fbhz2-1.fna.fbcdn.net/vp/970f06c2211709b380473535d4bad810/5BBB534A/t51.2885-15/e35/21149619_1720037108300122_2320621059671326720_n.jpg" />
@@ -79,7 +79,7 @@ class ColaboradorVer extends Component {
                             </ul>
                         </div>
                     </div>
-                    <div className="card-action teal white-text center darken-2">
+                    <div className="card-action blue white-text center darken-3">
                         <ul >
                             <font size='5'><b>SITUAÇÃO: </b> {status}</font><br />
                         </ul>
@@ -87,7 +87,7 @@ class ColaboradorVer extends Component {
                 </div>
             </div>
             <div className="col s8">
-                <div className=" row teal lighten-1">
+                <div className=" row blue ">
                     <div className=" row">
                         <div className="card-content white-text col s6">
                             <ul >
@@ -97,7 +97,7 @@ class ColaboradorVer extends Component {
 
                                 <font size='4'><b> ENTRADA: </b>{dataEntrada.substring(0, 10)}</font><br />
 
-                                <font size='4'><b>SAÍDA: </b>{dataSaida.substring(0, 10)} </font><br />
+                                <font size='4'><b>SAÍDA: </b>{dataSaida} </font><br />
 
                                 <font size='4'><b>TAMANHO DA CAMISA: </b>{camisa} </font>
                             </ul>
@@ -118,7 +118,7 @@ class ColaboradorVer extends Component {
                         </div>
 
                     </div>
-                    <div className="card-content center white-text darken-2">
+                    <div className="card-content center white-text blue darken-2">
                         <ul >
                             <font size='4'><b> ENDEREÇO: </b> {endereco}</font><br />
                         </ul>

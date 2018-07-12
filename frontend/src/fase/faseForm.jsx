@@ -20,6 +20,7 @@ class NovaFase extends Component {
     componentWillMount() {
         this.props.clearFase()
         this.props.searchFase()
+        window.history.replaceState('Object', 'bemvindo', '#/projetopp')
     }
 
     keyHandler(e) {
@@ -46,7 +47,7 @@ class NovaFase extends Component {
                 <h1>Nova Fase</h1>
 
                 <br />
-                <div className="card col s12">
+                <div className="card col s12 blue lighten-5">
                     <div className="left"><b>Nome:</b></div>
                     <div className="input-field">
                         <input id="name" type="text"
@@ -85,7 +86,7 @@ class NovaFase extends Component {
                     </div>
                 </div>
                 <br />
-                <div className=" card col s12">
+                <div className=" card col s12 blue lighten-5">
                     <div className="center"><b>Data prevista do fim:</b></div>
                     <div className="input-field">
 

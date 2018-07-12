@@ -8,7 +8,7 @@ import { changeCountFase, editFase, changeEditFase, searchFaseId } from './faseA
 
 const FaseList = props => {
 
-    const rendercompetencias = (name, idProjeto, inicio, fim, fimEsperado, descricao,fase) => {
+    const rendercompetencias = (name, idProjeto, inicio, fim, fimEsperado, descricao, fase) => {
 
 
         //if (props.isEditedProjeto == props.listFase[i].idProjeto) {
@@ -22,17 +22,17 @@ const FaseList = props => {
 
                 </div>
                 <div className="card-action col s6 white-text blue lighten-1">
-
-                   <a href='#/fasee' className="waves-effect waves btn #1565c9 blue darken-1"
+                    <div className="card blue lighten-1">
+                        <a href='#/fasee' className="waves-effect waves btn #1565c9 blue darken-3"
                             onClick={() => props.changeEditFase(fase)}>
                             <i className="material-icons left">{"edit"}</i>
 
                         </a>
-                        <a href='#/fasever' className="waves-effect waves btn #1565c9 orange darken-1"
+                        <a href='#/fasever' className="waves-effect waves btn #1565c9 orange "
                             onClick={() => props.changeEditFase(fase)}>
                             <i className="material-icons left">{"search"}</i>
                         </a>
-
+                    </div>
                 </div>
             </div>
 
@@ -63,7 +63,7 @@ const FaseList = props => {
             <div className="card-content blue lighten-1" key={fase._id}>
 
 
-                {rendercompetencias(fase.name, fase.idProjeto, fase.inicio, fase.fim, fase.fimEsperado, fase.descricao,fase)}
+                {rendercompetencias(fase.name, fase.idProjeto, fase.inicio, fase.fim, fase.fimEsperado, fase.descricao, fase)}
 
 
             </div>
@@ -78,10 +78,10 @@ const FaseList = props => {
         <div>
             <div className="row hide-on-med-and-down">
                 <div className="col s12">
-                <br/>
+                    <br />
                     <div className="divider" />
                     <div className="row">
-                    <br/>
+                        <br />
                         {renderRows1()}
                     </div>
                 </div>

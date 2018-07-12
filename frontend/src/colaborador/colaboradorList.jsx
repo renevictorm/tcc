@@ -58,12 +58,12 @@ const ColaboradorList = props => {
                 <td >{colaborador.name}</td>
                 <td>
 
-                    <a href='#/colaboradore' className="waves-effect waves btn #1565c0 blue darken-3"
+                    <a href='#/colaboradore' className="waves-effect waves btn #1565c0 blue lighten-3"
                         onClick={() => props.changeEdit(colaborador)}>
                         editar
                     </a>
                     <i className="material-icons left">{"add"}</i>
-                    <a className=" btn blue darken-3" style={{ float: "none", cursor: "pointer" }}><i className="material-icons">{"search"}</i></a>
+                    <a className=" btn blue lighten-3" style={{ float: "none", cursor: "pointer" }}><i className="material-icons">{"search"}</i></a>
 
 
                 </td>

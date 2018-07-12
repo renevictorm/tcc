@@ -14,6 +14,7 @@ class ClienteVer extends Component {
     constructor(props) {
         super(props)
         this.keyHandler = this.keyHandler.bind(this)
+        this.captaf = this.captaf.bind(this)
         this.getVALUE = this.getVALUE.bind(this)
         var escolha1;
     }
@@ -50,13 +51,21 @@ class ClienteVer extends Component {
 
 
     }
+    captaf(){
+        if(this.props.captacaoCliente){
+            return('Captação Ativa')
 
+        }else{
+            return('Captação Passiva')
+        }
+
+    }
     render() {
         const { editCliente, addCliente, searchC, cliente ,nameCliente, emailCliente, telefoneCliente, prefCliente, identidadeCliente,cnpjCliente, cpfCliente, enderecoCliente, captacaoCliente,empresaCliente} = this.props
         return <div onKeyUp={this.keyHandler} className="row" style={{ paddingTop: "20px" }}>
 
             <div className="col s4">
-                <div className=" row teal lighten-1">
+                <div className=" row blue lighten-1">
                     <div className=" row">
                         <div className="col s4">
                             <img className="responsive-imgr" src="https://instagram.fbhz2-1.fna.fbcdn.net/vp/970f06c2211709b380473535d4bad810/5BBB534A/t51.2885-15/e35/21149619_1720037108300122_2320621059671326720_n.jpg" />
@@ -74,15 +83,15 @@ class ClienteVer extends Component {
                             </ul>
                         </div>
                     </div>
-                    <div className="card-action teal white-text center darken-2">
+                    <div className="card-action blue white-text center darken-2">
                         <ul >
-                            <font size='5'><b>  {captacaoCliente}</b></font><br />
+                            <font size='5'><b>  {this.captaf()}</b></font><br />
                         </ul>
                     </div>
                 </div>
             </div>
             <div className="col s8">
-                <div className=" row teal lighten-1">
+                <div className=" row blue lighten-1">
                     <div className=" row">
                         <div className="card-content white-text col s6">
                         <ul ><font size='4'><b>DADOS ADCIONAIS: </b></font><br /><br />

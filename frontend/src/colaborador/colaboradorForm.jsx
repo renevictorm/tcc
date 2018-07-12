@@ -96,225 +96,239 @@ class NovoFuncionario extends Component {
         return <div style={{ paddingTop: "20px" }}>
             <Grid cols='12 9 10'>
                 <h1>Novo Funcionário</h1>
-                <div className="socorro2">
-                    <br />
-                    <div className="center"><b>Tipo de Usuário:</b></div>
-                    <div className="center">||1-Super Admin || 2-Admin || 3-User||</div>
-                    <div className="input-field" >
+                <div className="socorro row">
+                    <div className="card col s12 blue lighten-5 ">
+                        <div className="center"><b>Tipo de Usuário:</b></div>
+                        <div className="center">||1-Super Admin || 2-Admin || 3-User||</div>
+                        <div className="input-field text-blue" >
 
 
-                        <input id="tipo" type="range" min="1" max="3"
-                            placeholder='Tipo de Usuário'
+                            <input  id="tipo" type="range" min="1" max="3"
+                                placeholder='Tipo de Usuário'
 
-                            onChange={this.props.changeTipoUsuario}
-                            onKeyUp={this.keyHandler}
-                            value={this.props.tipoUsuario}                >
-                        </input>
+                                onChange={this.props.changeTipoUsuario}
+                                onKeyUp={this.keyHandler}
+                                value={this.props.tipoUsuario}                >
+                            </input>
 
-                    </div>
+                        </div>   </div>
 
-                    <br />
-                    <div className="center"><b>Nome:</b></div>
-                    <div className="input-field">
-                        <input id="name" type="text"
-                            placeholder='Nome'
+                    <div className="card col s6  ">
+                        <div className="center"><b>Nome:</b></div>
+                        <div className="input-field">
+                            <input id="name" type="text"
+                                placeholder='Nome'
 
-                            onChange={this.props.changeName}
-                            onKeyUp={this.keyHandler}
-                            value={this.props.name} >
-                        </input>
+                                onChange={this.props.changeName}
+                                onKeyUp={this.keyHandler}
+                                value={this.props.name} >
+                            </input>
 
-                    </div>
-                    <br />
-                    <div className="center"><b>Matrícula:</b></div>
-                    <div className="input-field">
-                        <input id="matricula" type="text"
-                            placeholder="Matrícula"
-                            onChange={this.props.changeMatricula}
-                            onKeyUp={this.keyHandler}
-                            value={this.props.matricula} >
-                        </input>
+                        </div>   </div>
 
-
-                    </div>
-                    <br />
-                    <div className="center"><b>CPF:</b></div>
-                    <div className="input-field">
-                        <input id="cpf" type="text"
-                            placeholder="CPF"
-                            onChange={this.props.changeCpf}
-                            onKeyUp={this.keyHandler}
-                            value={this.props.cpf} >
-                        </input>
-
-                    </div>
-                    <br />
-                    <div className="center"><b>Email:</b></div>
-                    <div className="input-field">
-                        <input id="email" type="text"
-                            placeholder="EMAIL"
-                            onChange={this.props.changeEmail}
-                            onKeyUp={this.keyHandler}
-                            value={this.props.email}  >
-                        </input>
-                    </div>
-                    <br />
-                    <div className="center"><b>Email Alternativo:</b></div>
-                    <div className="input-field">
-                        <input id="emailAlternative" type="text"
-                            placeholder="EMAIL ALTERNATIVO"
-                            onChange={this.props.changeEmailAlternative}
-                            onKeyUp={this.keyHandler}
-                            value={this.props.emailAlternative} >
-                        </input>
-                    </div>
-                    <br />
-                    <div className="center"><b>Endereço:</b></div>
-                    <div className="input-field">
-                        <input id="endereco" type="text"
-                            placeholder="ENDEREÇO"
-                            onChange={this.props.changeEndereco}
-                            onKeyUp={this.keyHandler}
-                            value={this.props.endereco} >
-                        </input>
-                    </div>
-                    <br />
-                    <div className="center"><b>Identidade:</b></div>
-                    <div className="input-field">
-                        <input id="identidade" type="text"
-                            placeholder="IDENTIDADE"
-                            onChange={this.props.changeIdentidade}
-                            onKeyUp={this.keyHandler}
-                            value={this.props.identidade}>
-                        </input>
-                    </div>
-                    <br />
-                    <div className="center"><b>Cargo:</b></div>
-                    <div className="input-field">
-                        <input id="cargo" type="text"
-                            placeholder="CARGO"
-                            onChange={this.props.changeCargo}
-                            onKeyUp={this.keyHandler}
-                            value={this.props.cargo}>
-                        </input>
-                    </div>
-                    <br />
-                    <div className="center"><b>Login:</b></div>
-                    <div className="input-field">
-                        <input id="login" type="text"
-                            placeholder="LOGIN"
-                            onChange={this.props.changeLogin}
-                            onKeyUp={this.keyHandler}
-                            value={this.props.login}>
-                        </input>
-                    </div>
-                    <br />
-                    <div className="center"><b>Senha:</b></div>
-                    <div className="input-field">
-                        <input id="senha" type="password"
-                            placeholder="SENHA"
-                            onChange={this.props.changeSenha}
-                            onKeyUp={this.keyHandler}
-                            value={this.props.senha}>
-                        </input>
-                    </div>
-                    <br />
-                    <div className="center"><b>Data de Nascimento:</b></div>
-                    <div className="input-field">
-                        
-                        <input id="dataNascimento" type="Date"
-                            placeholder="DATA DE NASCIMENTO"
-                            onChange={this.props.changeDataNascimento}
-                            onKeyUp={this.keyHandler}
-                            value={this.props.dataNascimento}>
-                        </input>
-                    </div>
-                    <br />
-                    <div className="center"><b>Data de Entrada:</b></div>
-                    <div className="input-field">
-                        
-                        <input id="dataEntrada" type="Date"
-                            placeholder="DATA DE ENTRADA"
-                            onChange={this.props.changeDataEntrada}
-                            onKeyUp={this.keyHandler}
-                            value={this.props.dataEntrada}>
-                        </input>
-
-                    </div>
-                    <br />
-                    <div className="center"><b>Data de Saída:</b></div>
-                    <div className="input-field">
-                       
-                        <input id="dataSaida" type="Date"
-                            placeholder="DATA DE SAÍDA"
-                            onChange={this.props.changeDataSaida}
-                            onKeyUp={this.keyHandler}
-                            value={this.props.dataSaida}>
-                        </input>
-
-                    </div>
-                    <br />
-                    <div className="center"><b>Tamanho da Camisa:</b></div>
-                    <div className="input-field">
-                        <input id="camisa" type="text"
-                            placeholder="TAMANHO DA CAMISA"
-                            onChange={this.props.changeCamisa}
-                            onKeyUp={this.keyHandler}
-                            value={this.props.camisa}>
-                        </input>
-
-                    </div>
-                    <br />
-                    <div className="center"><b>Status</b></div>
-                    <div className="input-field">
-                        <input id="status" type="text"
-                            placeholder="STATUS"
-                            onChange={this.props.changeStatus}
-                            onKeyUp={this.keyHandler}
-                            value={this.props.status}>
-                        </input>
-
-                    </div>
+                    <div className="card col s6  ">
+                        <div className="center"><b>Matrícula:</b></div>
+                        <div className="input-field">
+                            <input id="matricula" type="text"
+                                placeholder="Matrícula"
+                                onChange={this.props.changeMatricula}
+                                onKeyUp={this.keyHandler}
+                                value={this.props.matricula} >
+                            </input>
 
 
-                    <div className="row">
-                        <div className="center">
-                            <a className="waves-effect waves-light btn"
-                                onClick={() => [
+                        </div>   </div>
 
-                                    this.getVALUE()
+                    <div className="card col s6 blue lighten-5 ">
+                        <div className="center"><b>CPF:</b></div>
+                        <div className="input-field">
+                            <input id="cpf" type="text"
+                                placeholder="CPF"
+                                onChange={this.props.changeCpf}
+                                onKeyUp={this.keyHandler}
+                                value={this.props.cpf} >
+                            </input>
 
-                                ]
+                        </div>   </div>
 
-                                }>
-                                Salvar
-                        <i className="material-icons right">send</i>
-                            </a>
+                    <div className="card col s6 blue lighten-5 ">
+                        <div className="center"><b>Email:</b></div>
+                        <div className="input-field">
+                            <input id="email" type="text"
+                                placeholder="EMAIL"
+                                onChange={this.props.changeEmail}
+                                onKeyUp={this.keyHandler}
+                                value={this.props.email}  >
+                            </input>
+                        </div>   </div>
+
+                    <div className="card col s6  ">
+                        <div className="center"><b>Email Alternativo:</b></div>
+                        <div className="input-field">
+                            <input id="emailAlternative" type="text"
+                                placeholder="EMAIL ALTERNATIVO"
+                                onChange={this.props.changeEmailAlternative}
+                                onKeyUp={this.keyHandler}
+                                value={this.props.emailAlternative} >
+                            </input>
+                        </div>   </div>
+
+                    <div className="card col s6  ">
+                        <div className="center"><b>Endereço:</b></div>
+                        <div className="input-field">
+                            <input id="endereco" type="text"
+                                placeholder="ENDEREÇO"
+                                onChange={this.props.changeEndereco}
+                                onKeyUp={this.keyHandler}
+                                value={this.props.endereco} >
+                            </input>
+                        </div>   </div>
+
+                    <div className="card col s6 blue lighten-5 ">
+                        <div className="center"><b>Identidade:</b></div>
+                        <div className="input-field">
+                            <input id="identidade" type="text"
+                                placeholder="IDENTIDADE"
+                                onChange={this.props.changeIdentidade}
+                                onKeyUp={this.keyHandler}
+                                value={this.props.identidade}>
+                            </input>
+                        </div>   </div>
+
+                    <div className="card col s6 blue lighten-5 ">
+                        <div className="center"><b>Cargo:</b></div>
+                        <div className="input-field">
+                            <input id="cargo" type="text"
+                                placeholder="CARGO"
+                                onChange={this.props.changeCargo}
+                                onKeyUp={this.keyHandler}
+                                value={this.props.cargo}>
+                            </input>
+                        </div>   </div>
+
+                    <div className="card col s6  ">
+                        <div className="center"><b>Login:</b></div>
+                        <div className="input-field">
+                            <input id="login" type="text"
+                                placeholder="LOGIN"
+                                onChange={this.props.changeLogin}
+                                onKeyUp={this.keyHandler}
+                                value={this.props.login}>
+                            </input>
+                        </div>   </div>
+
+                    <div className="card col s6  ">
+                        <div className="center"><b>Senha:</b></div>
+                        <div className="input-field">
+                            <input id="senha" type="password"
+                                placeholder="SENHA"
+                                onChange={this.props.changeSenha}
+                                onKeyUp={this.keyHandler}
+                                value={this.props.senha}>
+                            </input>
+                        </div>   </div>
+
+                    <div className="card col s6 blue lighten-5 ">
+                        <div className="center"><b>Data de Nascimento:</b></div>
+                        <div className="input-field">
+
+                            <input id="dataNascimento" type="Date"
+                                placeholder="DATA DE NASCIMENTO"
+                                onChange={this.props.changeDataNascimento}
+                                onKeyUp={this.keyHandler}
+                                value={this.props.dataNascimento}>
+                            </input>
+                        </div>   </div>
+
+                    <div className="card col s6 blue lighten-5 ">
+                        <div className="center"><b>Data de Entrada:</b></div>
+                        <div className="input-field">
+
+                            <input id="dataEntrada" type="Date"
+                                placeholder="DATA DE ENTRADA"
+                                onChange={this.props.changeDataEntrada}
+                                onKeyUp={this.keyHandler}
+                                value={this.props.dataEntrada}>
+                            </input>
+
+                        </div>   </div>
+
+                    <div className="card col s6  ">
+                        <div className="center"><b>Data de Saída:</b></div>
+                        <div className="input-field">
+
+                            <input id="dataSaida" type="Date"
+                                placeholder="DATA DE SAÍDA"
+                                onChange={this.props.changeDataSaida}
+                                onKeyUp={this.keyHandler}
+                                value={this.props.dataSaida}>
+                            </input>
+
+                        </div>   </div>
+
+                    <div className="card col s6  ">
+                        <div className="center"><b>Tamanho da Camisa:</b></div>
+                        <div className="input-field">
+                            <input id="camisa" type="text"
+                                placeholder="TAMANHO DA CAMISA"
+                                onChange={this.props.changeCamisa}
+                                onKeyUp={this.keyHandler}
+                                value={this.props.camisa}>
+                            </input>
+
+                        </div> </div>
+
+                        <div className="card col s12 blue lighten-5 ">
+                            <div className="center"><b>Status</b></div>
+                            <div className="input-field">
+                                <input id="status" type="text"
+                                    placeholder="STATUS"
+                                    onChange={this.props.changeStatus}
+                                    onKeyUp={this.keyHandler}
+                                    value={this.props.status}>
+                                </input>
+
+                            </div>   </div>
+
+
+                        <div className="row">
+                            <div className="center">
+                                <a className="waves-effect blue waves-light btn"
+                                    onClick={() => [
+
+                                        this.getVALUE()
+
+                                    ]
+
+                                    }>
+                                    Salvar
+                        <i className="material-icons orange-text right">send</i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
             </Grid>
 
         </div>
 
-    }
-}
-
+            }
+        }
+        
 const mapStateToProps = state => ({
-    name: state.colaborador.name, tipoUsuario: state.colaborador.tipoUsuario,
-    matricula: state.colaborador.matricula, email: state.colaborador.email,
-    emailAlternative: state.colaborador.emailAlternative, cpf: state.colaborador.cpf,
-    endereco: state.colaborador.endereco, identidade: state.colaborador.identidade,
-    cargo: state.colaborador.cargo, login: state.colaborador.login,
-    senha: state.colaborador.senha, dataNascimento: state.colaborador.dataNascimento,
-    dataEntrada: state.colaborador.dataEntrada, dataSaida: state.colaborador.dataSaida,
-    camisa: state.colaborador.camisa, status: state.colaborador.status
-})
-const mapDispatchToProps = dispatch =>
+                name: state.colaborador.name, tipoUsuario: state.colaborador.tipoUsuario,
+            matricula: state.colaborador.matricula, email: state.colaborador.email,
+            emailAlternative: state.colaborador.emailAlternative, cpf: state.colaborador.cpf,
+            endereco: state.colaborador.endereco, identidade: state.colaborador.identidade,
+            cargo: state.colaborador.cargo, login: state.colaborador.login,
+            senha: state.colaborador.senha, dataNascimento: state.colaborador.dataNascimento,
+            dataEntrada: state.colaborador.dataEntrada, dataSaida: state.colaborador.dataSaida,
+            camisa: state.colaborador.camisa, status: state.colaborador.status
+        })
+        const mapDispatchToProps = dispatch =>
     bindActionCreators({
-        add, changeName, search, clear, changeTipoUsuario, changeMatricula,
-        changeEmail, changeEmailAlternative, changeCpf, changeEndereco, changeIdentidade, changeCargo,
-        changeLogin, changeSenha, changeDataNascimento, changeDataEntrada, changeDataSaida, changeCamisa,
-        changeStatus
-    }, dispatch)
-export default connect(mapStateToProps, mapDispatchToProps)(NovoFuncionario)
+                add, changeName, search, clear, changeTipoUsuario, changeMatricula,
+            changeEmail, changeEmailAlternative, changeCpf, changeEndereco, changeIdentidade, changeCargo,
+            changeLogin, changeSenha, changeDataNascimento, changeDataEntrada, changeDataSaida, changeCamisa,
+            changeStatus
+        }, dispatch)
+    export default connect(mapStateToProps, mapDispatchToProps)(NovoFuncionario)

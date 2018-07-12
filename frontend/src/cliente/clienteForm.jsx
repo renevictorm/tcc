@@ -39,12 +39,13 @@ class ClienteForm extends Component {
         const { addCliente, searchCliente, nameCliente, emailCliente, telefoneCliente, prefCliente, identidadeCliente,
             cnpjCliente, cpfCliente, enderecoCliente, captacaoCliente, empresaCliente, isEditedCliente } = this.props
         return <div style={{ paddingTop: "20px" }}>
-            <Grid cols='12 9 10'>
+           
                 <h1>Novo Cliente</h1>
-                <div className="socorro2">
+                <div className="socorro row">
 
                     <br />
-                    <div className="center"><b>Nome:</b></div>
+                    <div className="card col s6 blue lighten-5 ">
+                    <div className="center "><b>Nome:</b></div>
                     <div className="input-field" >
 
 
@@ -57,8 +58,10 @@ class ClienteForm extends Component {
                         </input>
 
                     </div>
+                    </div>
 
-                    <br />
+                 
+                    <div className="card col s6 blue lighten-5 ">
                     <div className="center"><b>Email:</b></div>
                     <div className="input-field">
                         <input id="email" type="text"
@@ -69,8 +72,9 @@ class ClienteForm extends Component {
                             value={this.props.emailCliente} >
                         </input>
 
-                    </div>
-                    <br />
+                    
+                    </div></div>
+                    <div className="card col s6  ">
                     <div className="center"><b>Telefone:</b></div>
                     <div className="input-field">
                         <input id="telefone" type="text"
@@ -81,8 +85,8 @@ class ClienteForm extends Component {
                         </input>
 
 
-                    </div>
-                    <br />
+                    </div>  </div>
+                    <div className="card col s6 ">
                     <div className="center"><b>Contato Preferencial:</b></div>
                     <div className="input-field">
                         <input id="pref" type="text"
@@ -91,8 +95,8 @@ class ClienteForm extends Component {
 
                             value={this.props.prefCliente}  >
                         </input>
-                    </div>
-                    <br />
+                    </div>  </div>
+                    <div className="card col s6 blue lighten-5 ">
                     <div className="center"><b>Identidade:</b></div>
                     <div className="input-field">
                         <input id="identidade" type="text"
@@ -101,8 +105,8 @@ class ClienteForm extends Component {
 
                             value={this.props.identidadeCliente}>
                         </input>
-                    </div>
-                    <br />
+                    </div>  </div>
+                    <div className="card col s6 blue lighten-5 ">
                     <div className="center"><b>CNPJ:</b></div>
                     <div className="input-field">
                         <input id="cnpj" type="text"
@@ -111,8 +115,8 @@ class ClienteForm extends Component {
 
                             value={this.props.cnpjCliente} >
                         </input>
-                    </div>
-                    <br />
+                    </div>  </div>
+                    <div className="card col s6  ">
                     <div className="center"><b>CPF:</b></div>
                     <div className="input-field">
                         <input id="cpf" type="text"
@@ -122,24 +126,14 @@ class ClienteForm extends Component {
                             value={this.props.cpfCliente} >
                         </input>
 
-                    </div>
+                    </div>  </div>
 
 
 
 
-                    <br />
-                    <div className="center"><b>Endereço:</b></div>
-                    <div className="input-field">
-                        <input id="endereco" type="text"
-                            placeholder="ENDEREÇO"
-                            onChange={this.props.changeEnderecoCliente}
-
-                            value={this.props.enderecoCliente} >
-                        </input>
-                    </div>
 
 
-                    <br />
+                    <div className="card col s6  ">
                     <div className="center"><b>Empresa:</b></div>
                     <div className="input-field">
                         <input id="empresa" type="text"
@@ -149,14 +143,28 @@ class ClienteForm extends Component {
                             value={this.props.empresaCliente}>
                         </input>
                     </div>
+                    </div>
+                    
+                  <div className="card col s12 blue lighten-5 ">
+                    <div className="center"><b>Endereço:</b></div>
+                    <div className="input-field">
+                        <input id="endereco" type="text"
+                            placeholder="ENDEREÇO"
+                            onChange={this.props.changeEnderecoCliente}
+
+                            value={this.props.enderecoCliente} >
+                        </input>
+                    </div>  </div>
 
 
 
-
+                
 
                     <div className="row">
+                    
                         <div className="center">
-                            <a className="waves-effect orange waves-light btn"
+                        
+                            <a className="waves-effect blue waves-light btn"
                                 onClick={() => [
 
                                     this.getVALUE()
@@ -165,12 +173,12 @@ class ClienteForm extends Component {
 
                                 }>
                                 Salvar
-                        <i className="material-icons right">send</i>
+                        <i className="material-icons orange-text right">send</i>
                             </a>
                         </div>
                     </div>
                 </div>
-            </Grid>
+         
 
         </div>
 

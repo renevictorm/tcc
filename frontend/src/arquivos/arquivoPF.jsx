@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import Grid from '../template/grid'
 import IconButton from '../template/iconButton'
 import { bindActionCreators } from 'redux'
-import { searchArquivo, clearArquivo,changeNameArquivo  } from './arquivoActions'
+import { searchArquivo, clearArquivo, changeNameArquivo } from './arquivoActions'
 
 
 
@@ -14,11 +14,12 @@ class ColaboradorPF extends Component {
     }
     componentWillMount() {
         this.props.clearArquivo()
+        window.history.replaceState('Object', 'bemvindo', '#/projetopp')
 
 
     }
     keyHandler(e) {
-       
+
         if (e.key === 'Enter') {
             this.props.searchArquivo()
         } else if (e.key === 'Escape') {
@@ -26,19 +27,19 @@ class ColaboradorPF extends Component {
         }
     }
     render() {
-        const { searchArquivo, nameArquivo,changeNameArquivo  } = this.props
+        const { searchArquivo, nameArquivo, changeNameArquivo } = this.props
         return (
             <div role='form' className='socorro3'>
                 <Grid cols='12 9 10'>
                     <input id='name' className='form-control'
                         placeholder='Pesquise por nome'
-                        onChange={this.props.changeNameArquivo }
+                        onChange={this.props.changeNameArquivo}
                         onKeyUp={this.keyHandler}
                         value={this.props.nameArquivo}></input>
                 </Grid>
                 <Grid cols='12 3 2'>
 
-                    <a className="waves-effect waves btn #1565c0 blue darken-1 left"
+                    <a className="waves-effect waves btn #1565c0 blue lighten-1  left"
                         onClick={searchArquivo}>
 
                         <i className="material-icons ">{"search"}</i>
@@ -47,6 +48,12 @@ class ColaboradorPF extends Component {
                         onClick={this.props.clearArquivo}>
 
                         <i className="material-icons ">{"clear"}</i>
+                    </a>
+                    <br /><br /><br />
+                    <a href="#/projetover" className="waves-effect blue lighten-1  waves-light btn"
+                    >
+                        <b >Voltar</b>
+                        <i className="material-icons orange-text text-lighten-1 right">redo</i>
                     </a>
 
                 </Grid>
@@ -58,5 +65,5 @@ class ColaboradorPF extends Component {
 }
 const mapStateToProps = state => ({ name: state.arquivo.nameArquivo })
 const mapDispatchToProps = dispatch =>
-    bindActionCreators({ searchArquivo, clearArquivo,changeNameArquivo  }, dispatch)
+    bindActionCreators({ searchArquivo, clearArquivo, changeNameArquivo }, dispatch)
 export default connect(mapStateToProps, mapDispatchToProps)(ColaboradorPF)

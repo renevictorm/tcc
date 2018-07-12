@@ -28,27 +28,27 @@ const ColaboradorCompetenciaList = props => {
 
                 if (nivel == 1){
                     return (<div>
-                        <h5 className='center'><b>{props.list[i].name}:</b> <br/><br/> <i className="material-icons ">{"star"}</i><i className="material-icons">{"star_border"}</i><i className="material-icons ">{"star_border"}</i><i className="material-icons">{"star_border"}</i><i className="material-icons ">{"star_border"}</i></h5>
+                        <h5 className='center'><b>{props.list[i].name}:</b> <br/><br/> <i className="material-icons yellow-text">{"star"}</i><i className="material-icons">{"star_border"}</i><i className="material-icons ">{"star_border"}</i><i className="material-icons">{"star_border"}</i><i className="material-icons ">{"star_border"}</i></h5>
                     </div>)
                 }
                 if (nivel == 2){
                     return (<div>
-                       <h5 className='center'><b>{props.list[i].name}:</b> <br/><br/><i className="material-icons ">{"star"}</i><i className="material-icons">{"star"}</i><i className="material-icons ">{"star_border"}</i><i className="material-icons">{"star_border"}</i><i className="material-icons ">{"star_border"}</i></h5>
+                       <h5 className='center'><b>{props.list[i].name}:</b> <br/><br/><i className="material-icons  yellow-text ">{"star"}</i><i className="material-icons  yellow-text">{"star"}</i><i className="material-icons ">{"star_border"}</i><i className="material-icons">{"star_border"}</i><i className="material-icons ">{"star_border"}</i></h5>
                     </div>)
                 }
                 if (nivel == 3){
                     return (<div>
-                        <h5 className='center'><b>{props.list[i].name}:</b> <br/><br/> <i className="material-icons ">{"star"}</i><i className="material-icons">{"star"}</i><i className="material-icons ">{"star"}</i><i className="material-icons">{"star_border"}</i><i className="material-icons ">{"star_border"}</i></h5>
+                        <h5 className='center'><b>{props.list[i].name}:</b> <br/><br/> <i className="material-icons  yellow-text">{"star"}</i><i className="material-icons  yellow-text">{"star"}</i><i className="material-icons  yellow-text">{"star"}</i><i className="material-icons">{"star_border"}</i><i className="material-icons ">{"star_border"}</i></h5>
                     </div>)
                 }
                 if (nivel == 4){
                     return (<div>
-                        <h5 className='center'><b>{props.list[i].name}:</b> <br/><br/> <i className="material-icons ">{"star"}</i><i className="material-icons">{"star"}</i><i className="material-icons ">{"star"}</i><i className="material-icons">{"star"}</i><i className="material-icons ">{"star_border"}</i></h5>
+                        <h5 className='center'><b>{props.list[i].name}:</b> <br/><br/> <i className="material-icons yellow-text ">{"star"}</i><i className="material-icons  yellow-text">{"star"}</i><i className="material-icons  yellow-text">{"star"}</i><i className="material-icons  yellow-text">{"star"}</i><i className="material-icons ">{"star_border"}</i></h5>
                     </div>)
                 }
                 if (nivel == 5){
                     return (<div>
-                       <h5 className='center'><b>{props.list[i].name}:</b> <br/><br/> <i className="material-icons ">{"star"}</i><i className="material-icons">{"star"}</i><i className="material-icons ">{"star"}</i><i className="material-icons">{"star"}</i><i className="material-icons ">{"star"}</i></h5>
+                       <h5 className='center'><b>{props.list[i].name}:</b> <br/><br/> <i className="material-icons  yellow-text">{"star"}</i><i className="material-icons  yellow-text">{"star"}</i><i className="material-icons  yellow-text">{"star"}</i><i className="material-icons  yellow-text">{"star"}</i><i className="material-icons  yellow-text">{"star"}</i></h5>
                     </div>)
                 }
 
@@ -103,7 +103,7 @@ const ColaboradorCompetenciaList = props => {
 
             <div className="col s6 " key={cc._id}>
 
-                <div className="card teal lighten-1">
+                <div className="card blue lighten-1">
                     <div className="card-content white-text">
                         {rendercompetencias(cc.idColaborador, cc.idCompetencia, cc.nivel)}
 
@@ -121,13 +121,13 @@ const ColaboradorCompetenciaList = props => {
         const idColaborador = props.isEdited
         return list.map(competencia => (
             <div className="col s4" key={competencia._id}>
-                <div className="card teal lighten-1">
+                <div className="card blue lighten-1">
                     <div className="card-content white-text">
-                        <a className="card-title center white-text" style={{ cursor: "pointer" }}>{competencia.name}</a>
+                        <a className="card-title center white-text" style={{ cursor: "pointer" }}><b>{competencia.name}</b></a>
 
 
                     </div>
-                    <div className="card-action teal darken-2 center">
+                    <div className="card-action blue darken-2 center">
 
 
                         <div className="input-field">
@@ -139,7 +139,7 @@ const ColaboradorCompetenciaList = props => {
                             </input>
 
                         </div>
-                        <a className="btn blue darken-4 "
+                        <a className="btn blue lighten-1 "
                             onClick={() => {
                                 adicionar(idColaborador, competencia._id, props.pontos)
 
@@ -154,7 +154,7 @@ const ColaboradorCompetenciaList = props => {
                         </a>
 
 
-                        <a className="btn red darken-4 "
+                        <a className="btn orange"
                             onClick={() => {
                                 remover(idColaborador, competencia._id)
 

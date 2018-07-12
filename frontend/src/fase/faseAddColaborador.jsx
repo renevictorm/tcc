@@ -53,7 +53,7 @@ if( props.competenciaName != ''){
 
 
                 return (<div>
-                    <h5 className='center'><b>{props.list[i].name}:</b> <br /><br /></h5>
+                    <h5 className='center'><b>{props.list[i].name}</b> <br /><br /></h5>
                 </div>)
 
 
@@ -101,6 +101,7 @@ if( props.competenciaName != ''){
             props.searchFC(props.isEditedFase)
             props.searchCCTotal()
             props.clear()
+            window.history.replaceState('Object', 'bemvindo', '#/projetopp')
 
         }
     }
@@ -112,7 +113,7 @@ if( props.competenciaName != ''){
 
             <div className="col s2 " key={fc._id}>
 
-                <div className="card teal lighten-1">
+                <div className="card blue lighten-1">
                     <div className="card-content white-text">
                         {rendercolaborador(fc.idFase, fc.idColaborador)}
 
@@ -138,13 +139,13 @@ if( props.competenciaName != ''){
 
                         return (
                             <div className="col s4">
-                                <div className="card teal lighten-1">
+                                <div className="card blue lighten-1">
                                     <div className="card-content white-text">
                                         <h3 className="card-title center white-text" style={{ cursor: "pointer" }}><b>{colaborador.name}</b></h3>
                                         {rendercompetencias(props.listComp[l].name,  props.listcc[k].nivel)}
 
                                     </div>
-                                    <div className="card-action teal darken-2 center">
+                                    <div className="card-action blue darken-2 center">
 
 
 
@@ -163,7 +164,7 @@ if( props.competenciaName != ''){
                                         </a>
 
 
-                                        <a className="btn red darken-4 "
+                                        <a className="btn orange "
                                             onClick={() => {
                                                 remover(idFase, colaborador._id)
 

@@ -6,8 +6,8 @@ import TodoForm from './todoForm'
 import TodoList from './todoList'
 
 export default props => (
-    <div>
-        <PageHeader name='Tarefas' small='Cadastro'></PageHeader>
+    <div className='socorro'>
+        <PageHeader name='Tarefas' ></PageHeader>
         <TodoForm />
         <TodoList />
     </div>

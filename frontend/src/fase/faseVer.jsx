@@ -9,43 +9,6 @@ import { bindActionCreators } from 'redux'
 import { clearFase, searchFase, changeCountFase, editFase, changeEditFase, searchFaseId } from '../fase/faseActions'
 import { clearFC, searchFC } from './faseColaboradorActions'
 
-
-/** <form id="frm" >
-                            <input type="file" />
-                            <button type="button" id="btn_enviar"
-                                onClick={() => {
-
-                            
-
-                                    $(document).ready(function () {
-                                        $('#btn_enviar').click(function () {
-                                            enviar();
-                                        });
-                                    });
-                                    function enviar() {
-                                        var formData = new FormData($('#frm')[0]);
-                                        $.ajax({
-                                            url: 'C:\Users\Unknown\Dropbox\Seminarios\ponto 6\todo-app\frontend\src\fase\fasefiles',
-                                            type: "POST",
-                                            data: formData,
-                                            contentType: false,
-                                            processData: false,
-                                            dataType: "JSON",
-                                            success: function (data) {
-                                                console.log(data);
-                                            },
-                                        });
-                                    }
-
-
-
-
-
-                                }}> Salvar</button>
-
-                        </form> */
-
-
 class FaseVer extends Component {
     constructor(props) {
         super(props)
@@ -88,10 +51,10 @@ class FaseVer extends Component {
     render() {
         const { codigoProjeto, nameProjeto, nameFase, tipoProjeto, isEditProjetoFase, inicioFase, fimFase, fimEsperadoFase, descricaoFase } = this.props
         return <div >
-            <div className="card-action blue darken-2 center white-text ">
+            <div className="card-action blue center white-text ">
                 <h1><b>{nameProjeto}</b></h1>
 
-                <div className="card blue  center white-text ">
+                <div className="card blue lighten-2  center white-text ">
 
                     <h3>{nameFase}</h3>
                 </div>
@@ -108,22 +71,22 @@ class FaseVer extends Component {
             <br /><br /><br />
             <div className="row">
                 <div className="col s3">
-                    <div className="card blue darken-2 col s12 ">
-                        <div className="   blue darken-2 white-text">
-                            <div className="   blue darken-2 center white-text"> <h5><b>DADOS DA FASE: </b></h5></div>
+                    <div className="card blue  col s12 ">
+                        <div className="   blue  white-text">
+                            <div className="   blue  center white-text"> <h5><b>DADOS DA FASE: </b></h5></div>
                             <div className="  divider" />
-                            <div className="   blue darken-2 white-text"> <h5><b>Código: </b>{codigoProjeto}</h5></div>
-                            <div className="   blue darken-1 white-text"> <h5><b>Tipo de projeto: </b>{tipoProjeto}</h5></div>
+                            <div className="   blue  white-text"> <h5><b>Código: </b>{codigoProjeto}</h5></div>
+                            <div className="   blue lighten-1 white-text"> <h5><b>Tipo de projeto: </b>{tipoProjeto}</h5></div>
 
-                            <div className="   blue darken-2 white-text">  <h5><b>Inicio: </b>{inicioFase.substring(0, 10)}</h5></div>
-                            <div className="   blue  darken-1 white-text"> <h5><b>Fim: </b>{fimFase.substring(0, 10)}</h5></div>
+                            <div className="   blue  white-text">  <h5><b>Inicio: </b>{inicioFase.substring(0, 10)}</h5></div>
+                            <div className="   blue  lighten-1 white-text"> <h5><b>Fim: </b>{fimFase.substring(0, 10)}</h5></div>
 
-                            <div className="   blue darken-2 white-text"> <h5><b>Fim Estimado: </b><br/>{fimEsperadoFase.substring(0, 10)}</h5></div>
-                            <div className="   blue  darken-1 white-text"> <h5><b>Descrição: </b>{descricaoFase}</h5></div>
+                            <div className="   blue  white-text"> <h5><b>Fim Estimado: </b><br/>{fimEsperadoFase.substring(0, 10)}</h5></div>
+                            <div className="   blue  lighten-1 white-text"> <h5><b>Descrição: </b>{descricaoFase}</h5></div>
 
-                            <div className="center card-action blue darken-2">
+                            <div className="center card-action blue ">
 
-                                <a href='#/fasee' className="waves-effect waves btn orange darken-1"
+                                <a href='#/fasee' className="waves-effect waves btn orange lighten-1"
                                 >
                                     <i className="material-icons small center"><b> EDITAR </b> {"edit"}</i>
                                 </a>
@@ -149,7 +112,7 @@ class FaseVer extends Component {
 
                 <div className=" center col s3">
 
-                    <div className="  card blue darken-2  white-text">
+                    <div className="  card blue  white-text">
 
 
                         <FaseColaboradorList />

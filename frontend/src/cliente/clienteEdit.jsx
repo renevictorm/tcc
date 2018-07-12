@@ -18,18 +18,18 @@ class ClienteForm extends Component {
 
 
     componentWillMount() {
-       // this.props.clearCliente()
+        // this.props.clearCliente()
         this.props.searchCliente()
     }
 
 
 
     getVALUE() {
-        const {editCliente, cliente, nameCliente, emailCliente, telefoneCliente, prefCliente, identidadeCliente,
+        const { editCliente, cliente, nameCliente, emailCliente, telefoneCliente, prefCliente, identidadeCliente,
             cnpjCliente, cpfCliente, enderecoCliente, captacaoCliente, empresaCliente, isEditedCliente } = this.props
         const eee = false
-        
-        editCliente(isEditedCliente,cliente ,nameCliente, emailCliente, telefoneCliente, prefCliente, identidadeCliente, cnpjCliente, cpfCliente, enderecoCliente, eee, empresaCliente)
+
+        editCliente(isEditedCliente, cliente, nameCliente, emailCliente, telefoneCliente, prefCliente, identidadeCliente, cnpjCliente, cpfCliente, enderecoCliente, eee, empresaCliente)
         alert(emailCliente)
 
     }
@@ -42,114 +42,119 @@ class ClienteForm extends Component {
         return <div style={{ paddingTop: "20px" }}>
             <Grid cols='12 9 10'>
                 <h1>Novo Cliente</h1>
-                <div className="socorro2">
+                <div className="socorro row">
 
-                    <br />
-                    <div className="center"><b>Nome:</b></div>
-                    <div className="input-field" >
-
-
-                        <input id="tipo" type="text"
-                            placeholder='Nome'
-
-                            onChange={this.props.changeNameCliente}
-
-                            value={this.props.nameCliente}                >
-                        </input>
-
-                    </div>
-
-                    <br />
-                    <div className="center"><b>Email:</b></div>
-                    <div className="input-field">
-                        <input id="email" type="text"
-                            placeholder='Email'
-
-                            onChange={this.props.changeEmailCliente}
-
-                            value={this.props.emailCliente} >
-                        </input>
-
-                    </div>
-                    <br />
-                    <div className="center"><b>Telefone:</b></div>
-                    <div className="input-field">
-                        <input id="telefone" type="text"
-                            placeholder="Telefone"
-                            onChange={this.props.changeTelefoneCliente}
-
-                            value={this.props.telefoneCliente} >
-                        </input>
+                    <div className="card col s6 blue lighten-5 ">
+                        <div className="center"><b>Nome:</b></div>
+                        <div className="input-field" >
 
 
-                    </div>
-                    <br />
-                    <div className="center"><b>Contato Preferencial:</b></div>
-                    <div className="input-field">
-                        <input id="pref" type="text"
-                            placeholder="Contato Preferencial"
-                            onChange={this.props.changePrefCliente}
+                            <input id="tipo" type="text"
+                                placeholder='Nome'
 
-                            value={this.props.prefCliente}  >
-                        </input>
-                    </div>
-                    <br />
-                    <div className="center"><b>Identidade:</b></div>
-                    <div className="input-field">
-                        <input id="identidade" type="text"
-                            placeholder="IDENTIDADE"
-                            onChange={this.props.changeIdentidadeCliente}
+                                onChange={this.props.changeNameCliente}
 
-                            value={this.props.identidadeCliente}>
-                        </input>
-                    </div>
-                    <br />
-                    <div className="center"><b>CNPJ:</b></div>
-                    <div className="input-field">
-                        <input id="cnpj" type="text"
-                            placeholder="CNPJ"
-                            onChange={this.props.changeCnpjCliente}
+                                value={this.props.nameCliente}                >
+                            </input>
 
-                            value={this.props.cnpjCliente} >
-                        </input>
-                    </div>
-                    <br />
-                    <div className="center"><b>CPF:</b></div>
-                    <div className="input-field">
-                        <input id="cpf" type="text"
-                            placeholder="CPF"
-                            onChange={this.props.changeCpfCliente}
+                        </div> </div>
 
-                            value={this.props.cpfCliente} >
-                        </input>
+                    <div className="card col s6 blue lighten-5 ">
+                        <div className="center"><b>Email:</b></div>
+                        <div className="input-field">
+                            <input id="email" type="text"
+                                placeholder='Email'
 
-                    </div>
+                                onChange={this.props.changeEmailCliente}
+
+                                value={this.props.emailCliente} >
+                            </input>
+
+                        </div> </div>
+
+                    <div className="card col s6  ">
+                        <div className="center"><b>Telefone:</b></div>
+                        <div className="input-field">
+                            <input id="telefone" type="text"
+                                placeholder="Telefone"
+                                onChange={this.props.changeTelefoneCliente}
+
+                                value={this.props.telefoneCliente} >
+                            </input>
 
 
+                        </div> </div>
+
+                    <div className="card col s6 ">
+                        <div className="center"><b>Contato Preferencial:</b></div>
+                        <div className="input-field">
+                            <input id="pref" type="text"
+                                placeholder="Contato Preferencial"
+                                onChange={this.props.changePrefCliente}
+
+                                value={this.props.prefCliente}  >
+                            </input>
+                        </div> </div>
+
+                    <div className="card col s6 blue lighten-5 ">
+                        <div className="center"><b>Identidade:</b></div>
+                        <div className="input-field">
+                            <input id="identidade" type="text"
+                                placeholder="IDENTIDADE"
+                                onChange={this.props.changeIdentidadeCliente}
+
+                                value={this.props.identidadeCliente}>
+                            </input>
+                        </div> </div>
+
+                    <div className="card col s6 blue lighten-5 ">
+                        <div className="center"><b>CNPJ:</b></div>
+                        <div className="input-field">
+                            <input id="cnpj" type="text"
+                                placeholder="CNPJ"
+                                onChange={this.props.changeCnpjCliente}
+
+                                value={this.props.cnpjCliente} >
+                            </input>
+                        </div> </div>
+
+                    <div className="card col s6  ">
+                        <div className="center"><b>CPF:</b></div>
+                        <div className="input-field">
+                            <input id="cpf" type="text"
+                                placeholder="CPF"
+                                onChange={this.props.changeCpfCliente}
+
+                                value={this.props.cpfCliente} >
+                            </input>
+
+                        </div> </div>
+
+                    <div className="card col s6  ">
+                        <div className="center"><b>Empresa:</b></div>
+                        <div className="input-field">
+                            <input id="empresa" type="text"
+                                placeholder="EMPRESA"
+                                onChange={this.props.changeEmpresaCliente}
+
+                                value={this.props.empresaCliente}>
+                            </input>
+                        </div> </div>
 
 
-                    <br />
-                    <div className="center"><b>Endereço:</b></div>
-                    <div className="input-field">
-                        <input id="endereco" type="text"
-                            placeholder="ENDEREÇO"
-                            onChange={this.props.changeEnderecoCliente}
+                    <div className="card col s12 blue lighten-5">
+                        <div className="center"><b>Endereço:</b></div>
+                        <div className="input-field">
+                            <input id="endereco" type="text"
+                                placeholder="ENDEREÇO"
+                                onChange={this.props.changeEnderecoCliente}
 
-                            value={this.props.enderecoCliente} >
-                        </input>
-                    </div>
+                                value={this.props.enderecoCliente} >
+                            </input>
+                        </div> </div>
 
 
-                    <br />
-                    <div className="center"><b>Empresa:</b></div>
-                    <div className="input-field">
-                        <input id="empresa" type="text"
-                            placeholder="EMPRESA"
-                            onChange={this.props.changeEmpresaCliente}
 
-                            value={this.props.empresaCliente}>
-                        </input>
-                    </div>
 
 
 

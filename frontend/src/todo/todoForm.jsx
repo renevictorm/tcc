@@ -33,11 +33,11 @@ class TodoForm extends Component {
                         value={this.props.description}></input>
                 </Grid>
                 <Grid cols='12 3 2'>
-                    <IconButton style='primary' icon='plus'
+                    <IconButton style='blue' icon='add'
                         onClick={() => add(description)}></IconButton>
-                    <IconButton style='info' icon='search'
+                    <IconButton style='blue lighten-1' icon='search'
                         onClick={search}></IconButton>
-                    <IconButton style='default' icon='close'
+                    <IconButton style='orange' icon='close'
                         onClick={this.props.clear}></IconButton>
                 </Grid>
 
