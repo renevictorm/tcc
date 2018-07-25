@@ -7,11 +7,29 @@ import { markAsDone, markAsPending, remove } from './todoActions'
 
 
 const TodoList = props => {
+
+    const renderlinha = (todo,description) => {
+     
+            if (!todo) {
+
+
+                return (<td>{description}</td>)
+
+
+
+            }else{
+                return (<td><strike>{description}</strike></td>)
+            }
+       
+
+    }
     const renderRows = () => {
         const list = props.list || []
         return list.map(todo => (
+
             <tr key={todo._id}>
-                <td className={todo.done ? 'markedAsDone' : ''}>{todo.description}</td>            
+             
+                {renderlinha(todo.done,todo.description)}
                 <td>
                     <IconButton style='blue' icon='check' hide={todo.done}
                         onClick={() => props.markAsDone(todo)}></IconButton>
@@ -28,7 +46,7 @@ const TodoList = props => {
             <thead>
                 <tr>
                     <th>Descrição</th>
-                    <th className ='tableActions' >Ações</th>
+                    <th className='tableActions' >Ações</th>
                 </tr>
             </thead>
             <tbody>
@@ -38,6 +56,6 @@ const TodoList = props => {
     )
 }
 
-const mapStateToProps = state => ({list: state.todo.list})
-const mapDosátchToProps = (dispatch) => bindActionCreators ({ markAsDone, markAsPending, remove}, dispatch)
+const mapStateToProps = state => ({ list: state.todo.list })
+const mapDosátchToProps = (dispatch) => bindActionCreators({ markAsDone, markAsPending, remove }, dispatch)
 export default connect(mapStateToProps, mapDosátchToProps)(TodoList)

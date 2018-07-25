@@ -64,7 +64,7 @@ class ColaboradorVer extends Component {
                 <div className=" row blue ">
                     <div className=" row">
                         <div className="col s4">
-                            <img className="responsive-imgr" src="https://instagram.fbhz2-1.fna.fbcdn.net/vp/970f06c2211709b380473535d4bad810/5BBB534A/t51.2885-15/e35/21149619_1720037108300122_2320621059671326720_n.jpg" />
+                            <img className="responsive-imgr" src="https://instagram.fbhz1-1.fna.fbcdn.net/vp/6177b1f18eb50104dff81120a39dd611/5BDE2CE9/t51.2885-19/s150x150/23417012_126449281383186_8806784900909760512_n.jpg" />
 
                         </div>
                         <div className="card-content white-text col s8">
