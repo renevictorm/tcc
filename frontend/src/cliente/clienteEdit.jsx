@@ -162,7 +162,7 @@ class ClienteForm extends Component {
 
                     <div className="row">
                         <div className="center">
-                            <a className="waves-effect waves-light btn"
+                            <a className="waves-effect blue waves-light btn"
                                 onClick={() => [
 
                                     this.getVALUE()
@@ -171,7 +171,7 @@ class ClienteForm extends Component {
 
                                 }>
                                 Salvar
-                        <i className="material-icons right">send</i>
+                        <i className="material-icons orange-text right">send</i>
                             </a>
                         </div>
                     </div>
