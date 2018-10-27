@@ -18,9 +18,9 @@ const ProjetoClienteList = props => {
 
                 if (responsavel == 1) {
                     return (<div>
-                        <div className=" orange "><h5 className='center'><b>{props.list[i].name}:</b></h5></div>
-                        <div className=" orange "><h5 className='center'><b>{props.list[i].telefone}</b></h5></div>
-                        <div className=" orange "><h6 className='center'><b>{props.list[i].email}</b></h6></div>
+                        <div className=" green "><h5 className='center'><b>{props.list[i].name}:</b></h5></div>
+                        <div className=" green "><h5 className='center'><b>{props.list[i].telefone}</b></h5></div>
+                        <div className=" green "><h6 className='center'><b>{props.list[i].email}</b></h6></div>
                         <div className=" card  blue  "><h5>Responsável</h5></div>
                         <a href='#/clientee' className="waves-effect waves btn #1565c9 blue darken-1"
                             onClick={() => props.changeEditCliente(props.list[i])}>
@@ -36,10 +36,10 @@ const ProjetoClienteList = props => {
                 }
                 if (responsavel == 2) {
                     return (<div>
-                        <div className=" orange "><h5 className='center'><b>{props.list[i].name}:</b></h5></div>
-                        <div className=" orange "><h5 className='center'><b>{props.list[i].telefone}</b></h5></div>
-                        <div className=" orange "><h6 className='center'><b>{props.list[i].email}</b></h6></div>
-                        <div className=" orange  "></div><br/>
+                        <div className=" green "><h5 className='center'><b>{props.list[i].name}:</b></h5></div>
+                        <div className=" green "><h5 className='center'><b>{props.list[i].telefone}</b></h5></div>
+                        <div className=" green "><h6 className='center'><b>{props.list[i].email}</b></h6></div>
+                        <div className=" green  "></div><br/>
                         <a href='#/clientee' className="waves-effect waves btn #1565c9 blue darken-1"
                             onClick={() => props.changeEditCliente(props.list[i])}>
                             <i className="material-icons ">{"edit"}</i>
@@ -76,7 +76,7 @@ const ProjetoClienteList = props => {
         const listpc = props.listpc || []
         return listpc.map(pc => (
 
-            <div className="col s12 card orange " key={pc._id}>
+            <div className="col s12 card green " key={pc._id}>
 
 
                 <div className="card-content white-text">
