@@ -76,7 +76,7 @@ const ProjetoClienteList = props => {
         const listpc = props.listpc || []
         return listpc.map(pc => (
 
-            <div className="col s12 card orange " key={pc._id}>
+            <div className="col s12 card green " key={pc._id}>
 
 
                 <div className="card-content white-text">
